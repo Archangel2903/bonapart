@@ -1,8 +1,9 @@
 import '../scss/main.scss';
 import 'intersection-observer';
 import $ from 'jquery';
-import 'bootstrap';
 import 'popper.js';
+import 'bootstrap';
+import Swiper from 'swiper';
 
 $(window).on('load', function () {
     let b = $('body');
@@ -34,4 +35,30 @@ $(function () {
             imgObserve.observe(image);
         });
     }
+
+    let mainSlider = document.querySelector('.main-slider');
+    let slider = new Swiper(mainSlider, {
+        // observer: true,
+        // observeParents: true,
+        direction: 'vertical',
+        loop: true,
+        effect: 'slide',
+        // autoplay: true,
+        height: 690,
+        // centeredSlides: true,
+        // slidesPerView: 1,
+
+        navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
+        },
+        pagination: {
+            el: '.swiper-pagination',
+            type: 'fraction',
+            clickable: true,
+        },
+        /*scrollbar: {
+            el: '.swiper-scrollbar'
+        }*/
+    });
 });

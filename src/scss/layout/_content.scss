@@ -8,3 +8,80 @@
   -webkit-flex-grow: 1;
   min-width: 320px;
 }
+
+.title {
+  &__sup-text {
+    &:before {
+      content: '';
+      display: inline-block;
+      width: 25px;
+      height: 3px;
+      margin-right: 19px;
+      vertical-align: middle;
+      background: #e8b607;
+    }
+  }
+
+  &__text {
+
+  }
+}
+
+.main-slider {
+  max-height: 690px;
+  overflow: hidden;
+
+  .swiper-wrapper {
+    .slide-content {
+      padding: 210px 0 0;
+    }
+  }
+  .swiper-controls {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    display: inline-block;
+    width: 90px;
+    height: 17px;
+    z-index: 1;
+    transform: translate(-50%, -50%) rotate(-90deg);
+  }
+  .swiper-pagination {
+    top: -2px;
+    bottom: auto;
+    color: white;
+    text-align: center;
+    z-index: 3;
+  }
+  .swiper-arrows {
+    top: 0;
+    left: auto;
+    right: auto;
+    width: 17px;
+    height: 17px;
+    margin: 0;
+    background: none;
+
+    svg {
+      width: 17px;
+      height: 17px;
+      fill: white;
+      vertical-align: top;
+    }
+  }
+  .swiper-button-prev {
+    left: 0;
+  }
+  .swiper-button-next {
+    right: 0;
+    text-align: right;
+  }
+}
+
+.main-section-content {
+  &__nav {
+    &-link {
+
+    }
+  }
+}

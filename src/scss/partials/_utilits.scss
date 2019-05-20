@@ -77,8 +77,8 @@
   &:after {
     content: '';
     @extend .section-bg;
-    opacity: .25;
-    //background: $main-first-color-custom;
+    opacity: .6;
+    background: $main-second-color;
     z-index: 0;
   }
 
@@ -100,4 +100,10 @@
 }
 .font-weight-sbold {
   font-weight: 600 !important;
+}
+
+.swiper-wrapper {
+  img[data-src] {
+    opacity: 1;
+  }
 }

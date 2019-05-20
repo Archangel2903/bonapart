@@ -11,11 +11,15 @@
 @import "~bootstrap/scss/grid";
 @import "~bootstrap/scss/type";
 @import "~bootstrap/scss/utilities";
+@import "~bootstrap/scss/dropdown";
 @import "~bootstrap/scss/buttons";
 @import "~bootstrap/scss/card";
 @import "~bootstrap/scss/forms";
 @import "~bootstrap/scss/modal";
 @import "~bootstrap/scss/utilities/text";
+
+/* Plugins style */
+@import '~swiper/dist/css/swiper.min.css';
 
 /* Project style */
 //partials

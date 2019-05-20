@@ -12,9 +12,76 @@
 <!-- BODY -->
 <div class="main-wrapper">
     <!-- HEADER -->
-    <header class="header">
-        <div class="container bg-light">
-            <h1 class="m-0">Header Title</h1>
+    <header class="header position-absolute">
+        <div class="header-top">
+            <div class="container">
+                <div class="row justify-content-between">
+                    <div class="col-md-8">
+                        <ul class="header-top__contacts">
+                            <li class="header-top__contacts-item">
+                                <span class="header-top__text">г. Железный порт, ул. Набережная, 1</span>
+                            </li>
+                            <li class="header-top__contacts-item">
+                                <a href="tel:+380500000000" class="header-top__text">+38 (050) 000 00 00</a> / <a href="tel:+380500000000" class="header-top__text">+38 (050) 000 00
+                                00</a>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="col-md-2">
+                        <nav class="social-list">
+                            <a href="#social-booking" class="social-list__link">
+                                <svg>
+                                    <use xlink:href="img/spritemap.svg#sprite-booking"></use>
+                                </svg>
+                            </a>
+                            <a href="#social-instagram" class="social-list__link">
+                                <svg>
+                                    <use xlink:href="img/spritemap.svg#sprite-instagram"></use>
+                                </svg>
+                            </a>
+                            <a href="#social-tripadvisor" class="social-list__link">
+                                <svg>
+                                    <use xlink:href="img/spritemap.svg#sprite-tripadvisor"></use>
+                                </svg>
+                            </a>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="header-content">
+            <div class="container">
+                <div class="row justify-content-between">
+                    <div class="col-md-2">
+                        <a href="index.html" class="logo">
+                            <picture>
+                                <img src="<%= require('./img/placeholder.png') %>" data-src="<%= require('./img/logo.svg') %>" alt="logo" title="logo">
+                            </picture>
+                        </a>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="header-content__dropdown dropdown">
+                            <a class="btn btn-transparent dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true"
+                               aria-expanded="false">
+                                Выпадающая ссылка
+                            </a>
+
+                            <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                                <a class="dropdown-item" href="#">Action</a>
+                                <a class="dropdown-item" href="#">Another action</a>
+                                <a class="dropdown-item" href="#">Something else here</a>
+                            </div>
+                        </div>
+
+                        <nav class="header-navigation">
+                            <a href="#01" class="header-navigation__link">01</a>
+                            <a href="#02" class="header-navigation__link">02</a>
+                            <a href="#03" class="header-navigation__link">03</a>
+                        </nav>
+                    </div>
+                </div>
+            </div>
         </div>
     </header>
     <!-- HEADER END -->
@@ -22,27 +89,327 @@
     <!-- CONTENT -->
     <main class="content">
 
-        <div class="section">
-            <div class="container bg-dark">
-                <h2 class="title m-0">Section Title</h2>
+        <div class="section main-section">
+            <div class="main-slider">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <div class="section-bg">
+                            <picture>
+                                <source srcset="<%= require('./img/main-slide-img01.webp') %>" type="image/webp">
+                                <img data-src="<%= require('./img/main-slide-img01.jpg') %>" src="<%= require('./img/placeholder.png') %>" class="section-bg__img" alt="slide-1"
+                                     title="">
+                            </picture>
+                        </div>
+
+                        <div class="container">
+                            <div class="slide-content">
+                                <div class="title">
+                                    <span class="title__sup-text">на берегу моря</span>
+                                    апартаменты
+                                </div>
+
+                                <span class="slide-content">This is Photoshop's version  of Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum</span>
+
+                                <button>Забронировать</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="swiper-slide">
+                        <div class="section-bg">
+                            <picture>
+                                <source srcset="<%= require('./img/main-slide-img01.webp') %>" type="image/webp">
+                                <img data-src="<%= require('./img/main-slide-img01.jpg') %>" src="<%= require('./img/placeholder.png') %>" class="section-bg__img" alt="slide-1"
+                                     title="">
+                            </picture>
+                        </div>
+
+                        <div class="container">
+                            <div class="slide-content">
+                                <div class="title">
+                                    <span class="title__sup-text">на берегу моря</span>
+                                    апартаменты
+                                </div>
+
+                                <span class="slide-content">This is Photoshop's version  of Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum</span>
+
+                                <button>Забронировать</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="swiper-slide">
+                        <div class="section-bg">
+                            <picture>
+                                <source srcset="<%= require('./img/main-slide-img01.webp') %>" type="image/webp">
+                                <img data-src="<%= require('./img/main-slide-img01.jpg') %>" src="<%= require('./img/placeholder.png') %>" class="section-bg__img" alt="slide-1"
+                                     title="">
+                            </picture>
+                        </div>
+
+                        <div class="container">
+                            <div class="slide-content">
+                                <div class="title">
+                                    <span class="title__sup-text">на берегу моря</span>
+                                    апартаменты
+                                </div>
+
+                                <span class="slide-content">This is Photoshop's version  of Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum</span>
+
+                                <button>Забронировать</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="swiper-controls">
+                    <div class="swiper-arrows swiper-button-prev">
+                        <svg>
+                            <use xlink:href="img/spritemap.svg#sprite-arrow_left"></use>
+                        </svg>
+                    </div>
+                    <div class="swiper-pagination"></div>
+                    <div class="swiper-arrows swiper-button-next">
+                        <svg>
+                            <use xlink:href="img/spritemap.svg#sprite-arrow_right"></use>
+                        </svg>
+                    </div>
+                </div>
+            </div>
+
+            <div class="main-section-content">
+                <nav class="main-section-content__nav">
+                    <a href="#01" class="main-section-content__nav-link">01</a>
+                    <a href="#02" class="main-section-content__nav-link">02</a>
+                    <a href="#03" class="main-section-content__nav-link">03</a>
+                    <a href="#04" class="main-section-content__nav-link">04</a>
+                </nav>
+            </div>
+        </div>
+
+        <div class="section advantage-section">
+            <div class="container">
+                <div class="title">
+                    <span class="title__sup-text">наши</span>
+                    преимущества
+                </div>
+                <div class="row advantage">
+                    <div class="col-md-4 advantage__box">
+                        <div class="advantage__ico"></div>
+                        <p class="advantage__caption"></p>
+                        <p class="advantage__text"></p>
+                    </div>
+
+                    <div class="col-md-4 advantage__box">
+                        <div class="advantage__ico"></div>
+                        <p class="advantage__caption"></p>
+                        <p class="advantage__text"></p>
+                    </div>
+
+                    <div class="col-md-4 advantage__box">
+                        <div class="advantage__ico"></div>
+                        <p class="advantage__caption"></p>
+                        <p class="advantage__text"></p>
+                    </div>
+
+                    <div class="col-md-4 advantage__box">
+                        <div class="advantage__ico"></div>
+                        <p class="advantage__caption"></p>
+                        <p class="advantage__text"></p>
+                    </div>
+
+                    <div class="col-md-4 advantage__box">
+                        <div class="advantage__ico"></div>
+                        <p class="advantage__caption"></p>
+                        <p class="advantage__text"></p>
+                    </div>
+
+                    <div class="col-md-4 advantage__box">
+                        <div class="advantage__ico"></div>
+                        <p class="advantage__caption"></p>
+                        <p class="advantage__text"></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="section apartments-section">
+            <div class="container">
+                <div class="title">
+                    <span class="title__sup-text">лучшие</span>
+                    апартаменты
+                </div>
+
+                <div class="row justify-content-center">
+                    <div class="col-md-10">
+                        <div class="best-apartment row">
+                            <div class="col-md-12">
+                                <picture>
+                                    <source srcset="<%= require('./img/main-slide-img01.webp') %>" type="image/webp">
+                                    <img data-src="<%= require('./img/main-slide-img01.jpg') %>" src="<%= require('./img/placeholder.png') %>" class="best-apartment__image"
+                                         alt="apartment-image" title="">
+                                </picture>
+
+                                <div class="best-apartment__description">
+                                    <p class="best-apartment__title">Апартаменты может есть название</p>
+
+                                    <p class="best-apartment__text">This is Photoshop's version of Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin,
+                                        lorem quis</p>
+
+                                    <div class="apartment-includes">
+                                        <div class="apartment-includes__box">
+                                            <div class="apartment-includes__ico">
+                                                <svg>
+                                                    <use xlink:href="img/spritemap.svg#sprite-wifi"></use>
+                                                </svg>
+                                            </div>
+                                            <span class="apartment-includes__text">Wi-Fi</span>
+                                        </div>
+
+                                        <div class="apartment-includes__box">
+                                            <div class="apartment-includes__ico">
+                                                <svg>
+                                                    <use xlink:href="img/spritemap.svg#sprite-tv"></use>
+                                                </svg>
+                                            </div>
+                                            <span class="apartment-includes__text">TV</span>
+                                        </div>
+
+                                        <div class="apartment-includes__box">
+                                            <div class="apartment-includes__ico">
+                                                <svg>
+                                                    <use xlink:href="img/spritemap.svg#sprite-vid_iz_okna"></use>
+                                                </svg>
+                                            </div>
+                                            <span class="apartment-includes__text">Вид из окна</span>
+                                        </div>
+
+                                        <div class="apartment-includes__box">
+                                            <div class="apartment-includes__ico">
+                                                <svg>
+                                                    <use xlink:href="img/spritemap.svg#sprite-rooms"></use>
+                                                </svg>
+                                            </div>
+                                            <span class="apartment-includes__text">3 комнаты</span>
+                                        </div>
+                                    </div>
+
+                                    <a href="#more" class="best-apartment__link">Подробнее</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="section attractions-section">
+            <div class="title">
+                <span class="title__sup-text">интересные</span>
+                достопримечательности
+            </div>
+
+            <div class="container">
+                <div class="swiper-container">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">01</div>
+                        <div class="swiper-slide">02</div>
+                        <div class="swiper-slide">03</div>
+                    </div>
+                    <div class="swiper-pagination"></div>
+                    <button class="swiper-button-prev"></button>
+                    <button class="swiper-button-next"></button>
+                </div>
+            </div>
+        </div>
+
+        <div class="section instagram-section">
+            <div class="title">
+                <span class="title__sup-text">инстаграм</span>
+                #апартаменты_железный_порт
+            </div>
+
+            <div class="container">
+
+            </div>
+        </div>
+
+        <div class="section reserve-section">
+            <div class="container">
+                <div class="row">
+
+                </div>
+            </div>
+        </div>
+
+        <div class="section last-section">
+            <div class="container">
+                <div class="title">
+                    <span class="title__sup-text">отличный</span>
+                    отдых в железном порту
+                </div>
+
+                <picture>
+                    <source srcset="<%= require('./img/main-slide-img01.webp') %>" type="image/webp">
+                    <img data-src="<%= require('./img/main-slide-img01.jpg') %>" src="<%= require('./img/placeholder.png') %>" class="best-apartment__image"
+                         alt="apartment-image" title="">
+                </picture>
+
+                <div class="row justify-content-center">
+                    <div class="col-md-10">
+                        <div class="last-section-content row">
+                            <div class="col-md-6">
+                                <p class="last-section-content__text">This is Photoshop's version of Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin,
+                                    lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit. Duis sed odio sit amet nibh vulputate cursus a sit amet
+                                    mauris.
+
+                                    Morbi accumsan ipsum velit. Nam nec tellus a odio tincidunt auctor a ornare odio. Sed non mauris vitae erat consequat auctor eu in elit. This is
+                                    Photoshop's version of Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit
+                                    consequat ipsum, nec sagittis sem nibh id elit. Duis sed odio sit amet nibh vulputate cursus a sit amet mauris. Morbi accumsan ipsum velit. </p>
+                            </div>
+                            <div class="col-md-6">
+                                <p class="last-section-content__text">This is Photoshop's version of Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin,
+                                    lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit. Duis sed odio sit amet nibh vulputate cursus a sit amet
+                                    mauris.
+
+                                    Morbi accumsan ipsum velit. Nam nec tellus a odio tincidunt auctor a ornare odio. Sed non mauris vitae erat consequat auctor eu in elit. This is
+                                    Photoshop's version of Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit
+                                    consequat ipsum, nec sagittis sem nibh id elit. Duis sed odio sit amet nibh vulputate cursus a sit amet mauris. Morbi accumsan ipsum velit. </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
 
         <picture>
+            <source srcset="<%= require('./img/loader.svg') %>" type="image/xml+svg">
             <img src="<%= require('./img/loader.svg') %>" data-src="<%= require('./img/loader.svg') %>" alt="loader" title="loader">
         </picture>
-
-        <svg>
-            <use xlink:href="img/spritemap.svg#sprite-loader"></use>
-        </svg>
 
     </main>
     <!-- CONTENT END -->
 
     <!-- FOOTER -->
     <footer class="footer">
-        <div class="container bg-info">
-            <h3 class="m-0">Footer Title</h3>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-2"></div>
+
+                <div class="col-md-8">
+                    <div class="row">
+                        <div class="col-md-2"></div>
+                        <div class="col-md-2"></div>
+                        <div class="col-md-4"></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <svg>
+                    <use xlink:href="img/spritemap.svg#sprite-bonum"></use>
+                </svg>
+            </div>
         </div>
     </footer>
     <!-- FOOTER END -->

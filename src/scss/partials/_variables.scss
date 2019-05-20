@@ -1,6 +1,6 @@
 // main colors
-$main-first-color: red;
-$main-second-color: green;
+$main-first-color: #f3bd00;
+$main-second-color: #232766;
 $main-third-color: blue;
 
 // colors
@@ -9,9 +9,9 @@ $text-color: #333;
 $input-placeholder-color: #aaa;
 
 // fonts
-$font-family-base: 'Verdana', sans-serif;
-$font-family-custom: 'Arial', sans-serif;
-$font-family-unique: 'Times New Roman', serif;
+$font-family-base: 'Ubuntu', sans-serif;
+$font-family-custom: 'Georgia', serif;
+//$font-family-unique: 'Times New Roman', serif;
 
 // font-weight
 $font-weight-medium: 500;
@@ -25,5 +25,10 @@ $line-height-base: 1.25;
 $transition-base: all .3s ease 0s;
 
 //Bootstrap var
+
+$container-max-widths: (
+  xl: 1200px
+);
+
 $enable-shadows: true;
 $body-color: $text-color;

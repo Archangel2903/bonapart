@@ -38,6 +38,7 @@
     "intersection-observer": "^0.7.0",
     "jquery": "^3.4.1",
     "popper.js": "^1.15.0",
-    "svg-spritemap-webpack-plugin": "^3.3.0"
+    "svg-spritemap-webpack-plugin": "^3.3.0",
+    "swiper": "^4.5.0"
   }
 }

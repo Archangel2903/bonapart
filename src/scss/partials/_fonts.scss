@@ -1,2 +1,79 @@
 $fonts-path: '../fonts/';
 
+@font-face {
+  font-family: 'Ubuntu';
+  src: url('#{$fonts-path}subset-Ubuntu-Light.eot');
+  src: url('#{$fonts-path}subset-Ubuntu-Light.eot?#iefix') format('embedded-opentype'),
+  url('#{$fonts-path}subset-Ubuntu-Light.woff2') format('woff2'),
+  url('#{$fonts-path}subset-Ubuntu-Light.woff') format('woff'),
+  url('#{$fonts-path}subset-Ubuntu-Light.ttf') format('truetype'),
+  url('#{$fonts-path}subset-Ubuntu-Light.svg#Ubuntu-Light') format('svg');
+  font-display: swap;
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Ubuntu';
+  src: url('#{$fonts-path}subset-Ubuntu-Regular.eot');
+  src: url('#{$fonts-path}subset-Ubuntu-Regular.eot?#iefix') format('embedded-opentype'),
+  url('#{$fonts-path}subset-Ubuntu-Regular.woff2') format('woff2'),
+  url('#{$fonts-path}subset-Ubuntu-Regular.woff') format('woff'),
+  url('#{$fonts-path}subset-Ubuntu-Regular.ttf') format('truetype'),
+  url('#{$fonts-path}subset-Ubuntu-Regular.svg#Ubuntu-Regular') format('svg');
+  font-display: swap;
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Ubuntu';
+  src: url('#{$fonts-path}subset-Ubuntu-Medium.eot');
+  src: url('#{$fonts-path}subset-Ubuntu-Medium.eot?#iefix') format('embedded-opentype'),
+  url('#{$fonts-path}subset-Ubuntu-Medium.woff2') format('woff2'),
+  url('#{$fonts-path}subset-Ubuntu-Medium.woff') format('woff'),
+  url('#{$fonts-path}subset-Ubuntu-Medium.ttf') format('truetype'),
+  url('#{$fonts-path}subset-Ubuntu-Medium.svg#Ubuntu-Medium') format('svg');
+  font-display: swap;
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Ubuntu';
+  src: url('#{$fonts-path}subset-Ubuntu-Bold.eot');
+  src: url('#{$fonts-path}subset-Ubuntu-Bold.eot?#iefix') format('embedded-opentype'),
+  url('#{$fonts-path}subset-Ubuntu-Bold.woff2') format('woff2'),
+  url('#{$fonts-path}subset-Ubuntu-Bold.woff') format('woff'),
+  url('#{$fonts-path}subset-Ubuntu-Bold.ttf') format('truetype'),
+  url('#{$fonts-path}subset-Ubuntu-Bold.svg#Ubuntu-Bold') format('svg');
+  font-display: swap;
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Georgia';
+  src: url('#{$fonts-path}subset-Georgia.eot');
+  src: url('#{$fonts-path}subset-Georgia.eot?#iefix') format('embedded-opentype'),
+  url('#{$fonts-path}subset-Georgia.woff2') format('woff2'),
+  url('#{$fonts-path}subset-Georgia.woff') format('woff'),
+  url('#{$fonts-path}subset-Georgia.ttf') format('truetype'),
+  url('#{$fonts-path}subset-Georgia.svg#Georgia') format('svg');
+  font-display: swap;
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Georgia';
+  src: url('#{$fonts-path}subset-Georgia-Bold.eot');
+  src: url('#{$fonts-path}subset-Georgia-Bold.eot?#iefix') format('embedded-opentype'),
+  url('#{$fonts-path}subset-Georgia-Bold.woff2') format('woff2'),
+  url('#{$fonts-path}subset-Georgia-Bold.woff') format('woff'),
+  url('#{$fonts-path}subset-Georgia-Bold.ttf') format('truetype'),
+  url('#{$fonts-path}subset-Georgia-Bold.svg#Georgia-Bold') format('svg');
+  font-display: swap;
+  font-weight: bold;
+  font-style: normal;
+}
