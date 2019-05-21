@@ -5,7 +5,7 @@ $main-third-color: blue;
 
 // colors
 $title-color: #111;
-$text-color: #333;
+$text-color: #000;
 $input-placeholder-color: #aaa;
 
 // fonts
@@ -25,6 +25,7 @@ $line-height-base: 1.25;
 $transition-base: all .3s ease 0s;
 
 //Bootstrap var
+$primary: $main-first-color;
 
 $container-max-widths: (
   xl: 1200px

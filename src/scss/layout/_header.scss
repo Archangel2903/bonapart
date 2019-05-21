@@ -11,12 +11,31 @@ header.header {
 }
 
 .header-top {
-  background: white;
   &__contacts {
-    &-item {
-      &-text {
+    &-text {
+      color: inherit;
+      font-size: 12px;
 
+      &:not(:first-child):before {
+        content: '/';
+        display: inline-block;
+        margin: 0 10px;
       }
+    }
+  }
+
+  &__contacts-item {
+    color: #728fbf;
+
+    &:before {
+      content: '';
+      display: inline-block;
+      width: 6px;
+      height: 6px;
+      border-radius: 10px;
+      margin-right: 6px;
+      vertical-align: middle;
+      background: #418dcb;
     }
   }
 }
@@ -27,27 +46,70 @@ header.header {
 
     svg {
       display: block;
-      width: 100%;
-      max-width: 16px;
+      width: 23px;
       height: 16px;
+      fill: #afc1e0;
+
+      &.tripadvisor {
+        height: 25px;
+        fill: $main-first-color;
+      }
     }
   }
 }
 
 .header-content {
   &__dropdown {
-    display: inline-block;
+
+    .dropdown-toggle {
+      &:after {
+        display: none;
+      }
+
+      svg {
+        width: 15px;
+        height: 15px;
+        margin-left: 9px;
+        fill: white;
+        opacity: .5;
+      }
+    }
   }
 }
 
 .logo {
+  display: inline-block;
 
+  &__img {
+    display: block;
+    width: 120px;
+  }
 }
 
 .header-navigation {
   display: inline-block;
 
   &__link {
+    &:before {
+      content: '';
+      width: 0;
+      height: 3px;
+      position: absolute;
+      bottom: -10px;
+      left: 0;
+      background: $main-first-color;
+      transition: all .3s ease 0s;
+    }
 
+    position: relative;
+
+    &:hover {
+      text-decoration: none;
+
+      &:before {
+        content: '';
+        width: 25px;
+      }
+    }
   }
 }

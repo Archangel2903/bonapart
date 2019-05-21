@@ -36,14 +36,13 @@ $(function () {
         });
     }
 
-    let mainSlider = document.querySelector('.main-slider');
-    let slider = new Swiper(mainSlider, {
+    let mainSlider = new Swiper(document.querySelector('.main-slider'), {
         // observer: true,
         // observeParents: true,
         direction: 'vertical',
         loop: true,
         effect: 'slide',
-        // autoplay: true,
+        autoplay: true,
         height: 690,
         // centeredSlides: true,
         // slidesPerView: 1,
@@ -57,8 +56,32 @@ $(function () {
             type: 'fraction',
             clickable: true,
         },
-        /*scrollbar: {
-            el: '.swiper-scrollbar'
-        }*/
+    });
+
+    let attractionSlider = new Swiper(document.querySelector('.attractions'), {
+        observer: true,
+        observeParents: true,
+        direction: 'horizontal',
+        loop: true,
+        effect: 'slide',
+        // autoplay: true,
+        centeredSlides: true,
+        slidesPerView: 3,
+
+        navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
+        },
+        pagination: {
+            el: '.swiper-pagination',
+            clickable: true,
+        },
+    });
+
+    $('.main-section-content-nav__link').hover(function () {
+        let w = $(this).find('.main-section-content-nav__text').width() + 81;
+        $(this).css('width', w);
+    }, function () {
+        $(this).css('width', 51);
     });
 });

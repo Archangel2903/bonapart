@@ -319,18 +319,18 @@ img {
 
 ::selection {
   text-shadow: none;
-  color: $text-color;
-  background: $main-first-color;
+  color: $main-first-color;
+  background: $main-second-color;
 }
 
 ::-moz-selection {
   text-shadow: none;
-  color: $text-color;
-  background: $main-first-color;
+  color: $main-first-color;
+  background: $main-second-color;
 }
 
 ::-ms-selection {
   text-shadow: none;
-  color: $text-color;
-  background: $main-first-color;
+  color: $main-first-color;
+  background: $main-second-color;
 }
