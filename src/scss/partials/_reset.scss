@@ -123,8 +123,6 @@ input {
     -moz-appearance: textfield;
 
     &:focus {
-      background: none;
-
       &::-webkit-input-placeholder {
         color: transparent;
         transform: rotate3d(1, 0, 0, 90deg);

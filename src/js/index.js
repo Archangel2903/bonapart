@@ -3,7 +3,12 @@ import 'intersection-observer';
 import $ from 'jquery';
 import 'popper.js';
 import 'bootstrap';
-import Swiper from 'swiper';
+import Swiper from 'swiper/dist/js/swiper.min';
+import 'jquery-form-styler';
+import L from 'leaflet';
+import 'leaflet/dist/images/marker-icon-2x.png';
+import 'leaflet/dist/images/marker-icon.png';
+import 'leaflet/dist/images/marker-shadow.png';
 
 $(window).on('load', function () {
     let b = $('body');
@@ -15,6 +20,38 @@ $(window).on('load', function () {
     }
 
     b.removeClass('loaded');
+
+    //leaflet map
+    delete L.Icon.Default.prototype._getIconUrl;
+    L.Icon.Default.mergeOptions({
+        iconRetinaUrl: 'img/marker-icon-2x.png',
+        iconUrl: 'img/marker-icon.png',
+        shadowUrl: 'img/marker-shadow.png',
+    });
+
+    const map = L.map('map');
+    const defaultCenter = function () {
+        if (window.innerWidth < 768) {
+            return [43.262990, 76.931635];
+        } else {
+            return [43.244010, 76.967512];
+        }
+    };
+    const basemap = L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/World_Topo_Map/MapServer/tile/{z}/{y}/{x}');
+
+    let clinic1 = L.marker([43.23931, 76.94392]).addTo(map).bindPopup('');
+
+    basemap.addTo(map);
+
+    if (map) {
+        map.setView(
+            defaultCenter(),
+            13,
+            {
+                scrollWheelZoom: false
+            })
+            .scrollWheelZoom.disable();
+    }
 });
 
 $(function () {
@@ -37,15 +74,11 @@ $(function () {
     }
 
     let mainSlider = new Swiper(document.querySelector('.main-slider'), {
-        // observer: true,
-        // observeParents: true,
         direction: 'vertical',
         loop: true,
         effect: 'slide',
-        autoplay: true,
+        // autoplay: true,
         height: 690,
-        // centeredSlides: true,
-        // slidesPerView: 1,
 
         navigation: {
             nextEl: '.swiper-button-next',
@@ -57,16 +90,14 @@ $(function () {
             clickable: true,
         },
     });
-
     let attractionSlider = new Swiper(document.querySelector('.attractions'), {
         observer: true,
         observeParents: true,
-        direction: 'horizontal',
         loop: true,
-        effect: 'slide',
-        // autoplay: true,
+        autoplay: true,
+        spaceBetween: 30,
         centeredSlides: true,
-        slidesPerView: 3,
+        slidesPerView: 'auto',
 
         navigation: {
             nextEl: '.swiper-button-next',
@@ -77,6 +108,19 @@ $(function () {
             clickable: true,
         },
     });
+    let instagramSlider = new Swiper(document.querySelector('.instagram-slider'), {
+        observer: true,
+        observeParents: true,
+        loop: true,
+        // autoplay: true,
+        spaceBetween: 16,
+        slidesPerView: 4,
+
+        navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
+        },
+    });
 
     $('.main-section-content-nav__link').hover(function () {
         let w = $(this).find('.main-section-content-nav__text').width() + 81;
@@ -84,4 +128,6 @@ $(function () {
     }, function () {
         $(this).css('width', 51);
     });
+
+
 });

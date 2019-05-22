@@ -7,6 +7,7 @@
   flex-grow: 1;
   -webkit-flex-grow: 1;
   min-width: 320px;
+  width: 100%;
 }
 
 .swiper-wrapper {
@@ -154,22 +155,6 @@
   counter-reset: nav;
 
   &__link {
-    &:before {
-      counter-increment: nav;
-      content: counter(nav);
-      display: inline-block;
-      width: 51px;
-      height: 51px;
-      border: 2px solid $main-first-color;
-      border-radius: 50px;
-      margin: -2px 0 0 -2px;
-      vertical-align: middle;
-      font-size: 20px;
-      line-height: 42px;
-      text-align: center;
-      transition: $transition-base;
-    }
-
     position: relative;
     display: block;
     min-width: 51px;
@@ -189,11 +174,29 @@
     transition: $transition-base;
     transition-delay: .2s;
 
+    &:before {
+      counter-increment: nav;
+      content: counter(nav);
+      display: inline-block;
+      width: 51px;
+      height: 51px;
+      border: 2px solid $main-first-color;
+      border-radius: 50px;
+      margin: -2px 0 0 -2px;
+      vertical-align: middle;
+      font-size: 20px;
+      line-height: 42px;
+      text-align: center;
+      transition: $transition-base;
+    }
+
     &:not(:last-child) {
       margin-bottom: 22px;
     }
 
     &:hover {
+      background: rgba(255, 255, 255, .2);
+
       &:before {
         background: $main-first-color;
       }
@@ -371,7 +374,7 @@
   &__description {
     position: relative;
     max-width: 485px;
-    height: 350px;
+    min-height: 350px;
     padding: 42px 100px 50px;
     //margin-left: auto;
     background: white;
@@ -414,14 +417,202 @@
 
 // ATTRACTIONS SECTION
 .attractions-section {
-  padding: 95px 0 200px;
+  padding: 95px 0 70px;
+
+  .section-bg {
+    &:after {
+      opacity: .9;
+    }
+  }
+
+  .title {
+    &__sup-text {
+      color: #e6e6e6;
+
+      &:before {
+        margin-right: 8px;
+      }
+    }
+  }
 }
 
 .attractions {
   padding: 112px 0 0 0;
-  &__box {
-    .card {
-      max-width: 370px;
+
+  &__card {
+    max-width: 370px;
+
+    .card-title {
+      color: #120706;
+      font-family: $font-family-custom;
+      font-size: 20px;
     }
+
+    .card-text {
+      color: #727272;
+    }
+  }
+
+  &__more {
+    color: #727272;
+    text-decoration: underline;
+  }
+
+  .swiper-slide {
+    width: 32%;
+  }
+
+  .swiper-controls {
+
+  }
+
+  .swiper-arrows {
+    display: inline-block;
+    background: none;
+    position: static;
+
+    &.swiper-button-prev {
+
+    }
+
+    &.swiper-button-next {
+
+    }
+
+    svg {
+      width: 21px;
+      height: 21px;
+      fill: white;
+    }
+  }
+
+  .swiper-pagination {
+    display: inline-block;
+    position: static;
+
+    &-bullet {
+      width: 12px;
+      height: 12px;
+      margin-right: 10px;
+      opacity: 1;
+      background: none;
+      box-shadow: inset 0 0 0 2px white;
+      transition: $transition-base;
+
+      &-active {
+        box-shadow: inset 0 0 0 10px white;
+      }
+    }
+  }
+}
+
+// INSTAGRAM SECTION
+.instagram-section {
+  padding: 115px 0 100px;
+}
+
+.instagram-slider {
+  padding: 0 20px;
+  margin: 110px 0 0;
+
+  &:before, &:after {
+    content: '';
+    position: absolute;
+    top: 0;
+    display: block;
+    width: 20px;
+    height: 100%;
+    background: white;
+    z-index: 5;
+  }
+
+  &:before {
+    left: 0;
+  }
+
+  &:after {
+    right: 0;
+  }
+
+  &__img {
+    display: block;
+    width: 270px;
+    height: 270px;
+  }
+
+  .swiper-arrows {
+    height: auto;
+    background: none;
+
+    &.swiper-button-prev {
+      left: 0;
+    }
+
+    &.swiper-button-next {
+      right: 0;
+      text-align: right;
+    }
+
+    svg {
+      width: 21px;
+      height: 21px;
+      fill: #a1a1a1;
+    }
+  }
+}
+
+.instagram-link {
+  width: max-content;
+  padding: 10px 40px;
+  margin-top: 75px !important;
+  font-size: 16px;
+}
+
+// RESERVE SECTION
+.reserve-section {
+  padding: 117px 0 98px;
+
+  .section-bg {
+    &:after {
+      opacity: .9;
+    }
+  }
+}
+
+.reserve {
+  margin: 105px 0 0;
+
+  &__submit {
+    padding: 13px 30px;
+    font-size: 16px;
+    line-height: 1;
+  }
+}
+
+.reserve-form-content {
+  label {
+    margin: 0 0 10px;
+    color: #9090ad;
+    font-weight: 300;
+    font-size: 14px;
+  }
+
+  .form-control-lg {
+    display: block;
+    width: 100%;
+    height: 50px;
+    font-weight: 300;
+    font-size: 16px;
+  }
+}
+
+// LAST SECTION
+.last-section {
+  padding: 135px 0 75px;
+}
+
+.last-section-content {
+  &__text {
+    color: #727272;
   }
 }
