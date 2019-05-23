@@ -6,51 +6,33 @@ import 'bootstrap';
 import Swiper from 'swiper/dist/js/swiper.min';
 import 'jquery-form-styler';
 import L from 'leaflet';
-import 'leaflet/dist/images/marker-icon-2x.png';
-import 'leaflet/dist/images/marker-icon.png';
-import 'leaflet/dist/images/marker-shadow.png';
+import '../img/point.svg';
 
 $(window).on('load', function () {
     let b = $('body');
-
     if (/Android|webOS|iPhone|iPad|iPod|BlackBerry/i.test(navigator.userAgent)) {
         b.addClass('ios');
     } else {
         b.addClass('web');
     }
-
     b.removeClass('loaded');
 
     //leaflet map
     delete L.Icon.Default.prototype._getIconUrl;
     L.Icon.Default.mergeOptions({
-        iconRetinaUrl: 'img/marker-icon-2x.png',
-        iconUrl: 'img/marker-icon.png',
-        shadowUrl: 'img/marker-shadow.png',
+        iconRetinaUrl: '../img/point.svg',
+        iconUrl: 'img/point.svg',
+        iconSize: 38,
+        iconAnchor: [19, 37],
+        shadowUrl: null,
     });
-
     const map = L.map('map');
-    const defaultCenter = function () {
-        if (window.innerWidth < 768) {
-            return [43.262990, 76.931635];
-        } else {
-            return [43.244010, 76.967512];
-        }
-    };
+    const defaultCenter = [46.123802, 32.286997];
     const basemap = L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/World_Topo_Map/MapServer/tile/{z}/{y}/{x}');
-
-    let clinic1 = L.marker([43.23931, 76.94392]).addTo(map).bindPopup('');
-
+    let marker = L.marker([46.122359, 32.269908]).addTo(map).bindPopup('«BonApart” Апартаменты у моря. Железный Порт');
     basemap.addTo(map);
-
     if (map) {
-        map.setView(
-            defaultCenter(),
-            13,
-            {
-                scrollWheelZoom: false
-            })
-            .scrollWheelZoom.disable();
+        map.setView(defaultCenter, 14.5).scrollWheelZoom.disable();
     }
 });
 
@@ -58,7 +40,7 @@ $(function () {
     const imagesAll = document.querySelectorAll('img[data-src]');
     let imgObserve = new IntersectionObserver(function (entries) {
         entries.forEach(function (entry) {
-            if (entry.intersectionRatio >= 0 && entry.target.hasAttribute('data-src')) {
+            if (entry.intersectionRatio > 0 && entry.target.hasAttribute('data-src')) {
                 let current = entry.target;
                 let source = current.getAttribute('data-src');
 
@@ -129,5 +111,5 @@ $(function () {
         $(this).css('width', 51);
     });
 
-
+    $('.styled').styler();
 });

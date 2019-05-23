@@ -1,4 +1,5 @@
 const path = require('path');
+const webpack = require('webpack');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const TerserJSPlugin = require('terser-webpack-plugin');
@@ -79,8 +80,22 @@ module.exports = {
         }),
         new SVGSpritemapPlugin("src/img/icons/*.svg", {
             output: {
-                filename: "img/spritemap.svg"
+                filename: "img/spritemap.svg",
+                svg: {
+                    sizes: false
+                }
             }
         }),
-    ]
+        new webpack.ProvidePlugin({
+            $: 'jquery/dist/jquery.min.js',
+            jQuery: 'jquery/dist/jquery.min.js',
+            "window.jQuery": 'jquery/dist/jquery.min.js'
+        }),
+    ],
+    resolve: {
+        alias: {
+            $: path.resolve('./node_modules','jquery/dist/jquery.min.js'),
+            jquery: path.resolve('./node_modules','jquery/dist/jquery.min.js'),
+        }
+    },
 };

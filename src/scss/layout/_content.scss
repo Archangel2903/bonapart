@@ -48,13 +48,6 @@
 
 // MAIN SECTION
 .main-section {
-
-}
-
-.main-slider {
-  max-height: 690px;
-  overflow: hidden;
-
   .title {
     margin: 0;
     font-size: 85px;
@@ -81,6 +74,11 @@
       letter-spacing: 2.4px;
     }
   }
+}
+
+.main-slider {
+  max-height: 690px;
+  overflow: hidden;
 
   .swiper-wrapper {
     .slide-content {
@@ -590,6 +588,31 @@
 }
 
 .reserve-form-content {
+  &__field-ico {
+    position: absolute;
+    top: 55%;
+    right: 20px;
+    z-index: 1;
+
+    &:before {
+      content: '';
+      width: 21px;
+      height: 21px;
+      border-radius: 100%;
+      position: absolute;
+      bottom: 1px;
+      left: -5px;
+      z-index: -1;
+      background: #fff2c3;
+    }
+
+    svg {
+      width: 20px;
+      height: 20px;
+      fill: $main-second-color;
+    }
+  }
+
   label {
     margin: 0 0 10px;
     color: #9090ad;
@@ -601,8 +624,83 @@
     display: block;
     width: 100%;
     height: 50px;
-    font-weight: 300;
     font-size: 16px;
+    letter-spacing: 0.8px;
+    background: #f0f0f0;
+
+    &.jq-selectbox {
+      .jq-selectbox {
+        &__select {
+          height: 100%;
+          padding: 10px 34px 10px 22px;
+          border-radius: 0;
+          font-family: $font-family-base;
+          font-size: 16px;
+          background: none;
+          box-shadow: none;
+          text-shadow: none;
+
+          &-text {
+
+          }
+        }
+
+        &__trigger {
+          width: 45px;
+          border: 0;
+
+          &-arrow {
+            position: absolute;
+            top: 50%;
+            right: auto;
+            left: 50%;
+            width: 12px;
+            height: 12px;
+            border: 2px solid #a1a1a1;
+            border-left: 0;
+            border-bottom: 0;
+            transform: translate(-50%, -50%) rotate(45deg);
+            transition: $transition-base;
+          }
+        }
+
+        &__dropdown {
+          background: #f0f0f0;
+          border-top: 0;
+          border-radius: 0;
+
+          ul {
+
+          }
+
+          li {
+            padding: 0 23px;
+            color: #728fbf;
+            font-size: 16px;
+            line-height: 50px;
+
+            &.sel {}
+
+            &.selected {
+              color: $main-second-color;
+              background: white;
+            }
+
+            &:hover {
+              color: $main-second-color;
+              background: white;
+            }
+          }
+        }
+      }
+
+      &.opened {
+        .jq-selectbox__trigger-arrow {
+          border-color: $main-first-color;
+          transform: translate(-50%, -50%) rotate(135deg);
+        }
+      }
+    }
   }
 }
 
