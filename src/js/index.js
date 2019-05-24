@@ -5,6 +5,8 @@ import 'popper.js';
 import 'bootstrap';
 import Swiper from 'swiper/dist/js/swiper.min';
 import 'jquery-form-styler';
+import '@fancyapps/fancybox';
+import IMask from 'imask';
 import L from 'leaflet';
 import '../img/point.svg';
 
@@ -37,7 +39,7 @@ $(window).on('load', function () {
 });
 
 $(function () {
-    const imagesAll = document.querySelectorAll('img[data-src]');
+    let imagesAll = document.querySelectorAll('img[data-src]');
     let imgObserve = new IntersectionObserver(function (entries) {
         entries.forEach(function (entry) {
             if (entry.intersectionRatio > 0 && entry.target.hasAttribute('data-src')) {
@@ -112,4 +114,13 @@ $(function () {
     });
 
     $('.styled').styler();
+
+    let phoneInput = document.querySelectorAll('.phone-mask');
+    let maskOpt = {
+        mask: '{+38} (000) 00 00 000'
+    };
+
+    phoneInput.forEach(function (input) {
+        IMask(input, maskOpt);
+    });
 });

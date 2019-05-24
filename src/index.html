@@ -79,7 +79,7 @@
                         </div>
 
                         <nav class="header-navigation">
-                            <a href="#01" class="header-navigation__link text-white">как к нам добраться</a>
+                            <a href="contacts.html" class="header-navigation__link text-white">как к нам добраться</a>
                         </nav>
                     </div>
                 </div>
@@ -104,20 +104,18 @@
                         </div>
 
                         <div class="container">
-                            <div class="row">
+                            <div class="slide-content row">
                                 <div class="col-md-6 offset-md-1">
-                                    <div class="slide-content">
-                                        <div class="title text-white font-weight-light">
-                                            <span class="title__sup-text">на берегу моря</span>
-                                            апартаменты
-                                        </div>
-
-                                        <span class="slide-content__text-description d-block my-5 mr-3 ml-auto text-white">This is Photoshop's version  of Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum</span>
-
-                                        <button class="slide-content__button position-relative d-block btn btn-primary rounded-pill ml-auto text-white font-weight-bold shadow-none">
-                                            Забронировать
-                                        </button>
+                                    <div class="title ml-2 text-white font-weight-light">
+                                        <span class="title__sup-text">на берегу моря</span>
+                                        апартаменты
                                     </div>
+
+                                    <span class="slide-content__text-description d-block my-5 mr-3 ml-auto text-white">This is Photoshop's version  of Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum</span>
+
+                                    <button class="slide-content__button position-relative d-block btn btn-primary rounded-pill ml-auto text-white font-weight-bold shadow-none">
+                                        Забронировать
+                                    </button>
                                 </div>
                             </div>
                         </div>
@@ -141,19 +139,19 @@
 
             <div class="main-section-content">
                 <nav class="main-section-content-nav">
-                    <a href="#01" class="main-section-content-nav__link d-block border-primary rounded-pill text-white font-weight-bold">
+                    <a href="apart-page.html" class="main-section-content-nav__link d-block border-primary rounded-pill text-white font-weight-bold">
                         <span class="main-section-content-nav__text">Апартаменты <svg><use xlink:href="img/spritemap.svg#sprite-arrow_right"></use></svg></span>
                     </a>
 
-                    <a href="#02" class="main-section-content-nav__link d-block border-primary rounded-pill text-white font-weight-bold">
+                    <a href="apart-page.html" class="main-section-content-nav__link d-block border-primary rounded-pill text-white font-weight-bold">
                         <span class="main-section-content-nav__text">Апартаменты 2<svg><use xlink:href="img/spritemap.svg#sprite-arrow_right"></use></svg></span>
                     </a>
 
-                    <a href="#03" class="main-section-content-nav__link d-block border-primary rounded-pill text-white font-weight-bold">
+                    <a href="apart-page.html" class="main-section-content-nav__link d-block border-primary rounded-pill text-white font-weight-bold">
                         <span class="main-section-content-nav__text">Апартаменты lorem ipsum<svg><use xlink:href="img/spritemap.svg#sprite-arrow_right"></use></svg></span>
                     </a>
 
-                    <a href="#04" class="main-section-content-nav__link d-block border-primary rounded-pill text-white font-weight-bold">
+                    <a href="apart-page.html" class="main-section-content-nav__link d-block border-primary rounded-pill text-white font-weight-bold">
                         <span class="main-section-content-nav__text">Апартаменты 2 lorem ipsum<svg><use xlink:href="img/spritemap.svg#sprite-arrow_right"></use></svg></span>
                     </a>
                 </nav>
@@ -572,77 +570,41 @@
             <div class="container">
                 <div class="instagram-slider swiper-container">
                     <div class="swiper-wrapper">
-                        <div class="swiper-slide">
+                        <a href="<%= require('./img/apartment-img01.jpg') %>" data-fancybox="instagram-gallery" class="swiper-slide">
                             <picture class="instagram-slider__img">
                                 <source srcset="<%= require('./img/instagram-img01.webp') %>" type="image/webp">
                                 <img data-src="<%= require('./img/instagram-img01.jpg') %>" src="<%= require('./img/placeholder.png') %>" class="instagram-slider__img"
                                      alt="attraction"
                                      title="">
                             </picture>
-                        </div>
+                        </a>
 
-                        <div class="swiper-slide">
+                        <a href="<%= require('./img/apartment-img02.jpg') %>" data-fancybox="instagram-gallery" class="swiper-slide">
                             <picture class="instagram-slider__img">
                                 <source srcset="<%= require('./img/instagram-img02.webp') %>" type="image/webp">
                                 <img data-src="<%= require('./img/instagram-img02.jpg') %>" src="<%= require('./img/placeholder.png') %>" class="instagram-slider__img"
                                      alt="attraction"
                                      title="">
                             </picture>
-                        </div>
+                        </a>
 
-                        <div class="swiper-slide">
+                        <a href="<%= require('./img/apartment-img03.jpg') %>" data-fancybox="instagram-gallery" class="swiper-slide">
                             <picture class="instagram-slider__img">
                                 <source srcset="<%= require('./img/instagram-img03.webp') %>" type="image/webp">
                                 <img data-src="<%= require('./img/instagram-img03.jpg') %>" src="<%= require('./img/placeholder.png') %>" class="instagram-slider__img"
                                      alt="attraction"
                                      title="">
                             </picture>
-                        </div>
+                        </a>
 
-                        <div class="swiper-slide">
+                        <a href="<%= require('./img/apartment-img04.jpg') %>" data-fancybox="instagram-gallery" class="swiper-slide">
                             <picture class="instagram-slider__img">
                                 <source srcset="<%= require('./img/instagram-img04.webp') %>" type="image/webp">
                                 <img data-src="<%= require('./img/instagram-img04.jpg') %>" src="<%= require('./img/placeholder.png') %>" class="instagram-slider__img"
                                      alt="attraction"
                                      title="">
                             </picture>
-                        </div>
-
-                        <div class="swiper-slide">
-                            <picture class="instagram-slider__img">
-                                <source srcset="<%= require('./img/instagram-img01.webp') %>" type="image/webp">
-                                <img data-src="<%= require('./img/instagram-img01.jpg') %>" src="<%= require('./img/placeholder.png') %>" class="instagram-slider__img"
-                                     alt="attraction"
-                                     title="">
-                            </picture>
-                        </div>
-
-                        <div class="swiper-slide">
-                            <picture class="instagram-slider__img">
-                                <source srcset="<%= require('./img/instagram-img02.webp') %>" type="image/webp">
-                                <img data-src="<%= require('./img/instagram-img02.jpg') %>" src="<%= require('./img/placeholder.png') %>" class="instagram-slider__img"
-                                     alt="attraction"
-                                     title="">
-                            </picture>
-                        </div>
-
-                        <div class="swiper-slide">
-                            <picture class="instagram-slider__img">
-                                <source srcset="<%= require('./img/instagram-img03.webp') %>" type="image/webp">
-                                <img data-src="<%= require('./img/instagram-img03.jpg') %>" src="<%= require('./img/placeholder.png') %>" class="instagram-slider__img"
-                                     alt="attraction"
-                                     title="">
-                            </picture>
-                        </div>
-
-                        <div class="swiper-slide">
-                            <picture class="instagram-slider__img">
-                                <source srcset="<%= require('./img/instagram-img04.webp') %>" type="image/webp">
-                                <img data-src="<%= require('./img/instagram-img04.jpg') %>" src="<%= require('./img/placeholder.png') %>" class="instagram-slider__img"
-                                     alt="attraction"
-                                     title="">
-                            </picture>
-                        </div>
+                        </a>
                     </div>
 
                     <div class="swiper-arrows swiper-button-prev">
@@ -676,22 +638,22 @@
                 </p>
 
                 <div class="reserve">
-                    <div class="reserve__form">
+                    <form class="reserve__form">
                         <div class="reserve-form-content row justify-content-center pb-3">
                             <div class="col-md-4">
                                 <div class="form-group position-relative">
                                     <label for="reserve_name">Ваше имя*</label>
-                                    <input type="text" name="name" id="reserve_name" class="form-control-lg py-2 px-4 rounded-0">
+                                    <input type="text" name="name" id="reserve_name" class="form-control-lg py-2 px-4 rounded-0" required>
                                 </div>
 
                                 <div class="form-group position-relative">
                                     <label for="reserve_phone">Ваш телефон*</label>
-                                    <input type="tel" name="phone" id="reserve_phone" class="form-control-lg py-2 px-4 rounded-0">
+                                    <input type="tel" name="phone" id="reserve_phone" class="form-control-lg py-2 px-4 rounded-0 phone-mask" pattern="\+\d{1,3}\s[\(]{0,1}[0-9]{3}[\)]{0,1}\s\d{2}\s\d{2}\s\d{3}" required>
                                 </div>
 
                                 <div class="form-group position-relative">
                                     <label for="reserve_mail">Ваша почта*</label>
-                                    <input type="email" name="mail" id="reserve_mail" class="form-control-lg py-2 px-4 rounded-0">
+                                    <input type="email" name="mail" id="reserve_mail" class="form-control-lg py-2 px-4 rounded-0" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" required>
                                 </div>
                             </div>
 
@@ -730,7 +692,7 @@
                         </div>
 
                         <button type="submit" class="reserve__submit btn btn-lg btn-primary d-block mt-4 mx-auto font-weight-bold rounded-pill text-white">Забронировать</button>
-                    </div>
+                    </form>
                 </div>
             </div>
         </div>
@@ -833,7 +795,7 @@
                     <div class="col-md-2">
                         <ul class="footer-content__list pl-3 pt-3 m-0">
                             <li class="footer-content__list-item"><a href="#0" class="footer-content__li-text">Апартаменты 4</a></li>
-                            <li class="footer-content__list-item"><a href="#0" class="footer-content__li-text">Как к нам добраться</a></li>
+                            <li class="footer-content__list-item"><a href="contacts.html" class="footer-content__li-text">Как к нам добраться</a></li>
                         </ul>
                     </div>
 
@@ -873,6 +835,7 @@
 
 <div class="icon-load"></div>
 <!-- BODY END   -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 
 </body>
 </html>

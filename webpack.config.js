@@ -1,4 +1,6 @@
 const path = require('path');
+const fs = require('fs');
+
 const webpack = require('webpack');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
@@ -6,6 +8,19 @@ const TerserJSPlugin = require('terser-webpack-plugin');
 const OptimizeCSSAssetsPlugin = require('optimize-css-assets-webpack-plugin');
 const SVGSpritemapPlugin = require('svg-spritemap-webpack-plugin');
 const CleanWebpackPlugin = require('clean-webpack-plugin');
+
+function getViews() {
+    const viewsPath = path.resolve(__dirname, 'src');
+    const items = fs.readdirSync(viewsPath);
+
+    return items
+        .filter(item => /\.html$/.test(item))
+        .map(filename => new HtmlWebpackPlugin({
+            template: path.resolve(viewsPath, filename),
+            filename: filename,
+            favicon: "./src/favicon.ico"
+        }));
+}
 
 module.exports = {
     entry: {main: "./src/js/index.js"},
@@ -73,11 +88,16 @@ module.exports = {
             },
             canPrint: true
         }),
-        new HtmlWebpackPlugin({
-            template: 'src/index.html',
-            filename: "index.html",
-            favicon: "./src/favicon.ico"
-        }),
+        ...getViews(),
+        // new HtmlWebpackPlugin({
+        //     template: 'src/index.html',
+        //     filename: "index.html",
+        //     favicon: "./src/favicon.ico"
+        // }),
+        // new HtmlWebpackPlugin({
+        //     template: 'src/apart-page.html',
+        //     filename: "apart-page.html",
+        // }),
         new SVGSpritemapPlugin("src/img/icons/*.svg", {
             output: {
                 filename: "img/spritemap.svg",
@@ -92,10 +112,15 @@ module.exports = {
             "window.jQuery": 'jquery/dist/jquery.min.js'
         }),
     ],
-    resolve: {
-        alias: {
-            $: path.resolve('./node_modules','jquery/dist/jquery.min.js'),
-            jquery: path.resolve('./node_modules','jquery/dist/jquery.min.js'),
-        }
-    },
+    externals: {
+        jquery: 'jQuery'
+    }
+    // resolve: {
+    //     alias: {
+    //         // $: path.resolve('./node_modules','jquery/dist/jquery.min.js'),
+    //         // jQuery: path.resolve('./node_modules','jquery/dist/jquery.min.js'),
+    //         // jquery: path.resolve('./node_modules','jquery/dist/jquery.min.js'),
+    //         // 'window.jQuery': path.resolve('./node_modules','jquery/dist/jquery.min.js'),
+    //     }
+    // },
 };

@@ -48,6 +48,10 @@
 
 // MAIN SECTION
 .main-section {
+  .container {
+    padding: 255px 0 133px;
+  }
+
   .title {
     margin: 0;
     font-size: 85px;
@@ -82,8 +86,6 @@
 
   .swiper-wrapper {
     .slide-content {
-      padding: 255px 0 0;
-
       &__text-description {
         max-width: 255px;
       }
