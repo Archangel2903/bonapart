@@ -7,6 +7,9 @@ import Swiper from 'swiper/dist/js/swiper.min';
 import 'jquery-form-styler';
 import '@fancyapps/fancybox';
 import IMask from 'imask';
+import moment from 'moment';
+import 'moment/locale/ru';
+import 'bootstrap-daterangepicker';
 import L from 'leaflet';
 import '../img/point.svg';
 
@@ -39,6 +42,7 @@ $(window).on('load', function () {
 });
 
 $(function () {
+    // intersection Observer
     let imagesAll = document.querySelectorAll('img[data-src]');
     let imgObserve = new IntersectionObserver(function (entries) {
         entries.forEach(function (entry) {
@@ -57,6 +61,7 @@ $(function () {
         });
     }
 
+    // Swiper
     let mainSlider = new Swiper(document.querySelector('.main-slider'), {
         direction: 'vertical',
         loop: true,
@@ -106,6 +111,7 @@ $(function () {
         },
     });
 
+    // apartments nav
     $('.main-section-content-nav__link').hover(function () {
         let w = $(this).find('.main-section-content-nav__text').width() + 81;
         $(this).css('width', w);
@@ -113,14 +119,46 @@ $(function () {
         $(this).css('width', 51);
     });
 
+    // form styler
     $('.styled').styler();
 
+    // input Mask
     let phoneInput = document.querySelectorAll('.phone-mask');
     let maskOpt = {
         mask: '{+38} (000) 00 00 000'
     };
-
     phoneInput.forEach(function (input) {
         IMask(input, maskOpt);
     });
+
+    // reserved input
+    moment.updateLocale('ru');
+    console.log(moment().format('LL'));
+
+    let dateInputAll = document.querySelectorAll('input[name="datefilter"]');
+    if (dateInputAll.length > 0) {
+        dateInputAll.forEach(function (i) {
+            $(i).daterangepicker({
+                alwaysShowCalendars: true,
+                autoApply: true,
+                singleDatePicker: true,
+                minDate: moment().format('DD MMMM YYYY'),
+                startDate: moment().format('DD MMMM YYYY'),
+                autoUpdateInput: false,
+                locale: {
+                    format: 'DD MMMM YYYY',
+                    cancelLabel: 'Clear',
+                    separator: ' '
+                }
+            });
+
+            $(i).on('apply.daterangepicker', function (ev, picker) {
+                if ($(this).attr('id') === 'date_out') {
+                    $(this).val(picker.startDate.format('DD MMMM YYYY'));
+                } else {
+                    $(this).val(picker.startDate.format('DD MMMM YYYY'));
+                }
+            });
+        });
+    }
 });

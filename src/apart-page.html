@@ -4,7 +4,7 @@
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
     <meta name="format-detection" content="telephone=no">
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no, maximum-scale=1, shrink-to-fit=no">
-    <title>Главная</title>
+    <title>Страница номера</title>
 </head>
 
 <body class="loaded">
@@ -79,7 +79,7 @@
                         </div>
 
                         <nav class="header-navigation">
-                            <a href="#01" class="header-navigation__link text-white">как к нам добраться</a>
+                            <a href="contacts.html" class="header-navigation__link text-white">как к нам добраться</a>
                         </nav>
                     </div>
                 </div>
@@ -91,12 +91,12 @@
     <!-- CONTENT -->
     <main class="content">
 
-        <div class="section main-section">
+        <div class="section main-section main-section_apartment">
             <div class="main-content">
                 <div class="section-bg">
                     <picture>
-                        <source srcset="<%= require('./img/main-slide-img01.webp') %>" type="image/webp">
-                        <img data-src="<%= require('./img/main-slide-img01.jpg') %>" src="<%= require('./img/placeholder.png') %>" class="section-bg__img" alt="slide-1"
+                        <source srcset="<%= require('./img/main-bg01.webp') %>" type="image/webp">
+                        <img data-src="<%= require('./img/main-bg01.jpg') %>" src="<%= require('./img/placeholder.png') %>" class="section-bg__img" alt="main background"
                              title="">
                     </picture>
                 </div>
@@ -105,40 +105,17 @@
                     <div class="row">
                         <div class="col-md-6 offset-md-1">
                             <div class="slide-content">
-                                <div class="title text-white font-weight-light">
-                                    <span class="title__sup-text">на берегу моря</span>
-                                    апартаменты
+                                <div class="title ml-md-2 text-white font-weight-light">
+                                    <span class="title__sup-text">3-х комнатные апартаменты</span>
+                                    длинное название
+                                    апартаментов
                                 </div>
 
-                                <span class="slide-content__text-description d-block my-5 mr-3 ml-auto text-white">This is Photoshop's version  of Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum</span>
-
-                                <button class="slide-content__button position-relative d-block btn btn-primary rounded-pill ml-auto text-white font-weight-bold shadow-none">
+                                <button class="slide-content__button position-relative d-block btn btn-primary rounded-pill mt-md-5 ml-md-2 text-white font-weight-bold shadow-none">
                                     Забронировать
                                 </button>
                             </div>
                         </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="main-slider">
-                <div class="swiper-wrapper">
-                    <div class="swiper-slide">
-
-                    </div>
-                </div>
-
-                <div class="swiper-controls">
-                    <div class="swiper-arrows swiper-button-prev">
-                        <svg>
-                            <use xlink:href="img/spritemap.svg#sprite-arrow_left"></use>
-                        </svg>
-                    </div>
-                    <div class="swiper-pagination"></div>
-                    <div class="swiper-arrows swiper-button-next">
-                        <svg>
-                            <use xlink:href="img/spritemap.svg#sprite-arrow_right"></use>
-                        </svg>
                     </div>
                 </div>
             </div>
@@ -164,7 +141,217 @@
             </div>
         </div>
 
+        <div class="section advantage-section">
+            <div class="container">
+                <div class="row">
+                    <nav aria-label="breadcrumb">
+                        <ol class="breadcrumb">
+                            <li class="breadcrumb-item"><a href="#">Home</a></li>
+                            <li class="breadcrumb-item active" aria-current="page">Library</li>
+                        </ol>
+                    </nav>
+                </div>
 
+                <div class="row">
+                    <div class="advantage__box col-md-3">
+                        <div class="advantage__ico d-inline-block position-relative">
+                            <svg>
+                                <use xlink:href="img/spritemap.svg#sprite-wifi"></use>
+                            </svg>
+                        </div>
+                        <p class="advantage__caption mt-4 mb-3 font-weight-bold">Wi-Fi</p>
+                        <p class="advantage__text">Отличный интернет</p>
+                    </div>
+
+                    <div class="advantage__box col-md-3">
+                        <div class="advantage__ico d-inline-block position-relative">
+                            <svg>
+                                <use xlink:href="img/spritemap.svg#sprite-cook"></use>
+                            </svg>
+                        </div>
+                        <p class="advantage__caption mt-4 mb-3 font-weight-bold">Удобства</p>
+                        <p class="advantage__text">В каждой квартире есть своя кухня</p>
+                    </div>
+
+                    <div class="advantage__box col-md-3">
+                        <div class="advantage__ico d-inline-block position-relative">
+                            <svg>
+                                <use xlink:href="img/spritemap.svg#sprite-shower"></use>
+                            </svg>
+                        </div>
+                        <p class="advantage__caption mt-4 mb-3 font-weight-bold">Душ</p>
+                        <p class="advantage__text">Современная ванная комната</p>
+                    </div>
+
+                    <div class="advantage__box col-md-3">
+                        <div class="advantage__ico d-inline-block position-relative">
+                            <svg>
+                                <use xlink:href="img/spritemap.svg#sprite-key"></use>
+                            </svg>
+                        </div>
+                        <p class="advantage__caption mt-4 mb-3 font-weight-bold">Под ключ</p>
+                        <p class="advantage__text">Какой-то неизвестный текст</p>
+                    </div>
+
+                    <div class="advantage__box col-md-3">
+                        <div class="advantage__ico d-inline-block position-relative">
+                            <svg>
+                                <use xlink:href="img/spritemap.svg#sprite-tv"></use>
+                            </svg>
+                        </div>
+                        <p class="advantage__caption mt-4 mb-3 font-weight-bold">Преимущества</p>
+                        <p class="advantage__text">Телевизор в каждом номере</p>
+                    </div>
+
+                    <div class="advantage__box col-md-3">
+                        <div class="advantage__ico d-inline-block position-relative">
+                            <svg>
+                                <use xlink:href="img/spritemap.svg#sprite-wave"></use>
+                            </svg>
+                        </div>
+                        <p class="advantage__caption mt-4 mb-3 font-weight-bold">Вид из окна</p>
+                        <p class="advantage__text">Большие балконы террасы с видом на море</p>
+                    </div>
+
+                    <div class="advantage__box col-md-3">
+                        <div class="advantage__ico d-inline-block position-relative">
+                            <svg>
+                                <use xlink:href="img/spritemap.svg#sprite-rooms"></use>
+                            </svg>
+                        </div>
+                        <p class="advantage__caption mt-4 mb-3 font-weight-bold">Номер</p>
+                        <p class="advantage__text">3-х комнатный номер</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="section tour3d-section">
+            <div class="container">
+                <p class="title">
+                    <span class="title__sup-text">полный</span>
+                    3D тур по номеру
+                </p>
+                <div class="row justify-content-center">
+                    <div class="col-md-10">
+                        <div class="tour3d-content row position-relative pt-5 mt-5">
+                            <div class="col-12">
+                                <picture>
+                                    <source srcset="<%= require('./img/3d-tour-img01.webp') %>" type="image/webp">
+                                    <img data-src="<%= require('./img/3d-tour-img01.jpg') %>" src="<%= require('./img/placeholder.png') %>" alt="3d tour"
+                                         title="">
+                                </picture>
+
+                                <div class="scroll-ico">
+                                    <svg>
+                                        <use xlink:href="img/spritemap.svg#sprite-scroll"></use>
+                                    </svg>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="tour3d-description row">
+                            <div class="col-md-6">
+                                <p class="tour3d-description__text">This is Photoshop's version of Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin,
+                                    lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit. Duis sed odio sit amet nibh vulputate cursus a sit amet
+                                    mauris.
+                                    Morbi accumsan ipsum velit. Nam nec tellus a odio tincidunt auctor a ornare odio. Sed non mauris vitae erat consequat auctor eu in elit. This is
+                                    Photoshop's version of Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit
+                                    consequat ipsum, nec sagittis sem nibh id elit. Duis sed odio sit amet nibh vulputate cursus a sit amet mauris. Morbi accumsan ipsum velit. </p>
+                            </div>
+                            <div class="col-md-6">
+                                <p class="tour3d-description__text">This is Photoshop's version of Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin,
+                                    lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit. Duis sed odio sit amet nibh vulputate cursus a sit amet
+                                    mauris.
+                                    Morbi accumsan ipsum velit. Nam nec tellus a odio tincidunt auctor a ornare odio. Sed non mauris vitae erat consequat auctor eu in elit. This is
+                                    Photoshop's version of Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit
+                                    consequat ipsum, nec sagittis sem nibh id elit. Duis sed odio sit amet nibh vulputate cursus a sit amet mauris. Morbi accumsan ipsum velit. </p>
+                            </div>
+
+                            <div class="col-12">
+                                <div class="season-prices row">
+                                    <div class="season-prices__box col-md-3">
+                                        <p class="season-prices__date"><svg>
+                                            <use xlink:href="img/spritemap.svg#sprite-calendar"></use>
+                                        </svg> с 1 по 31 мая</p>
+                                        <p class="season-prices__price">700 грн/сутки</p>
+                                    </div>
+
+                                    <div class="season-prices__box col-md-3">
+                                        <div class="season-prices__date"><svg>
+                                            <use xlink:href="img/spritemap.svg#sprite-calendar"></use>
+                                        </svg> с 1 по 30 июня</div>
+                                        <div class="season-prices__price">900 грн/сутки</div>
+                                    </div>
+
+                                    <div class="season-prices__box col-md-3">
+                                        <div class="season-prices__date"><svg>
+                                            <use xlink:href="img/spritemap.svg#sprite-calendar"></use>
+                                        </svg> с 1 по 31 июля</div>
+                                        <div class="season-prices__price">1000 грн/сутки</div>
+                                    </div>
+
+                                    <div class="season-prices__box col-md-3">
+                                        <div class="season-prices__date"><svg>
+                                            <use xlink:href="img/spritemap.svg#sprite-calendar"></use>
+                                        </svg> с 1 по 31 августа</div>
+                                        <div class="season-prices__price">1000 грн/сутки</div>
+                                    </div>
+
+                                    <div class="season-prices__box col-md-3">
+                                        <div class="season-prices__date"><svg>
+                                            <use xlink:href="img/spritemap.svg#sprite-calendar"></use>
+                                        </svg> с 1 по 30 сентября</div>
+                                        <div class="season-prices__price">700 грн/сутки</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="section simple-reserved-section">
+            <div class="container">
+                <p class="title">
+                    <span class="title__sup-text">простое</span>
+                    бронирование
+                </p>
+                <div class="row"></div>
+            </div>
+        </div>
+
+        <div class="section photo-room-section">
+            <div class="container">
+                <p class="title">
+                    <span class="title__sup-text">больше</span>
+                    фотографий номера
+                </p>
+                <div class="row"></div>
+            </div>
+        </div>
+
+        <div class="section last-reviews-section">
+            <div class="container">
+                <p class="title">
+                    <span class="title__sup-text">последние</span>
+                    отзывы о нас
+                </p>
+                <div class="row">
+
+                </div>
+            </div>
+        </div>
+
+        <div class="section pages-nav-section">
+            <div class="container">
+                <div class="pages-nav row">
+                    <a href="#0" class="pages-nav__link">Предыдущие апартаменты</a>
+                    <a href="#0" class="pages-nav__link">Следующие апартаменты</a>
+                </div>
+            </div>
+        </div>
 
     </main>
     <!-- CONTENT END -->
@@ -224,7 +411,9 @@
                     <div class="col-md-4  d-inline-flex justify-content-end">
                         <ul class="footer-content__list pt-3 m-0 ml-auto">
                             <li class="footer-content__list-item"><span class="footer-content__li-text">г. Железный порт, ул. Набережная, 1</span></li>
-                            <li class="footer-content__list-item"><a href="tel:+380500000000" class="footer-content__li-text">+38 (050) 000 00 00</a> / <a href="tel:+380500000000" class="footer-content__li-text">+38 (050) 000 00 00</a></li>
+                            <li class="footer-content__list-item"><a href="tel:+380500000000" class="footer-content__li-text">+38 (050) 000 00 00</a> / <a href="tel:+380500000000"
+                                                                                                                                                           class="footer-content__li-text">+38
+                                (050) 000 00 00</a></li>
                             <li class="footer-content__list-item"><a href="mailto:apartments@gmail.com" class="footer-content__li-text">apartments@gmail.com</a></li>
                         </ul>
                     </div>

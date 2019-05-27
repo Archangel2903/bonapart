@@ -60,6 +60,13 @@ header.header {
 
 .header-content {
   &__dropdown {
+    &.show {
+      .dropdown-toggle {
+        svg {
+          transform: rotate3d(1, 0, 0, 180deg);
+        }
+      }
+    }
 
     .dropdown-toggle {
       &:after {
@@ -72,6 +79,7 @@ header.header {
         margin-left: 9px;
         fill: white;
         opacity: .5;
+        transition: $transition-base;
       }
     }
   }
