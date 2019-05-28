@@ -141,17 +141,17 @@
             </div>
         </div>
 
-        <div class="section advantage-section">
-            <div class="container">
-                <div class="row">
-                    <nav aria-label="breadcrumb">
-                        <ol class="breadcrumb">
-                            <li class="breadcrumb-item"><a href="#">Home</a></li>
-                            <li class="breadcrumb-item active" aria-current="page">Library</li>
-                        </ol>
-                    </nav>
-                </div>
+        <div class="section advantage-section pt-0">
+            <div class="container mb-5">
+                <nav aria-label="breadcrumb">
+                    <ol class="breadcrumb py-3 px-0 m-0 bg-transparent">
+                        <li class="breadcrumb-item"><a href="#">Главная страница</a></li>
+                        <li class="breadcrumb-item active" aria-current="page">Апартаменты 1</li>
+                    </ol>
+                </nav>
+            </div>
 
+            <div class="container pt-3">
                 <div class="row">
                     <div class="advantage__box col-md-3">
                         <div class="advantage__ico d-inline-block position-relative">
@@ -235,7 +235,7 @@
                 <div class="row justify-content-center">
                     <div class="col-md-10">
                         <div class="tour3d-content row position-relative pt-5 mt-5">
-                            <div class="col-12">
+                            <div class="col-12 pt-3">
                                 <picture>
                                     <source srcset="<%= require('./img/3d-tour-img01.webp') %>" type="image/webp">
                                     <img data-src="<%= require('./img/3d-tour-img01.jpg') %>" src="<%= require('./img/placeholder.png') %>" alt="3d tour"
@@ -250,59 +250,79 @@
                             </div>
                         </div>
 
-                        <div class="tour3d-description row">
-                            <div class="col-md-6">
-                                <p class="tour3d-description__text">This is Photoshop's version of Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin,
-                                    lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit. Duis sed odio sit amet nibh vulputate cursus a sit amet
-                                    mauris.
-                                    Morbi accumsan ipsum velit. Nam nec tellus a odio tincidunt auctor a ornare odio. Sed non mauris vitae erat consequat auctor eu in elit. This is
-                                    Photoshop's version of Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit
-                                    consequat ipsum, nec sagittis sem nibh id elit. Duis sed odio sit amet nibh vulputate cursus a sit amet mauris. Morbi accumsan ipsum velit. </p>
+                        <div class="tour3d-description d-flex flex-wrap bg-white">
+                            <div class="tour3d-description__text-wrap">
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <p class="tour3d-description__text m-0 font-weight-light">This is Photoshop's version of Lorem Ipsum. Proin gravida nibh vel velit auctor
+                                            aliquet.
+                                            Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit. Duis sed odio sit amet nibh
+                                            vulputate cursus a sit amet mauris. <br>
+                                            Morbi accumsan ipsum velit. Nam nec tellus a odio tincidunt auctor a ornare odio. Sed non mauris vitae erat consequat auctor eu in elit.
+                                            This is Photoshop's version of Lorem</p>
+                                    </div>
+
+                                    <div class="col-md-6">
+                                        <p class="tour3d-description__text m-0 font-weight-light">This is Photoshop's version of Lorem Ipsum. Proin gravida nibh vel velit auctor
+                                            aliquet.
+                                            Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit. Duis sed odio sit amet nibh
+                                            vulputate cursus a sit amet mauris.<br>
+                                            Morbi accumsan ipsum velit. Nam nec tellus a odio tincidunt auctor a ornare odio. Sed non mauris vitae erat consequat auctor eu in elit.
+                                            This is Photoshop's version of Lorem</p>
+                                    </div>
+                                </div>
                             </div>
-                            <div class="col-md-6">
-                                <p class="tour3d-description__text">This is Photoshop's version of Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin,
-                                    lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit. Duis sed odio sit amet nibh vulputate cursus a sit amet
-                                    mauris.
-                                    Morbi accumsan ipsum velit. Nam nec tellus a odio tincidunt auctor a ornare odio. Sed non mauris vitae erat consequat auctor eu in elit. This is
-                                    Photoshop's version of Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit
-                                    consequat ipsum, nec sagittis sem nibh id elit. Duis sed odio sit amet nibh vulputate cursus a sit amet mauris. Morbi accumsan ipsum velit. </p>
-                            </div>
 
-                            <div class="col-12">
-                                <div class="season-prices row">
-                                    <div class="season-prices__box col-md-3">
-                                        <p class="season-prices__date"><svg>
-                                            <use xlink:href="img/spritemap.svg#sprite-calendar"></use>
-                                        </svg> с 1 по 31 мая</p>
-                                        <p class="season-prices__price">700 грн/сутки</p>
+                            <div class="col-12 pt-2">
+                                <div class="season-prices row border-top justify-content-center">
+                                    <div class="season-prices__box col-md p-0">
+                                        <p class="season-prices__date">
+                                            <span class="season-prices__date-ico"><svg>
+                                                <use xlink:href="img/spritemap.svg#sprite-calendar"></use>
+                                            </svg></span>
+                                            с 1 по 31 мая
+                                        </p>
+                                        <p class="season-prices__price border-top">700 грн/сутки</p>
                                     </div>
 
-                                    <div class="season-prices__box col-md-3">
-                                        <div class="season-prices__date"><svg>
-                                            <use xlink:href="img/spritemap.svg#sprite-calendar"></use>
-                                        </svg> с 1 по 30 июня</div>
-                                        <div class="season-prices__price">900 грн/сутки</div>
+                                    <div class="season-prices__box col-md p-0 border-left">
+                                        <div class="season-prices__date">
+                                            <span class="season-prices__date-ico"><svg>
+                                                <use xlink:href="img/spritemap.svg#sprite-calendar"></use>
+                                            </svg></span>
+                                            с 1 по 30 июня
+                                        </div>
+                                        <div class="season-prices__price border-top">900 грн/сутки</div>
                                     </div>
 
-                                    <div class="season-prices__box col-md-3">
-                                        <div class="season-prices__date"><svg>
-                                            <use xlink:href="img/spritemap.svg#sprite-calendar"></use>
-                                        </svg> с 1 по 31 июля</div>
-                                        <div class="season-prices__price">1000 грн/сутки</div>
+                                    <div class="season-prices__box col-md p-0 border-left">
+                                        <div class="season-prices__date">
+                                            <span class="season-prices__date-ico"><svg>
+                                                <use xlink:href="img/spritemap.svg#sprite-calendar"></use>
+                                            </svg></span>
+                                            с 1 по 31 июля
+                                        </div>
+                                        <div class="season-prices__price border-top">1000 грн/сутки</div>
                                     </div>
 
-                                    <div class="season-prices__box col-md-3">
-                                        <div class="season-prices__date"><svg>
-                                            <use xlink:href="img/spritemap.svg#sprite-calendar"></use>
-                                        </svg> с 1 по 31 августа</div>
-                                        <div class="season-prices__price">1000 грн/сутки</div>
+                                    <div class="season-prices__box col-md p-0 border-left">
+                                        <div class="season-prices__date">
+                                            <span class="season-prices__date-ico"><svg>
+                                                <use xlink:href="img/spritemap.svg#sprite-calendar"></use>
+                                            </svg></span>
+                                            с 1 по 31 августа
+                                        </div>
+                                        <div class="season-prices__price border-top">1000 грн/сутки</div>
                                     </div>
 
-                                    <div class="season-prices__box col-md-3">
-                                        <div class="season-prices__date"><svg>
-                                            <use xlink:href="img/spritemap.svg#sprite-calendar"></use>
-                                        </svg> с 1 по 30 сентября</div>
-                                        <div class="season-prices__price">700 грн/сутки</div>
+                                    <div class="season-prices__box col-md p-0 border-left">
+                                        <div class="season-prices__date">
+                                            <span class="season-prices__date-ico"><svg>
+                                                <use xlink:href="img/spritemap.svg#sprite-calendar"></use>
+                                            </svg></span>
+                                            с 1 по 30 сентября
+                                        </div>
+                                        <div class="season-prices__price border-top">700 грн/сутки</div>
                                     </div>
                                 </div>
                             </div>
@@ -312,7 +332,7 @@
             </div>
         </div>
 
-        <div class="section simple-reserved-section">
+        <div class="section simple-reserved-section bg-secondary">
             <div class="container">
                 <p class="title">
                     <span class="title__sup-text">простое</span>

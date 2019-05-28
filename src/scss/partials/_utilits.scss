@@ -197,6 +197,28 @@
   }
 }
 
+.breadcrumb {
+  &-item {
+    font-size: 14px;
+
+    &.active {
+      color: #418dcb;
+    }
+
+    a {
+      color: #a7a7a7;
+    }
+
+    & + .breadcrumb-item {
+      padding-left: .25rem;
+
+      &:before {
+        padding-right: .25rem;
+      }
+    }
+  }
+}
+
 @mixin button-variant($background, $border, $hover-background: darken($background, 7.5%), $hover-border: darken($border, 10%), $active-background: darken($background, 10%), $active-border: darken($border, 12.5%)) {
   color: color-yiq($background);
   @include gradient-bg($background);

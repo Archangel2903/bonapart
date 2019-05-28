@@ -20,6 +20,7 @@ $(window).on('load', function () {
     } else {
         b.addClass('web');
     }
+
     b.removeClass('loaded');
 
     //leaflet map
@@ -153,11 +154,7 @@ $(function () {
             });
 
             $(i).on('apply.daterangepicker', function (ev, picker) {
-                if ($(this).attr('id') === 'date_out') {
-                    $(this).val(picker.startDate.format('DD MMMM YYYY'));
-                } else {
-                    $(this).val(picker.startDate.format('DD MMMM YYYY'));
-                }
+                $(this).val(picker.startDate.format('DD MMMM YYYY'));
             });
         });
     }

@@ -772,11 +772,12 @@
 
 // 3D TOUR SECTION
 .tour3d-section {
-  padding: 27px 0 0;
+  padding: 90px 0 120px;
+  background: #f5f5f5;
 }
 
 .tour3d-content {
-
+  margin-bottom: 40px;
 }
 
 .scroll-ico {
@@ -789,5 +790,204 @@
     width: 44px;
     height: 44px;
     fill: white;
+  }
+}
+
+.tour3d-description {
+  box-shadow: 3px 4px 24px rgba(0, 0, 0, 0.15);
+
+  &__text {
+    line-height: 1.2;
+
+    &-wrap {
+      padding: 40px;
+    }
+  }
+}
+
+.season-prices {
+  &__box {
+
+  }
+  &__date {
+    min-height: 92px;
+    padding: 30px 35px 20px;
+    margin: 0;
+    color: #383838;
+    text-align: center;
+
+    svg {
+      position: relative;
+      width: 22px;
+      height: 20px;
+      margin-right: 10px;
+      z-index: 1;
+    }
+  }
+  &__date-ico {
+    position: relative;
+
+    &:before {
+      @extend .apartment-includes__ico:before;
+      right: auto;
+      left: -6px;
+    }
+  }
+  &__price {
+    padding: 28px 10px;
+    margin: 0;
+    text-align: center;
+  }
+}
+
+// SIMPLE RESERVED SECTION
+.simple-reserved-section {
+
+}
+
+// PHOTO ROOM SECTION
+.photo-room-section {
+
+}
+
+// LAST REVIEWS SECTION
+.last-reviews-section {
+
+}
+
+// PAGES NAV SECTION
+.pages-nav-section {
+
+}
+
+// WAYS SECTION
+.ways-section {
+  padding: 115px 0 105px;
+  background: #f5f5f5;
+}
+
+.ways {
+  padding-top: 85px;
+
+  &__box {
+    box-shadow: 3px 4px 20px rgba(0, 0, 0, 0.15);
+  }
+
+  &__icon {
+    position: relative;
+
+    &:before {
+      @extend .advantage__ico:before;
+      z-index: 0;
+    }
+
+    svg {
+      position: relative;
+      z-index: 1;
+      width: 44px;
+      height: 36px;
+    }
+  }
+
+  &__title {
+    font-family: $font-family-custom;
+  }
+
+  &__text {
+    color: #6a6a6a;
+  }
+
+  &__link {
+    color: #418dcb;
+  }
+}
+
+// MAP SECTION
+.map-section {
+  #map {
+    height: 500px;
+
+    &:after {
+      display: none;
+    }
+  }
+}
+
+// CONTACTS SECTION
+.contacts-section {
+  padding: 80px 0 99px;
+}
+
+.contacts {
+  &__title {
+    position: relative;
+    padding: 0 0 11px;
+    margin: 0;
+    font-family: $font-family-custom;
+
+    &:after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 25px;
+      height: 3px;
+      background: $main-first-color;
+    }
+  }
+}
+
+.contact-icons-list {
+  &__item {
+
+  }
+
+  &__icon {
+    position: absolute;
+    top: 0;
+    left: -37px;
+
+    &:after {
+      @extend .apartment-includes__ico:before;
+      right: 8px;
+    }
+
+    svg {
+      position: relative;
+      width: 20px;
+      height: 20px;
+      fill: $main-second-color;
+      z-index: 1;
+    }
+  }
+
+  &__text {
+    & + .contact-icons-list__text:before {
+      content: ' / '
+    }
+  }
+}
+
+.contacts-form {
+  label {
+    color: #919191;
+    font-weight: 300;
+    font-size: 14px;
+  }
+
+  &__field {
+    height: 45px;
+    background: #f0f0f0;
+
+    &:focus, &.focus {
+      background: #f0f0f0;
+    }
+  }
+
+  textarea {
+    position: relative;
+    display: block;
+    min-height: 200px;
+    height: 208px;
   }
 }
