@@ -41,6 +41,8 @@
     "intersection-observer": "^0.7.0",
     "jquery": "^3.4.1",
     "jquery-form-styler": "^2.0.2",
+    "jquery-ui": "^1.12.1",
+    "jquery-ui-bundle": "^1.12.1-migrate",
     "leaflet": "^1.5.1",
     "moment": "^2.24.0",
     "popper.js": "^1.15.0",

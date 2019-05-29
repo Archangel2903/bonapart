@@ -282,7 +282,7 @@
                                             </svg></span>
                                             с 1 по 31 мая
                                         </p>
-                                        <p class="season-prices__price border-top">700 грн/сутки</p>
+                                        <p class="season-prices__price border-top text-secondary font-weight-medium">700 грн/сутки</p>
                                     </div>
 
                                     <div class="season-prices__box col-md p-0 border-left">
@@ -292,7 +292,7 @@
                                             </svg></span>
                                             с 1 по 30 июня
                                         </div>
-                                        <div class="season-prices__price border-top">900 грн/сутки</div>
+                                        <p class="season-prices__price border-top text-secondary font-weight-medium">900 грн/сутки</p>
                                     </div>
 
                                     <div class="season-prices__box col-md p-0 border-left">
@@ -302,7 +302,7 @@
                                             </svg></span>
                                             с 1 по 31 июля
                                         </div>
-                                        <div class="season-prices__price border-top">1000 грн/сутки</div>
+                                        <p class="season-prices__price border-top text-secondary font-weight-medium">1000 грн/сутки</p>
                                     </div>
 
                                     <div class="season-prices__box col-md p-0 border-left">
@@ -312,7 +312,7 @@
                                             </svg></span>
                                             с 1 по 31 августа
                                         </div>
-                                        <div class="season-prices__price border-top">1000 грн/сутки</div>
+                                        <p class="season-prices__price border-top text-secondary font-weight-medium">1000 грн/сутки</p>
                                     </div>
 
                                     <div class="season-prices__box col-md p-0 border-left">
@@ -322,7 +322,7 @@
                                             </svg></span>
                                             с 1 по 30 сентября
                                         </div>
-                                        <div class="season-prices__price border-top">700 грн/сутки</div>
+                                        <p class="season-prices__price border-top text-secondary font-weight-medium">700 грн/сутки</p>
                                     </div>
                                 </div>
                             </div>
@@ -334,11 +334,53 @@
 
         <div class="section simple-reserved-section bg-secondary">
             <div class="container">
-                <p class="title">
+                <p class="title text-white">
                     <span class="title__sup-text">простое</span>
                     бронирование
                 </p>
-                <div class="row"></div>
+
+                <div class="row">
+                    <div class="col-md-8">
+                        <div class="calendar-reserved row">
+                            <div class="col-md-6">
+                                <div class="calendar-reserved__box">
+
+                                </div>
+                            </div>
+
+                            <div class="col-md-6">
+                                <div class="calendar-reserved__box">
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="simple-reserved-form">
+                    <div class="form-row">
+                        <div class="col-md-4">
+                            <div class="form-group">
+                                <label for="apart_reserve_name">Ваше имя*</label>
+                                <input type="text" id="apart_reserve_name" class="form-control">
+                            </div>
+                        </div>
+
+                        <div class="col-md-4">
+                            <div class="form-group">
+                                <label for="apart_reserve_phone">Ваш телефон*</label>
+                                <input type="text" id="apart_reserve_phone" class="form-control">
+                            </div>
+                        </div>
+
+                        <div class="col-md-4">
+                            <div class="form-group">
+                                <label for="apart_reserve_mail">Ваша почта*</label>
+                                <input type="text" id="apart_reserve_mail" class="form-control">
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
 
@@ -348,7 +390,60 @@
                     <span class="title__sup-text">больше</span>
                     фотографий номера
                 </p>
-                <div class="row"></div>
+                <div class="photo-room row">
+                    <div class="photo-room__box col-md-3">
+                        <picture>
+                            <source srcset="<%= require('./img/apartment-img01.webp') %>" type="image/webp">
+                            <img data-src="<%= require('./img/apartment-img01.jpg') %>" src="<%= require('./img/placeholder.png') %>" class="photo-room__img" alt="room" title="">
+                        </picture>
+                    </div>
+                    <div class="photo-room__box col-md-3">
+                        <picture>
+                            <source srcset="<%= require('./img/apartment-img02.webp') %>" type="image/webp">
+                            <img data-src="<%= require('./img/apartment-img02.jpg') %>" src="<%= require('./img/placeholder.png') %>" class="photo-room__img" alt="room" title="">
+                        </picture>
+                    </div>
+                    <div class="photo-room__box col-md-3">
+                        <picture>
+                            <source srcset="<%= require('./img/apartment-img03.webp') %>" type="image/webp">
+                            <img data-src="<%= require('./img/apartment-img03.jpg') %>" src="<%= require('./img/placeholder.png') %>" class="photo-room__img" alt="room" title="">
+                        </picture>
+                    </div>
+                    <div class="photo-room__box col-md-3">
+                        <picture>
+                            <source srcset="<%= require('./img/apartment-img04.webp') %>" type="image/webp">
+                            <img data-src="<%= require('./img/apartment-img04.jpg') %>" src="<%= require('./img/placeholder.png') %>" class="photo-room__img" alt="room" title="">
+                        </picture>
+                    </div>
+                    <div class="photo-room__box col-md-3">
+                        <picture>
+                            <source srcset="<%= require('./img/apartment-img01.webp') %>" type="image/webp">
+                            <img data-src="<%= require('./img/apartment-img01.jpg') %>" src="<%= require('./img/placeholder.png') %>" class="photo-room__img" alt="room" title="">
+                        </picture>
+                    </div>
+                    <div class="photo-room__box col-md-3">
+                        <picture>
+                            <source srcset="<%= require('./img/apartment-img02.webp') %>" type="image/webp">
+                            <img data-src="<%= require('./img/apartment-img02.jpg') %>" src="<%= require('./img/placeholder.png') %>" class="photo-room__img" alt="room" title="">
+                        </picture>
+                    </div>
+                    <div class="photo-room__box col-md-3">
+                        <picture>
+                            <source srcset="<%= require('./img/apartment-img03.webp') %>" type="image/webp">
+                            <img data-src="<%= require('./img/apartment-img03.jpg') %>" src="<%= require('./img/placeholder.png') %>" class="photo-room__img" alt="room" title="">
+                        </picture>
+                    </div>
+                    <div class="photo-room__box col-md-3">
+                        <picture>
+                            <source srcset="<%= require('./img/apartment-img04.webp') %>" type="image/webp">
+                            <img data-src="<%= require('./img/apartment-img04.jpg') %>" src="<%= require('./img/placeholder.png') %>" class="photo-room__img" alt="room" title="">
+                        </picture>
+                    </div>
+
+                    <div class="col-12 mt-5">
+                        <button type="button" class="btn btn-primary btn-custom d-block mt-4 mx-auto rounded-pill text-white shadow-none">Забронировать</button>
+                    </div>
+                </div>
             </div>
         </div>
 
@@ -358,8 +453,78 @@
                     <span class="title__sup-text">последние</span>
                     отзывы о нас
                 </p>
-                <div class="row">
+                <div class="row justify-content-center">
+                    <div class="reviews col-md-10">
 
+                        <div class="reviews__item media flex-column">
+                            <div class="reviews__item-head media-head mb-3">
+                                <h5 class="reviews__title">Александр</h5>
+
+                                <div class="reviews__info pr-1 pl-5 ml-5">
+                                    <div class="reviews-rating">
+                                        <a href="#01" class="reviews-rating__star"></a>
+                                        <a href="#02" class="reviews-rating__star"></a>
+                                        <a href="#03" class="reviews-rating__star"></a>
+                                        <a href="#04" class="reviews-rating__star"></a>
+                                        <a href="#05" class="reviews-rating__star"></a>
+                                    </div>
+
+                                    <span class="reviews__info-date pl-3">10.01.2019</span>
+
+                                    <a href="#fb" class="reviews__info-link float-right">ссылка на fb наверное длинная</a>
+                                </div>
+                            </div>
+
+                            <div class="reviews__item-body media-body">
+                                <p class="reviews__text mb-3">This is Photoshop's version  of Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit. Duis sed odio sit amet nibh vulputate cursus a sit amet mauris. Morbi accumsan ipsum velit. Nam nec tellus a odio tincidunt auctor a ornare odio. Sed non  mauris vitae erat consequat auctor eu in elit. C</p>
+
+                                <a href="#0" class="reviews__answer">ответить</a>
+                            </div>
+                        </div>
+
+                        <div class="reviews__item media flex-column">
+                            <div class="reviews__item-head media-head mb-3">
+                                <h5 class="reviews__title">Александр</h5>
+
+                                <div class="reviews__info pr-1 pl-5 ml-5">
+                                    <div class="reviews-rating">
+                                        <a href="#01" class="reviews-rating__star"></a>
+                                        <a href="#02" class="reviews-rating__star"></a>
+                                        <a href="#03" class="reviews-rating__star"></a>
+                                        <a href="#04" class="reviews-rating__star"></a>
+                                        <a href="#05" class="reviews-rating__star"></a>
+                                    </div>
+
+                                    <span class="reviews__info-date pl-3">10.01.2019</span>
+
+                                    <a href="#fb" class="reviews__info-link float-right">ссылка на fb наверное длинная</a>
+                                </div>
+                            </div>
+
+                            <div class="reviews__item-body media-body">
+                                <p class="reviews__text mb-3">This is Photoshop's version  of Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit. Duis sed odio sit amet nibh vulputate cursus a sit amet mauris. Morbi accumsan ipsum velit. Nam nec tellus a odio tincidunt auctor a ornare odio. Sed non  mauris vitae erat consequat auctor eu in elit. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Mauris in erat justo. Nullam ac urna eu felis dapibus condimentum sit amet a augue. Sed non neque elit. Sed ut imperdiet nisi. Proin condimentum fermentum nunc. Etiam</p>
+
+                                <a href="#0" class="reviews__answer">ответить</a>
+
+                                <div class="reviews__item media flex-column">
+                                    <div class="reviews__item-head media-head mb-3">
+                                        <h5 class="reviews__title">Администратор</h5>
+
+                                        <div class="reviews__info">
+                                            <span class="reviews__info-date">10.01.2019</span>
+                                        </div>
+                                    </div>
+
+                                    <div class="reviews__item-body media-body">
+                                        <p class="reviews__text mb-3 pb-1">This is Photoshop's version  of Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit. Duis sed odio sit amet nibh vulputate cursus a sit amet mauris. Morbi accumsan ipsum velit. Nam nec tellus a odio tincidunt auctor a ornare odio. Sed non  mauris vitae erat consequat</p>
+
+                                        <a href="#0" class="reviews__answer">ответить</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
                 </div>
             </div>
         </div>

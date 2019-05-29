@@ -18,7 +18,7 @@
 
 .title {
   display: block;
-  max-width: 640px;
+  max-width: 800px;
   width: max-content;
   margin: 0 auto 0;
   color: #120706;
@@ -105,7 +105,8 @@
   max-height: 690px;
   overflow: hidden;
 
-  .swiper-wrapper {}
+  .swiper-wrapper {
+  }
 
   .swiper-controls {
     position: absolute;
@@ -786,6 +787,17 @@
   left: 50%;
   transform: translateX(-50%);
 
+  &:before {
+    content: '';
+    position: absolute;
+    top: -25px;
+    left: 50%;
+    width: 2px;
+    height: 15px;
+    background: white;
+    transform: translateX(-50%);
+  }
+
   svg {
     width: 44px;
     height: 44px;
@@ -797,6 +809,7 @@
   box-shadow: 3px 4px 24px rgba(0, 0, 0, 0.15);
 
   &__text {
+    color: #727272;
     line-height: 1.2;
 
     &-wrap {
@@ -809,6 +822,7 @@
   &__box {
 
   }
+
   &__date {
     min-height: 92px;
     padding: 30px 35px 20px;
@@ -824,6 +838,7 @@
       z-index: 1;
     }
   }
+
   &__date-ico {
     position: relative;
 
@@ -833,6 +848,7 @@
       left: -6px;
     }
   }
+
   &__price {
     padding: 28px 10px;
     margin: 0;
@@ -842,16 +858,89 @@
 
 // SIMPLE RESERVED SECTION
 .simple-reserved-section {
-
+  padding: 448px 0;
 }
 
 // PHOTO ROOM SECTION
 .photo-room-section {
+  padding: 95px 0 115px;
+}
 
+.photo-room {
+  margin-top: 112px;
+
+  &__box {
+    &:not(:nth-last-child(-1n+5)) {
+      margin-bottom: 30px;
+    }
+  }
+
+  &__img {
+    width: 100%;
+    height: 270px;
+    object-fit: cover;
+    object-position: center;
+  }
 }
 
 // LAST REVIEWS SECTION
 .last-reviews-section {
+  padding: 99px 0 0;
+}
+
+.reviews {
+  margin: 95px auto 0;
+
+  &__item {
+    &:not(:last-child) {
+      margin-bottom: 56px;
+    }
+
+    &-head {
+
+    }
+
+    &-body {
+
+    }
+  }
+
+  &__title {
+    font-family: $font-family-custom;
+  }
+
+  &__info {
+    &-date {
+      color: #6e6e6e;
+    }
+
+    &-link {
+
+    }
+  }
+
+  &__text {
+    color: #979797;
+  }
+
+  &__answer {
+    color: #6e6e6e;
+  }
+}
+
+.media {
+  .media {
+    padding-left: 43px;
+    margin-top: 27px;
+  }
+}
+
+.media-head {
+  width: 100%;
+  flex: 1;
+}
+
+.reviews-rating {
 
 }
 

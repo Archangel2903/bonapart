@@ -1,6 +1,7 @@
 import '../scss/main.scss';
 import 'intersection-observer';
 import $ from 'jquery';
+import 'jquery-ui-bundle'
 import 'popper.js';
 import 'bootstrap';
 import Swiper from 'swiper/dist/js/swiper.min';
@@ -132,7 +133,7 @@ $(function () {
         IMask(input, maskOpt);
     });
 
-    // reserved input
+    // datepicker input
     moment.updateLocale('ru');
     console.log(moment().format('LL'));
 
@@ -158,4 +159,6 @@ $(function () {
             });
         });
     }
+
+    $/*('input[name="datefilter"]').datepicker();*/
 });

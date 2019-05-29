@@ -115,12 +115,4 @@ module.exports = {
     externals: {
         jquery: 'jQuery'
     }
-    // resolve: {
-    //     alias: {
-    //         // $: path.resolve('./node_modules','jquery/dist/jquery.min.js'),
-    //         // jQuery: path.resolve('./node_modules','jquery/dist/jquery.min.js'),
-    //         // jquery: path.resolve('./node_modules','jquery/dist/jquery.min.js'),
-    //         // 'window.jQuery': path.resolve('./node_modules','jquery/dist/jquery.min.js'),
-    //     }
-    // },
 };
