@@ -1,0 +1,12 @@
+pages:
+  stage: deploy
+  script:
+    - npm install
+    - npm run build
+    # Выкладка
+    - ls -la
+    - mv dist public
+  artifacts:
+    expire_in: 15 mins
+    paths:
+    - public
