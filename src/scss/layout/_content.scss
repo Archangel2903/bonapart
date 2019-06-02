@@ -884,15 +884,15 @@
 }
 
 // LAST REVIEWS SECTION
-.last-reviews-section {
-  padding: 99px 0 0;
+.reviews-section {
+  padding: 99px 0 125px;
 }
 
 .reviews {
   margin: 95px auto 0;
 
   &__item {
-    &:not(:last-child) {
+    &:not(:last-of-type) {
       margin-bottom: 56px;
     }
 
@@ -915,7 +915,19 @@
     }
 
     &-link {
+      color: #418dcb;
+    }
+  }
 
+  &__social {
+    padding: 0 18px;
+  }
+
+  &__soc-link {
+    svg {
+      min-width: 97px;
+      width: 97px;
+      height: 17px;
     }
   }
 
@@ -925,6 +937,10 @@
 
   &__answer {
     color: #6e6e6e;
+  }
+
+  &__button {
+    padding: 12px 33px;
   }
 }
 
@@ -946,7 +962,36 @@
 
 // PAGES NAV SECTION
 .pages-nav-section {
+  padding: 33px 0;
+  background: #f5f5f5;
+}
 
+.pages-nav {
+  &__link {
+    max-width: 400px;
+    width: 100%;
+    padding: 26px 0;
+    margin: 0 15px;
+    font-family: $font-family-custom;
+    box-shadow: 3px 4px 24px rgba(0, 0, 0, 0.15);
+
+    &:hover {
+      text-decoration: none;
+    }
+
+    svg {
+      width: 21px;
+      height: 21px;
+      fill: #a1a1a1;
+    }
+  }
+  &__number {
+    display: inline-block;
+    width: 29px;
+    height: 29px;
+    font-size: 20px;
+    text-align: center;
+  }
 }
 
 // WAYS SECTION
