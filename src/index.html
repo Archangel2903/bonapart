@@ -16,9 +16,9 @@
         <div class="header-top py-1 bg-white">
             <div class="container">
                 <div class="row justify-content-between">
-                    <div class="col-md-10">
+                    <div class="col-8 col-md-10">
                         <ul class="header-top__contacts p-0 m-0">
-                            <li class="header-top__contacts-item d-inline-block mr-3">
+                            <li class="header-top__contacts-item d-none d-md-inline-block mr-3">
                                 <span class="header-top__contacts-text">г. Железный порт, ул. Набережная, 1</span>
                             </li>
                             <li class="header-top__contacts-item d-inline-block">
@@ -28,7 +28,7 @@
                         </ul>
                     </div>
 
-                    <div class="col-md-2 d-inline-flex align-items-center justify-content-end">
+                    <div class="col-4 col-md-2 d-inline-flex align-items-center justify-content-end">
                         <nav class="social-list d-flex align-items-center text-right">
                             <a href="#social-booking" class="social-list__link mx-1" target="_blank">
                                 <svg>
@@ -51,17 +51,22 @@
             </div>
         </div>
 
-        <div class="header-content py-3">
+        <div class="header-content py-md-3">
             <div class="container">
                 <div class="row justify-content-between">
-                    <div class="col-md-2">
+                    <div class="col-12 col-md-2">
+                        <button class="header-content__burger-btn d-md-none border-0 bg-transparent">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </button>
                         <a href="index.html" class="logo">
                             <picture>
                                 <img src="<%= require('./img/placeholder.png') %>" data-src="<%= require('./img/logo.svg') %>" class="logo__img" alt="logo" title="logo">
                             </picture>
                         </a>
                     </div>
-                    <div class="col-md-6 d-inline-flex align-items-center justify-content-end pb-2">
+                    <div class="col-md-6 d-none d-md-inline-flex align-items-center justify-content-end pb-2">
                         <div class="header-content__dropdown dropdown d-inline-block mr-5">
                             <a class="dropdown-toggle btn btn-transparent text-white p-0 shadow-none" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown"
                                aria-haspopup="true" aria-expanded="false">
@@ -106,14 +111,14 @@
                         <div class="container">
                             <div class="slide-content row">
                                 <div class="col-md-6 offset-md-1">
-                                    <div class="title ml-2 text-white font-weight-light">
+                                    <div class="title mx-auto m-md-0 ml-md-2 text-white font-weight-light">
                                         <span class="title__sup-text">на берегу моря</span>
                                         апартаменты
                                     </div>
 
-                                    <span class="slide-content__text-description d-block my-5 mr-3 ml-auto text-white">This is Photoshop's version  of Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum</span>
+                                    <span class="slide-content__text-description d-block pt-1 pb-4 p-md-0 mt-5 mr-3 ml-auto my-lg-5 text-white">This is Photoshop's version  of Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum</span>
 
-                                    <button class="slide-content__button position-relative d-block btn btn-primary rounded-pill ml-auto text-white font-weight-bold shadow-none">
+                                    <button class="slide-content__button position-relative d-block btn btn-primary rounded-pill mt-2 ml-auto text-white font-weight-bold shadow-none">
                                         Забронировать
                                     </button>
                                 </div>
@@ -138,20 +143,20 @@
             </div>
 
             <div class="main-section-content">
-                <nav class="main-section-content-nav">
-                    <a href="apart-page.html" class="main-section-content-nav__link d-block border-primary rounded-pill text-white font-weight-bold">
+                <nav class="main-section-content-nav d-flex flex-row flex-lg-column">
+                    <a href="apart-page.html" class="main-section-content-nav__link border-primary rounded-pill ml-lg-auto text-white font-weight-bold">
                         <span class="main-section-content-nav__text">Апартаменты <svg><use xlink:href="img/spritemap.svg#sprite-arrow_right"></use></svg></span>
                     </a>
 
-                    <a href="apart-page.html" class="main-section-content-nav__link d-block border-primary rounded-pill text-white font-weight-bold">
+                    <a href="apart-page.html" class="main-section-content-nav__link border-primary rounded-pill ml-lg-auto text-white font-weight-bold">
                         <span class="main-section-content-nav__text">Апартаменты 2<svg><use xlink:href="img/spritemap.svg#sprite-arrow_right"></use></svg></span>
                     </a>
 
-                    <a href="apart-page.html" class="main-section-content-nav__link d-block border-primary rounded-pill text-white font-weight-bold">
+                    <a href="apart-page.html" class="main-section-content-nav__link border-primary rounded-pill ml-lg-auto text-white font-weight-bold">
                         <span class="main-section-content-nav__text">Апартаменты lorem ipsum<svg><use xlink:href="img/spritemap.svg#sprite-arrow_right"></use></svg></span>
                     </a>
 
-                    <a href="apart-page.html" class="main-section-content-nav__link d-block border-primary rounded-pill text-white font-weight-bold">
+                    <a href="apart-page.html" class="main-section-content-nav__link border-primary rounded-pill ml-lg-auto text-white font-weight-bold">
                         <span class="main-section-content-nav__text">Апартаменты 2 lorem ipsum<svg><use xlink:href="img/spritemap.svg#sprite-arrow_right"></use></svg></span>
                     </a>
                 </nav>
@@ -164,67 +169,74 @@
                     <span class="title__sup-text">наши</span>
                     преимущества
                 </p>
-                <div class="advantage row">
-                    <div class="advantage__box col-md-3 offset-md-1">
-                        <div class="advantage__ico d-inline-block position-relative">
-                            <svg>
-                                <use xlink:href="img/spritemap.svg#sprite-ticket"></use>
-                            </svg>
+
+                <div class="mobile-slider swiper-container">
+                    <div class="advantage swiper-wrapper flex-nowrap flex-md-wrap">
+                        <div class="advantage__box swiper-slide col-6 col-sm-4 col-md-3 offset-md-1">
+                            <div class="advantage__ico d-inline-block position-relative">
+                                <svg>
+                                    <use xlink:href="img/spritemap.svg#sprite-ticket"></use>
+                                </svg>
+                            </div>
+                            <p class="advantage__caption mt-2 mb-3 my-md-3 font-weight-bold">Бронирование</p>
+                            <p class="advantage__text">Скидки при раннем бронировании</p>
                         </div>
-                        <p class="advantage__caption my-3 font-weight-bold">Бронирование</p>
-                        <p class="advantage__text">Скидки при раннем бронировании</p>
+
+                        <div class="advantage__box swiper-slide col-6 col-sm-4 col-md-3 offset-md-1">
+                            <div class="advantage__ico d-inline-block position-relative">
+                                <svg>
+                                    <use xlink:href="img/spritemap.svg#sprite-beach"></use>
+                                </svg>
+                            </div>
+                            <p class="advantage__caption mt-2 mb-3 my-md-3 font-weight-bold">Расположение</p>
+                            <p class="advantage__text">1-я линия пляжа, море в 1 минуте ходьбы</p>
+                        </div>
+
+                        <div class="advantage__box swiper-slide col-6 col-sm-4 col-md-3 offset-md-1">
+                            <div class="advantage__ico d-inline-block position-relative">
+                                <svg>
+                                    <use xlink:href="img/spritemap.svg#sprite-sleep"></use>
+                                </svg>
+                            </div>
+                            <p class="advantage__caption mt-2 mb-3 my-md-3 font-weight-bold">Атмосфера</p>
+                            <p class="advantage__text">Тихое и спокойное место</p>
+                        </div>
+
+                        <div class="advantage__box swiper-slide col-6 col-sm-4 col-md-3 offset-md-1">
+                            <div class="advantage__ico d-inline-block position-relative">
+                                <svg>
+                                    <use xlink:href="img/spritemap.svg#sprite-wave"></use>
+                                </svg>
+                            </div>
+                            <p class="advantage__caption mt-2 mb-3 my-md-3 font-weight-bold">Вид из окна</p>
+                            <p class="advantage__text">Большие балконы террасы с видом на море</p>
+                        </div>
+
+                        <div class="advantage__box swiper-slide col-6 col-sm-4 col-md-3 offset-md-1">
+                            <div class="advantage__ico d-inline-block position-relative">
+                                <svg>
+                                    <use xlink:href="img/spritemap.svg#sprite-cook"></use>
+                                </svg>
+                            </div>
+                            <p class="advantage__caption mt-2 mb-3 my-md-3 font-weight-bold">Удобства</p>
+                            <p class="advantage__text">В каждой квартире есть своя кухня</p>
+                        </div>
+
+                        <div class="advantage__box swiper-slide col-6 col-sm-4 col-md-3 offset-md-1">
+                            <div class="advantage__ico d-inline-block position-relative">
+                                <svg>
+                                    <use xlink:href="img/spritemap.svg#sprite-column"></use>
+                                </svg>
+                            </div>
+                            <p class="advantage__caption mt-2 mb-3 my-md-3 font-weight-bold">Условия</p>
+                            <p class="advantage__text">Современный дизайнерский ремонт</p>
+                        </div>
                     </div>
 
-                    <div class="advantage__box col-md-3 offset-md-1">
-                        <div class="advantage__ico d-inline-block position-relative">
-                            <svg>
-                                <use xlink:href="img/spritemap.svg#sprite-beach"></use>
-                            </svg>
-                        </div>
-                        <p class="advantage__caption my-3 font-weight-bold">Расположение</p>
-                        <p class="advantage__text">1-я линия пляжа, море в 1 минуте ходьбы</p>
-                    </div>
-
-                    <div class="advantage__box col-md-3 offset-md-1">
-                        <div class="advantage__ico d-inline-block position-relative">
-                            <svg>
-                                <use xlink:href="img/spritemap.svg#sprite-sleep"></use>
-                            </svg>
-                        </div>
-                        <p class="advantage__caption my-3 font-weight-bold">Атмосфера</p>
-                        <p class="advantage__text">Тихое и спокойное место</p>
-                    </div>
-
-                    <div class="advantage__box col-md-3 offset-md-1">
-                        <div class="advantage__ico d-inline-block position-relative">
-                            <svg>
-                                <use xlink:href="img/spritemap.svg#sprite-wave"></use>
-                            </svg>
-                        </div>
-                        <p class="advantage__caption my-3 font-weight-bold">Вид из окна</p>
-                        <p class="advantage__text">Большие балконы террасы с видом на море</p>
-                    </div>
-
-                    <div class="advantage__box col-md-3 offset-md-1">
-                        <div class="advantage__ico d-inline-block position-relative">
-                            <svg>
-                                <use xlink:href="img/spritemap.svg#sprite-cook"></use>
-                            </svg>
-                        </div>
-                        <p class="advantage__caption my-3 font-weight-bold">Удобства</p>
-                        <p class="advantage__text">В каждой квартире есть своя кухня</p>
-                    </div>
-
-                    <div class="advantage__box col-md-3 offset-md-1">
-                        <div class="advantage__ico d-inline-block position-relative">
-                            <svg>
-                                <use xlink:href="img/spritemap.svg#sprite-column"></use>
-                            </svg>
-                        </div>
-                        <p class="advantage__caption my-3 font-weight-bold">Условия</p>
-                        <p class="advantage__text">Современный дизайнерский ремонт</p>
-                    </div>
+                    <div class="swiper-pagination"></div>
                 </div>
+
+
             </div>
         </div>
 

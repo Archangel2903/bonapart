@@ -23,8 +23,9 @@
   margin: 0 auto 0;
   color: #120706;
   font-family: $font-family-custom;
-  font-size: 65px;
+  font-size: 45px;
   line-height: 55px;
+  line-height: 1;
 
   &__sup-text {
     &:before {
@@ -50,12 +51,12 @@
 // MAIN SECTION
 .main-section {
   .container {
-    padding: 255px 0 133px;
+    padding: 240px 0 133px;
   }
 
   .title {
     margin: 0;
-    font-size: 85px;
+    font-size: 55px;
     line-height: 52px;
     letter-spacing: 2.4px;
 
@@ -88,10 +89,17 @@
       line-height: 64px;
     }
   }
+}
+
+.main-slider {
+  max-height: 768px;
+  overflow: hidden;
+
+  .swiper-wrapper {}
 
   .slide-content {
     &__text-description {
-      max-width: 255px;
+      max-width: 290px;
     }
 
     &__button {
@@ -99,19 +107,11 @@
       margin-right: 85px;
     }
   }
-}
-
-.main-slider {
-  max-height: 690px;
-  overflow: hidden;
-
-  .swiper-wrapper {
-  }
 
   .swiper-controls {
     position: absolute;
-    top: 60%;
-    left: 35.7%;
+    top: 53.5%;
+    left: 12%;
     display: inline-block;
     width: 80px;
     height: 17px;
@@ -156,9 +156,11 @@
 
 .main-section-content {
   position: absolute;
-  top: 61%;
-  right: 19.3%;
-  transform: translateY(-50%);
+  top: auto;
+  right: auto;
+  bottom: 50px;
+  left: 50%;
+  transform: translateX(-50%);
   z-index: 1;
 }
 
@@ -168,13 +170,12 @@
   &__link {
     position: relative;
     display: block;
-    min-width: 51px;
-    width: 51px;
-    //max-width: 51px;
-    height: 51px;
+    min-width: 46px;
+    width: 46px;
+    height: 46px;
     border: 2px solid;
     border-radius: 50px;
-    margin-left: auto;
+    //margin-left: auto;
     overflow: hidden;
     font-family: $font-family-custom;
     font-size: 20px;
@@ -189,20 +190,20 @@
       counter-increment: nav;
       content: counter(nav);
       display: inline-block;
-      width: 51px;
-      height: 51px;
+      width: 46px;
+      height: 46px;
       border: 2px solid $main-first-color;
       border-radius: 50px;
       margin: -2px 0 0 -2px;
       vertical-align: middle;
       font-size: 20px;
-      line-height: 42px;
+      line-height: 2;
       text-align: center;
       transition: $transition-base;
     }
 
     &:not(:last-child) {
-      margin-bottom: 22px;
+      margin-right: 6px;
     }
 
     &:hover {
@@ -239,17 +240,11 @@
 
 // ADVANTAGE SECTION
 .advantage-section {
-  padding: 115px 0 85px;
+  padding: 65px 0 85px;
 }
 
 .advantage {
-  padding: 146px 0 0;
-
-  &__box {
-    &:not(:nth-last-child(-1n+3)) {
-      margin-bottom: 57px;
-    }
-  }
+  padding: 110px 0 0;
 
   &__ico {
     &:before {
@@ -278,7 +273,6 @@
   }
 
   &__text {
-    width: 70%;
     color: #6a6a6a;
     letter-spacing: 0.8px;
   }
@@ -858,7 +852,40 @@
 
 // SIMPLE RESERVED SECTION
 .simple-reserved-section {
-  padding: 448px 0;
+  padding: 98px 0 0;
+
+  .title {
+    margin-bottom: 109px;
+  }
+}
+
+.calendar-reserved {
+  &__box {
+
+  }
+  &__label {
+    margin: 0 0 15px;
+    color: #9090ad;
+    font-weight: 300;
+    font-size: 14px;
+  }
+  &__calendar {
+    width: 375px;
+    height: 345px;
+    box-shadow: 3px 4px 24px rgba(0, 0, 0, 0.15);
+
+    .ui-datepicker {
+      height: 100%;
+      padding: 41px 25px 38px;
+
+      &-header {
+
+      }
+    }
+  }
+  &__text {
+
+  }
 }
 
 // PHOTO ROOM SECTION

@@ -6,7 +6,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no, maximum-scale=1, shrink-to-fit=no">
     <title>Страница номера</title>
 </head>
-
 <body class="loaded">
 
 <!-- BODY -->
@@ -339,47 +338,53 @@
                     бронирование
                 </p>
 
-                <div class="row">
+                <div class="row justify-content-center">
                     <div class="col-md-8">
                         <div class="calendar-reserved row">
                             <div class="col-md-6">
                                 <div class="calendar-reserved__box">
+                                    <p class="calendar-reserved__label">Укажите дату заезда</p>
+                                    <div class="calendar-reserved__calendar bg-white"></div>
 
+                                    <span class="calendar-reserved__text">эти даты уже заняты</span>
                                 </div>
                             </div>
 
                             <div class="col-md-6">
                                 <div class="calendar-reserved__box">
-
+                                    <p class="calendar-reserved__label">Укажите дату выезда</p>
+                                    <div class="calendar-reserved__calendar bg-white"></div>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
 
-                <div class="simple-reserved-form">
-                    <div class="form-row">
+                <div class="reserve__form">
+                    <div class="reserve-form-content form-row justify-content-center pb-3">
                         <div class="col-md-4">
-                            <div class="form-group">
+                            <div class="form-group position-relative">
                                 <label for="apart_reserve_name">Ваше имя*</label>
-                                <input type="text" id="apart_reserve_name" class="form-control">
+                                <input type="text" id="apart_reserve_name" class="form-control-lg py-2 px-4 rounded-0">
                             </div>
                         </div>
 
                         <div class="col-md-4">
-                            <div class="form-group">
+                            <div class="form-group position-relative">
                                 <label for="apart_reserve_phone">Ваш телефон*</label>
-                                <input type="text" id="apart_reserve_phone" class="form-control">
+                                <input type="text" id="apart_reserve_phone" class="form-control-lg py-2 px-4 rounded-0">
                             </div>
                         </div>
 
                         <div class="col-md-4">
-                            <div class="form-group">
+                            <div class="form-group position-relative">
                                 <label for="apart_reserve_mail">Ваша почта*</label>
-                                <input type="text" id="apart_reserve_mail" class="form-control">
+                                <input type="text" id="apart_reserve_mail" class="form-control-lg py-2 px-4 rounded-0">
                             </div>
                         </div>
                     </div>
+
+                    <button type="submit" class="reserve__submit btn btn-lg btn-primary d-block mt-4 mx-auto font-weight-bold rounded-pill text-white">Забронировать</button>
                 </div>
             </div>
         </div>
@@ -627,8 +632,8 @@
                 <div class="pages-nav row justify-content-center">
                     <a href="#0" class="pages-nav__link pl-4 font-weight-bold bg-white">
                         <svg>
-                        <use xlink:href="img/spritemap.svg#sprite-arrow_left"></use>
-                    </svg>
+                            <use xlink:href="img/spritemap.svg#sprite-arrow_left"></use>
+                        </svg>
                         <span class="pages-nav__number rounded-circle mr-3 ml-4 font-weight-bold text-white bg-primary">1</span>
                         Предыдущие апартаменты
                     </a>
@@ -636,8 +641,8 @@
                         Следующие апартаменты
                         <span class="pages-nav__number rounded-circle mr-4 ml-3 font-weight-bold text-white bg-primary">3</span>
                         <svg>
-                        <use xlink:href="img/spritemap.svg#sprite-arrow_right"></use>
-                    </svg>
+                            <use xlink:href="img/spritemap.svg#sprite-arrow_right"></use>
+                        </svg>
                     </a>
                 </div>
             </div>

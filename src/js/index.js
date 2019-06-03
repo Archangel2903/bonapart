@@ -4,6 +4,7 @@ import $ from 'jquery';
 import 'jquery-ui-bundle'
 import 'popper.js';
 import 'bootstrap';
+import 'bootstrap-star-rating';
 import Swiper from 'swiper/dist/js/swiper.min';
 import 'jquery-form-styler';
 import '@fancyapps/fancybox';
@@ -80,6 +81,12 @@ $(function () {
             type: 'fraction',
             clickable: true,
         },
+
+        breakpoints: {
+            768: {
+                height: 768,
+            }
+        }
     });
     let attractionSlider = new Swiper(document.querySelector('.attractions'), {
         observer: true,
@@ -112,13 +119,46 @@ $(function () {
             prevEl: '.swiper-button-prev',
         },
     });
+    let mobileSlider = new Swiper(document.querySelector('.mobile-slider'), {
+        destroy: true,
+        breakpoints: {
+            768: {
+                init: true,
+                observer: true,
+                observeParents: true,
+                loop: true,
+                // autoplay: true,
+                spaceBetween: 16,
+                slidesPerView: 3,
+
+                pagination: {
+                    el: '.swiper-pagination',
+                    clickable: true,
+                }
+            },
+            576: {
+                slidesPerView: 2
+            },
+            375: {
+                slidesPerView: 1
+            }
+        }
+    });
+
+    // burger button
+    $('.header-content__burger-btn').on('click', function () {
+        $(this).toggleClass('active');
+    });
 
     // apartments nav
+    $('.main-section-content-nav__link').each(function () {
+        $(this).data('width', $(this).css('width'));
+    });
     $('.main-section-content-nav__link').hover(function () {
         let w = $(this).find('.main-section-content-nav__text').width() + 81;
         $(this).css('width', w);
     }, function () {
-        $(this).css('width', 51);
+        $(this).css('width', $(this).data('width'));
     });
 
     // form styler
@@ -160,5 +200,6 @@ $(function () {
         });
     }
 
-    $/*('input[name="datefilter"]').datepicker();*/
+    // reserved calendar
+    $('.calendar-reserved__calendar').datepicker();
 });
