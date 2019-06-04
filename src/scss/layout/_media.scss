@@ -2,7 +2,16 @@
 ****************** MEDIA STYLES ******************
 *************************************************/
 // min-width
-@media screen and (min-width: 320px) {}
+@media screen and (min-width: 320px) {
+
+}
+@media screen and (min-width: 414px) {
+  .attractions-section {
+    .title {
+      font-size: 34px;
+    }
+  }
+}
 @include media-breakpoint-up(sm) {}
 @include media-breakpoint-up(md) {
   .header-top {
@@ -22,6 +31,7 @@
   }
 
   .title {
+    max-width: 800px;
     font-size: 65px;
   }
 
@@ -54,7 +64,7 @@
   }
 
   .advantage {
-    padding: 146px 0 0;
+    padding: 133px 0 0;
 
     &__box {
       &:not(:nth-last-child(-1n+3)) {
@@ -67,13 +77,71 @@
     }
   }
 
+  .mobile-slider {
+    .swiper-controls {
+      display: none;
+    }
+  }
+
   .apartments-section {
     padding: 95px 0 110px;
   }
 
+  .attractions-section {
+    padding: 95px 0 105px;
+
+    .title {
+      font-size: 65px;
+    }
+  }
+
   .attractions {
+    padding: 95px 0 0;
+
     .swiper-slide {
       width: 49%;
+    }
+  }
+
+  .instagram-section {
+    padding: 115px 0 100px;
+  }
+
+  .instagram-link {
+    margin-top: 75px !important;
+  }
+
+  .reserve-section {
+    padding: 117px 0 98px;
+  }
+
+  .reserve {
+    margin: 105px 0 0;
+  }
+
+  .last-section {
+    padding: 135px 0 75px;
+  }
+
+  footer.footer {
+    .logo {
+      &__img {
+        width: 148px;
+      }
+    }
+  }
+
+  .footer-content {
+    &__list-item {
+      padding: 0;
+      margin: 0;
+
+      &:before {
+        top: 8px;
+        left: -16px;
+        width: 5px;
+        height: 5px;
+      }
     }
   }
 }
@@ -104,7 +172,7 @@
   }
 
   .best-apartment {
-    padding: 135px 0 0;
+    padding: 130px 0 0;
 
     &__box {
       &:not(:last-child) {
@@ -176,16 +244,15 @@
   }
 }
 @include media-breakpoint-up(xl) {}
+@media screen and (min-width: 1100px) {
+  .main-slider .swiper-controls {
+    left: 30.3%;
+  }
+}
 @media screen and (min-width: 1201px) {
   .main-section-content {
     top: 41.5%;
     right: 19%;
-  }
-}
-
-@media screen and (min-width: 1100px) {
-  .main-slider .swiper-controls {
-    left: 30.3%;
   }
 }
 @media screen and (min-width: 1420px) {
@@ -198,11 +265,5 @@
 @include media-breakpoint-down(lg) {}
 @include media-breakpoint-down(md) {}
 @include media-breakpoint-down(sm) {}
-@include media-breakpoint-down(xs) {
-  .advantage {
-    &__box {
-      padding: 0;
-    }
-  }
-}
+@include media-breakpoint-down(xs) {}
 @media screen and (max-width: 414px) {}

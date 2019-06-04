@@ -18,7 +18,7 @@
 
 .title {
   display: block;
-  max-width: 800px;
+  max-width: 100%;
   width: max-content;
   margin: 0 auto 0;
   color: #120706;
@@ -26,6 +26,12 @@
   font-size: 45px;
   line-height: 55px;
   line-height: 1;
+
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+  word-break: break-all;
+  line-break: auto;
+  hyphens: manual;
 
   &__sup-text {
     &:before {
@@ -426,7 +432,7 @@
 
 // ATTRACTIONS SECTION
 .attractions-section {
-  padding: 95px 0 70px;
+  padding: 65px 0 93px;
 
   .section-bg {
     &:after {
@@ -435,6 +441,8 @@
   }
 
   .title {
+    font-size: 26px;
+
     &__sup-text {
       color: #e6e6e6;
 
@@ -446,7 +454,7 @@
 }
 
 .attractions {
-  padding: 112px 0 0 0;
+  padding: 60px 0 0;
 
   &__card {
     max-width: 370px;
@@ -478,6 +486,7 @@
 
   .swiper-arrows {
     display: inline-block;
+    height: 22px;
     background: none;
     position: static;
 
@@ -518,7 +527,7 @@
 
 // INSTAGRAM SECTION
 .instagram-section {
-  padding: 115px 0 100px;
+  padding: 65px 0 90px;
 }
 
 .instagram-slider {
@@ -548,6 +557,7 @@
     display: block;
     width: 270px;
     height: 270px;
+    margin: 0 auto;
   }
 
   .swiper-arrows {
@@ -574,13 +584,13 @@
 .instagram-link {
   width: max-content;
   padding: 10px 40px;
-  margin-top: 75px !important;
+  margin-top: 40px !important;
   font-size: 16px;
 }
 
 // RESERVE SECTION
 .reserve-section {
-  padding: 117px 0 98px;
+  padding: 65px 0 93px;
 
   .section-bg {
     &:after {
@@ -590,7 +600,7 @@
 }
 
 .reserve {
-  margin: 105px 0 0;
+  margin: 90px 0 0;
 
   &__submit {
     padding: 13px 30px;
@@ -761,7 +771,7 @@
 
 // LAST SECTION
 .last-section {
-  padding: 135px 0 75px;
+  padding: 75px 0 65px;
 }
 
 .last-section-content {

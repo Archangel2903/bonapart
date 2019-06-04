@@ -5,7 +5,13 @@ footer.footer {
   order: 3;
   -webkit-order: 3;
   position: relative;
-  //
+
+  .logo {
+    &__img {
+      width: 120px;
+    }
+  }
+
   .social-list {
     &__link {
       &:hover {
@@ -59,15 +65,20 @@ footer.footer {
 
   &__list-item {
     position: relative;
+    padding: 3px 0 0;
     color: #9a9dc0;
+
+    &:not(:last-child) {
+      margin: 0 0 11px;
+    }
 
     &:before {
       content: '';
       position: absolute;
-      top: 8px;
-      left: -16px;
-      width: 5px;
-      height: 5px;
+      top: 0;
+      left: 49%;
+      width: 4px;
+      height: 4px;
       border-radius: 50%;
       background: $main-first-color;
     }

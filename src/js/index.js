@@ -68,10 +68,8 @@ $(function () {
     let mainSlider = new Swiper(document.querySelector('.main-slider'), {
         direction: 'vertical',
         loop: true,
-        effect: 'slide',
-        // autoplay: true,
+        autoplay: true,
         height: 690,
-
         navigation: {
             nextEl: '.swiper-button-next',
             prevEl: '.swiper-button-prev',
@@ -81,7 +79,6 @@ $(function () {
             type: 'fraction',
             clickable: true,
         },
-
         breakpoints: {
             768: {
                 height: 768,
@@ -92,7 +89,7 @@ $(function () {
         observer: true,
         observeParents: true,
         loop: true,
-        // autoplay: true,
+        autoplay: true,
         spaceBetween: 30,
         centeredSlides: true,
         slidesPerView: 'auto',
@@ -120,16 +117,27 @@ $(function () {
         // autoplay: true,
         spaceBetween: 16,
         slidesPerView: 4,
-
         navigation: {
             nextEl: '.swiper-button-next',
             prevEl: '.swiper-button-prev',
         },
+        breakpoints: {
+            1100: {
+                slidesPerView: 3,
+                centeredSlides: true,
+            },
+            860: {
+                slidesPerView: 2,
+            },
+            600: {
+                slidesPerView: 1
+            }
+        }
     });
     let mobileSlider = new Swiper(document.querySelector('.mobile-slider'), {
         observer: true,
         observeParents: true,
-        spaceBetween: 16,
+        spaceBetween: 0,
         navigation: {
             prevEl: '.swiper-button-prev',
             nextEl: '.swiper-button-next',
