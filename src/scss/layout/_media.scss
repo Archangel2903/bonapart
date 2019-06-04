@@ -66,6 +66,16 @@
       width: 70%;
     }
   }
+
+  .apartments-section {
+    padding: 95px 0 110px;
+  }
+
+  .attractions {
+    .swiper-slide {
+      width: 49%;
+    }
+  }
 }
 @include media-breakpoint-up(lg) {
   .main-section-content {
@@ -92,6 +102,78 @@
       }
     }
   }
+
+  .best-apartment {
+    padding: 135px 0 0;
+
+    &__box {
+      &:not(:last-child) {
+        margin-bottom: 75px;
+      }
+
+      &:nth-child(odd) {
+        .best-apartment {
+          &__image {
+            left: 8px;
+            right: auto;
+          }
+
+          &__description {
+            margin-left: auto;
+          }
+        }
+      }
+
+      &:nth-child(even) {
+        .best-apartment {
+          &__image {
+            right: 8px;
+            left: auto;
+          }
+
+          &__description {
+
+          }
+        }
+
+        &__description {
+          margin-right: auto;
+        }
+      }
+    }
+
+    &__image {
+      width: 600px;
+      top: 50%;
+      left: auto;
+      transform: translate(0, -50%);
+    }
+
+    &__description {
+      padding: 42px 100px 50px;
+      margin: 0;
+    }
+
+    &__title {
+      position: relative;
+      color: #120706;
+      font-family: $font-family-custom;
+      font-size: 24px;
+
+      &:before {
+        position: absolute;
+        top: 0;
+        left: -45px;
+        margin: 0;
+      }
+    }
+  }
+
+  .attractions {
+    .swiper-slide {
+      width: 32%;
+    }
+  }
 }
 @include media-breakpoint-up(xl) {}
 @media screen and (min-width: 1201px) {
@@ -116,5 +198,11 @@
 @include media-breakpoint-down(lg) {}
 @include media-breakpoint-down(md) {}
 @include media-breakpoint-down(sm) {}
-@include media-breakpoint-down(xs) {}
+@include media-breakpoint-down(xs) {
+  .advantage {
+    &__box {
+      padding: 0;
+    }
+  }
+}
 @media screen and (max-width: 414px) {}

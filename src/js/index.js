@@ -8,7 +8,7 @@ import 'bootstrap-star-rating';
 import Swiper from 'swiper/dist/js/swiper.min';
 import 'jquery-form-styler';
 import '@fancyapps/fancybox';
-import IMask from 'imask';
+import IMask, {Masked} from 'imask';
 import moment from 'moment';
 import 'moment/locale/ru';
 import 'bootstrap-daterangepicker';
@@ -92,11 +92,10 @@ $(function () {
         observer: true,
         observeParents: true,
         loop: true,
-        autoplay: true,
+        // autoplay: true,
         spaceBetween: 30,
         centeredSlides: true,
         slidesPerView: 'auto',
-
         navigation: {
             nextEl: '.swiper-button-next',
             prevEl: '.swiper-button-prev',
@@ -105,6 +104,14 @@ $(function () {
             el: '.swiper-pagination',
             clickable: true,
         },
+        breakpoints: {
+            991: {
+                centeredSlides: false,
+            },
+            768: {
+                centeredSlides: true,
+            }
+        }
     });
     let instagramSlider = new Swiper(document.querySelector('.instagram-slider'), {
         observer: true,
@@ -120,21 +127,20 @@ $(function () {
         },
     });
     let mobileSlider = new Swiper(document.querySelector('.mobile-slider'), {
-        destroy: true,
+        observer: true,
+        observeParents: true,
+        spaceBetween: 16,
+        navigation: {
+            prevEl: '.swiper-button-prev',
+            nextEl: '.swiper-button-next',
+        },
+        pagination: {
+            el: '.swiper-pagination',
+            clickable: true,
+        },
         breakpoints: {
-            768: {
-                init: true,
-                observer: true,
-                observeParents: true,
-                loop: true,
-                // autoplay: true,
-                spaceBetween: 16,
+            1199: {
                 slidesPerView: 3,
-
-                pagination: {
-                    el: '.swiper-pagination',
-                    clickable: true,
-                }
             },
             576: {
                 slidesPerView: 2
@@ -144,6 +150,16 @@ $(function () {
             }
         }
     });
+
+    const mqlMD = matchMedia('(min-width: 768px)');
+    mqlMD.addListener(() => {
+        if (mqlMD.matches) {
+            mobileSlider.destroy();
+        }
+    });
+    if (mqlMD.matches) {
+        mobileSlider.destroy();
+    }
 
     // burger button
     $('.header-content__burger-btn').on('click', function () {
@@ -167,10 +183,24 @@ $(function () {
     // input Mask
     let phoneInput = document.querySelectorAll('.phone-mask');
     let maskOpt = {
-        mask: '{+38} (000) 00 00 000'
+        mask: '{+38} (000) 00 00 000',
+        // lazy: false,
+        placeholderChar: '_'
     };
     phoneInput.forEach(function (input) {
         IMask(input, maskOpt);
+
+        let placeholder = '+38 (';
+        input.onfocus = function () {
+            if (this.value === placeholder || this.value === '') {
+                this.value = placeholder
+            }
+        };
+        input.onblur = function () {
+            if (this.value === placeholder) {
+                this.value = ''
+            }
+        };
     });
 
     // datepicker input
