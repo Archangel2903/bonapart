@@ -65,122 +65,124 @@ $(function () {
     }
 
     // Swiper
-    let mainSlider = new Swiper(document.querySelector('.main-slider'), {
-        direction: 'vertical',
-        loop: true,
-        autoplay: true,
-        height: 690,
-        navigation: {
-            nextEl: '.swiper-button-next',
-            prevEl: '.swiper-button-prev',
-        },
-        pagination: {
-            el: '.swiper-pagination',
-            type: 'fraction',
-            clickable: true,
-            formatFractionCurrent: function (number) {
-                if (number < 10) {
-                    return '0' + number;
-                } else {
-                    return number;
+    if ($('.swiper-wrapper').length) {
+        let mainSlider = new Swiper(document.querySelector('.main-slider'), {
+            direction: 'vertical',
+            loop: true,
+            autoplay: true,
+            height: 690,
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+            pagination: {
+                el: '.swiper-pagination',
+                type: 'fraction',
+                clickable: true,
+                formatFractionCurrent: function (number) {
+                    if (number < 10) {
+                        return '0' + number;
+                    } else {
+                        return number;
+                    }
+                },
+                renderFraction: function (currentClass, totalClass, index) {
+                    if (index < 10) {
+                        return '<span class="' + currentClass + '">' + '0' + index + '</span>';
+                    } else {
+                        return '<span class="' + currentClass + '">' + index + '</span>';
+                    }
+                },
+            },
+            breakpoints: {
+                768: {
+                    height: 768,
                 }
+            }
+        });
+        let attractionSlider = new Swiper(document.querySelector('.attractions'), {
+            observer: true,
+            observeParents: true,
+            loop: true,
+            autoplay: true,
+            spaceBetween: 30,
+            centeredSlides: true,
+            slidesPerView: 'auto',
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
             },
-            renderFraction: function (currentClass, totalClass, index) {
-                if (index < 10) {
-                    return '<span class="' + currentClass + '">' + '0' + index + '</span>';
-                } else {
-                    return '<span class="' + currentClass + '">' + index + '</span>';
+            pagination: {
+                el: '.swiper-pagination',
+                clickable: true,
+            },
+            breakpoints: {
+                991: {
+                    centeredSlides: false,
+                },
+                768: {
+                    centeredSlides: true,
                 }
-            },
-        },
-        breakpoints: {
-            768: {
-                height: 768,
             }
-        }
-    });
-    let attractionSlider = new Swiper(document.querySelector('.attractions'), {
-        observer: true,
-        observeParents: true,
-        loop: true,
-        autoplay: true,
-        spaceBetween: 30,
-        centeredSlides: true,
-        slidesPerView: 'auto',
-        navigation: {
-            nextEl: '.swiper-button-next',
-            prevEl: '.swiper-button-prev',
-        },
-        pagination: {
-            el: '.swiper-pagination',
-            clickable: true,
-        },
-        breakpoints: {
-            991: {
-                centeredSlides: false,
+        });
+        let instagramSlider = new Swiper(document.querySelector('.instagram-slider'), {
+            observer: true,
+            observeParents: true,
+            loop: true,
+            // autoplay: true,
+            spaceBetween: 16,
+            slidesPerView: 4,
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
             },
-            768: {
-                centeredSlides: true,
+            breakpoints: {
+                1100: {
+                    slidesPerView: 3,
+                    centeredSlides: true,
+                },
+                860: {
+                    slidesPerView: 2,
+                },
+                600: {
+                    slidesPerView: 1
+                }
             }
-        }
-    });
-    let instagramSlider = new Swiper(document.querySelector('.instagram-slider'), {
-        observer: true,
-        observeParents: true,
-        loop: true,
-        // autoplay: true,
-        spaceBetween: 16,
-        slidesPerView: 4,
-        navigation: {
-            nextEl: '.swiper-button-next',
-            prevEl: '.swiper-button-prev',
-        },
-        breakpoints: {
-            1100: {
-                slidesPerView: 3,
-                centeredSlides: true,
+        });
+        let mobileSlider = new Swiper(document.querySelector('.mobile-slider'), {
+            observer: true,
+            observeParents: true,
+            spaceBetween: 0,
+            navigation: {
+                prevEl: '.swiper-button-prev',
+                nextEl: '.swiper-button-next',
             },
-            860: {
-                slidesPerView: 2,
+            pagination: {
+                el: '.swiper-pagination',
+                clickable: true,
             },
-            600: {
-                slidesPerView: 1
+            breakpoints: {
+                1199: {
+                    slidesPerView: 3,
+                },
+                576: {
+                    slidesPerView: 2
+                },
+                375: {
+                    slidesPerView: 1
+                }
             }
-        }
-    });
-    let mobileSlider = new Swiper(document.querySelector('.mobile-slider'), {
-        observer: true,
-        observeParents: true,
-        spaceBetween: 0,
-        navigation: {
-            prevEl: '.swiper-button-prev',
-            nextEl: '.swiper-button-next',
-        },
-        pagination: {
-            el: '.swiper-pagination',
-            clickable: true,
-        },
-        breakpoints: {
-            1199: {
-                slidesPerView: 3,
-            },
-            576: {
-                slidesPerView: 2
-            },
-            375: {
-                slidesPerView: 1
-            }
-        }
-    });
+        });
 
-    const mqlMD = matchMedia('(min-width: 768px)');
-    mqlMD.addListener(() => {
+        const mqlMD = matchMedia('(min-width: 768px)');
+        mqlMD.addListener(() => {
+            if (mqlMD.matches) {
+                mobileSlider.destroy();
+            }
+        });
         if (mqlMD.matches) {
             mobileSlider.destroy();
         }
-    });
-    if (mqlMD.matches) {
-        mobileSlider.destroy();
     }
 
     // burger button
