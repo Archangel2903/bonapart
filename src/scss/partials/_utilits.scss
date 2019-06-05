@@ -138,7 +138,8 @@
         font-size: 16px;
         line-height: 50px;
 
-        &.sel {}
+        &.sel {
+        }
 
         &.selected {
           color: $main-second-color;
@@ -174,25 +175,34 @@
   overflow: hidden;
   z-index: 0;
 
-  &:before, &:after {
-    content: '';
-    position: absolute;
-    height: 100%;
-    width: 100%;
-    bottom: 100%;
-    left: 0;
-    z-index: -1;
-    transition: $transition-base;
-  }
-
-  &:hover {
-    &:after {
-      -webkit-transition-delay: 0.175s;
-      transition-delay: 0.175s;
+  &-primary {
+    &:before, &:after {
+      content: '';
+      position: absolute;
+      height: 100%;
+      width: 100%;
+      bottom: 100%;
+      left: 0;
+      background: #e6b300;
+      z-index: -1;
+      transition: $transition-base;
     }
 
-    &:before, &:after {
-      transform: translateY(100%);
+    &:after {
+      background: #dead00;
+    }
+
+    &:hover {
+      background: $primary;
+
+      &:after {
+        -webkit-transition-delay: .2s;
+        transition-delay: .2s;
+      }
+
+      &:before, &:after {
+        transform: translateY(100%);
+      }
     }
   }
 
