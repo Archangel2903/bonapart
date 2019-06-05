@@ -26,12 +26,9 @@
   font-size: 45px;
   line-height: 55px;
   line-height: 1;
-
   overflow-wrap: break-word;
   word-wrap: break-word;
   word-break: break-all;
-  line-break: auto;
-  hyphens: manual;
 
   &__sup-text {
     &:before {
@@ -88,7 +85,7 @@
   }
 
   &_apartment {
-    padding-bottom: 50px;
+    padding-bottom: 62px;
 
     .title {
       font-size: 70px;
