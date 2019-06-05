@@ -78,6 +78,20 @@ $(function () {
             el: '.swiper-pagination',
             type: 'fraction',
             clickable: true,
+            formatFractionCurrent: function (number) {
+                if (number < 10) {
+                    return '0' + number;
+                } else {
+                    return number;
+                }
+            },
+            renderFraction: function (currentClass, totalClass, index) {
+                if (index < 10) {
+                    return '<span class="' + currentClass + '">' + '0' + index + '</span>';
+                } else {
+                    return '<span class="' + currentClass + '">' + index + '</span>';
+                }
+            },
         },
         breakpoints: {
             768: {
