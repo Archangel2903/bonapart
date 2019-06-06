@@ -149,6 +149,28 @@
     }
   }
 
+  .season-prices {
+    &__box {
+      &:not(:first-child) {
+        border-top: 0;
+        border-left: 1px solid #dee2e6;
+      }
+    }
+
+    &__date {
+      width: 100%;
+      min-height: 92px;
+      padding: 22px 5px 15px;
+    }
+
+    &__price {
+      width: 100%;
+      padding: 29px 2px;
+      border: 0;
+      border-top: 1px solid #dee2e6;
+    }
+  }
+
   .footer-content {
     &__list-item {
       padding: 0;
@@ -272,22 +294,14 @@
   }
 
   .season-prices {
-    &__box {
-      &:not(:first-child) {
-        border-top: 0;
-        border-left: 1px solid #dee2e6;
-      }
-    }
-
     &__date {
       width: 100%;
+      min-height: 92px;
       padding: 30px 30px 20px;
     }
 
     &__price {
-      width: 100%;
-      border: 0;
-      border-top: 1px solid #dee2e6;
+
     }
   }
 }
