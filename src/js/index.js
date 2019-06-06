@@ -1,10 +1,10 @@
 import '../scss/main.scss';
+
 import 'intersection-observer';
 import $ from 'jquery';
 import 'jquery-ui-bundle'
 import 'popper.js';
 import 'bootstrap';
-import 'bootstrap-star-rating';
 import Swiper from 'swiper/dist/js/swiper.min';
 import 'jquery-form-styler';
 import '@fancyapps/fancybox';
@@ -12,6 +12,7 @@ import IMask, {Masked} from 'imask';
 import moment from 'moment';
 import 'moment/locale/ru';
 import 'bootstrap-daterangepicker';
+import 'bootstrap-star-rating';
 import L from 'leaflet';
 import '../img/point.svg';
 
@@ -65,7 +66,7 @@ $(function () {
     }
 
     // Swiper
-    if ($('.swiper-wrapper').length) {
+    if ($('.swiper-container').length) {
         let mainSlider = new Swiper(document.querySelector('.main-slider'), {
             direction: 'vertical',
             loop: true,
@@ -132,6 +133,7 @@ $(function () {
             // autoplay: true,
             spaceBetween: 16,
             slidesPerView: 4,
+            centeredSlides: false,
             navigation: {
                 nextEl: '.swiper-button-next',
                 prevEl: '.swiper-button-prev',
@@ -149,40 +151,65 @@ $(function () {
                 }
             }
         });
-        let mobileSlider = new Swiper(document.querySelector('.mobile-slider'), {
-            observer: true,
-            observeParents: true,
-            spaceBetween: 0,
-            navigation: {
-                prevEl: '.swiper-button-prev',
-                nextEl: '.swiper-button-next',
-            },
-            pagination: {
-                el: '.swiper-pagination',
-                clickable: true,
-            },
-            breakpoints: {
-                1199: {
-                    slidesPerView: 3,
-                },
-                576: {
-                    slidesPerView: 2
-                },
-                375: {
-                    slidesPerView: 1
-                }
-            }
-        });
 
-        const mqlMD = matchMedia('(min-width: 768px)');
-        mqlMD.addListener(() => {
-            if (mqlMD.matches) {
-                mobileSlider.destroy();
+        let mobSlider = document.querySelectorAll('.mobile-slider');
+        mobSlider.forEach(function (slider) {
+            var swiper = null;
+
+            if (slider.classList.contains('photo-room')) {
+                swiper = new Swiper(slider, {
+                    observer: true,
+                    observeParents: true,
+                    spaceBetween: 0,
+                    navigation: {
+                        prevEl: '.swiper-button-prev',
+                        nextEl: '.swiper-button-next',
+                    },
+                    pagination: {
+                        el: null,
+                    },
+                    breakpoints: {
+                        768: {
+                            slidesPerView: 2,
+                        },
+                        480: {
+                            slidesPerView: 1,
+                        },
+                    }
+                });
+            } else {
+                swiper = new Swiper(slider, {
+                    // observer: true,
+                    // observeParents: true,
+                    spaceBetween: 0,
+                    navigation: {
+                        prevEl: '.swiper-button-prev',
+                        nextEl: '.swiper-button-next',
+                    },
+                    pagination: {
+                        el: '.swiper-pagination',
+                        clickable: true,
+                    },
+                    breakpoints: {
+                        1199: {
+                            slidesPerView: 3,
+                        },
+                        576: {
+                            slidesPerView: 2
+                        },
+                        375: {
+                            slidesPerView: 1
+                        }
+                    }
+                });
             }
+
+            const mqlMD = matchMedia('(min-width: 768px)');
+            mqlMD.addListener(() => {
+                if (mqlMD.matches) swiper.destroy();
+            });
+            if (mqlMD.matches) swiper.destroy();
         });
-        if (mqlMD.matches) {
-            mobileSlider.destroy();
-        }
     }
 
     // burger button
@@ -199,6 +226,34 @@ $(function () {
         $(this).css('width', w);
     }, function () {
         $(this).css('width', $(this).data('width'));
+    });
+
+    // star rating
+    let rateInput = document.querySelectorAll('.rating-input');
+    rateInput.forEach(function (input) {
+        if (input.classList.contains('rating-read')) {
+            $(input).rating({
+                showCaption: false,
+                showClear: false,
+                displayOnly: true,
+                max: 5,
+                size: 'xs',
+                emptyStar: '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" enable-background="new 0 0 512 512"><path fill-rule="evenodd" clip-rule="evenodd" fill="#c1c1c1" d="M256 19l84.4 148.9L512 200 392.5 324.2 414.2 493 256 420.8 97.7 493l21.7-168.8L0 200l171.6-32.1L256 19"/></svg>',
+                filledStar: '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" enable-background="new 0 0 512 512"><path fill-rule="evenodd" clip-rule="evenodd" fill="#f3bd00" d="M256 19l84.4 148.9L512 200 392.5 324.2 414.2 493 256 420.8 97.7 493l21.7-168.8L0 200l171.6-32.1L256 19"/></svg>',
+            });
+        } else {
+            $(input).rating({
+                showCaption: false,
+                showClear: false,
+                stars: 5,
+                min: 0,
+                max: 5,
+                step: 1,
+                size: 'xs',
+                emptyStar: '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" enable-background="new 0 0 512 512"><path fill-rule="evenodd" clip-rule="evenodd" fill="#c1c1c1" d="M256 19l84.4 148.9L512 200 392.5 324.2 414.2 493 256 420.8 97.7 493l21.7-168.8L0 200l171.6-32.1L256 19"/></svg>',
+                filledStar: '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" enable-background="new 0 0 512 512"><path fill-rule="evenodd" clip-rule="evenodd" fill="#f3bd00" d="M256 19l84.4 148.9L512 200 392.5 324.2 414.2 493 256 420.8 97.7 493l21.7-168.8L0 200l171.6-32.1L256 19"/></svg>',
+            });
+        }
     });
 
     // form styler
