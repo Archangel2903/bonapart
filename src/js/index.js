@@ -7,7 +7,7 @@ import 'popper.js';
 import 'bootstrap';
 import Swiper from 'swiper/dist/js/swiper.min';
 import 'jquery-form-styler';
-import '@fancyapps/fancybox';
+import 'lightgallery';
 import IMask, {Masked} from 'imask';
 import moment from 'moment';
 import 'moment/locale/ru';
@@ -131,7 +131,7 @@ $(function () {
             observeParents: true,
             loop: true,
             // autoplay: true,
-            spaceBetween: 16,
+            spaceBetween: 20,
             slidesPerView: 4,
             centeredSlides: false,
             navigation: {
@@ -331,4 +331,14 @@ $(function () {
 
     // reserved calendar
     $('.calendar-reserved__calendar').datepicker();
+
+    // fancybox modal
+    // $('.instagram-slider__img-wrap').fancybox();
+
+    $('.instagram-slider .swiper-wrapper').lightGallery({
+        download: false,
+        mode: 'lg-fade',
+        easing: 'ease',
+        getCaptionFromTitleOrAlt: false,
+    });
 });
