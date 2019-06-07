@@ -177,6 +177,26 @@ $(function () {
                         },
                     }
                 });
+            } else if (slider.classList.contains('ways')) {
+                swiper = new Swiper(slider, {
+                    autoHeight: true,
+                    observer: true,
+                    observeParents: true,
+                    spaceBetween: 0,
+                    navigation: {
+                        prevEl: '.swiper-button-prev',
+                        nextEl: '.swiper-button-next',
+                    },
+                    pagination: {
+                        el: '.swiper-pagination',
+                        clickable: true,
+                    },
+                    breakpoints: {
+                        767: {
+                            slidesPerView: 1
+                        },
+                    }
+                });
             } else {
                 swiper = new Swiper(slider, {
                     // observer: true,

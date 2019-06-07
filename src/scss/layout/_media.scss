@@ -18,6 +18,10 @@
       max-width: none;
     }
   }
+
+  .contacts-form {
+    max-width: none;
+  }
 }
 @include media-breakpoint-up(md) {
   .header-top {
@@ -215,6 +219,52 @@
 
     .media .media {
       //margin-top: 35px;
+    }
+  }
+
+  .ways-section {
+    padding: 115px 0 70px;
+  }
+
+  .ways {
+    &__box {
+      padding: 50px 49px 52px;
+    }
+  }
+
+  .contacts-section {
+    padding: 80px 0 92px;
+  }
+
+  .contacts {
+    &__title {
+      text-align: left;
+
+      &:after {
+        bottom: 0;
+        left: 0;
+        width: 25px;
+        height: 3px;
+        transform: translateX(0);
+      }
+    }
+  }
+
+  .contact-icons-list {
+    padding-left: 40px;
+
+    &__icon {
+      position: absolute;
+      top: 0;
+      left: -37px;
+      transform: translateX(0);
+    }
+  }
+
+  .contacts-form {
+    textarea {
+      min-height: 200px;
+      height: 200px;
     }
   }
 
