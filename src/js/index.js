@@ -199,8 +199,8 @@ $(function () {
                 });
             } else {
                 swiper = new Swiper(slider, {
-                    // observer: true,
-                    // observeParents: true,
+                    observer: true,
+                    observeParents: true,
                     spaceBetween: 0,
                     navigation: {
                         prevEl: '.swiper-button-prev',
@@ -331,9 +331,6 @@ $(function () {
 
     // reserved calendar
     $('.calendar-reserved__calendar').datepicker();
-
-    // fancybox modal
-    // $('.instagram-slider__img-wrap').fancybox();
 
     $('.instagram-slider .swiper-wrapper').lightGallery({
         download: false,
