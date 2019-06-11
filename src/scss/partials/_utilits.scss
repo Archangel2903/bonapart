@@ -236,8 +236,12 @@
 
 .modal-custom {
   .close {
+    position: absolute;
+    top: 13px;
+    right: 13px;
     padding: 0;
     border: none;
+    margin: 0;
     background: none;
 
     svg {
@@ -247,14 +251,74 @@
     }
   }
 
+  .modal-reserve-content {
+
+  }
+
+  .modal-review-content {
+    .reserve-form-content {
+      .form-group {
+        margin: 0 0 5px;
+      }
+
+      textarea {
+        min-width: 100%;
+        width: 100%;
+        max-width: 100%;
+        min-height: 150px;
+        height: 150px;
+        max-height: 250px;
+      }
+    }
+  }
+
   .modal {
+    &-content {
+      width: auto;
+      max-width: 650px;
+      padding: 40px 45px 45px;
+      margin: 0 auto;
+    }
+
     &-header {
       padding: 0;
       border: none;
+      margin: 0 0 38px;
     }
 
     &-title {
+      margin: 0 auto;
+      font-family: $font-family-custom;
+      font-size: 30px;
+    }
+  }
 
+  .reserve-form-content {
+    .form-group {
+      margin: 0 0 11px;
+    }
+
+    label {
+      margin: 0 0 7px;
+    }
+
+    .form-control-lg {
+      height: 45px;
+    }
+  }
+
+  .reviews-rating {
+    .rating-container {
+      .star {
+        width: 23px;
+        //height: 16px;
+        margin: 0 1px;
+
+        svg {
+          width: 23px;
+          height: 20px;
+        }
+      }
     }
   }
 }

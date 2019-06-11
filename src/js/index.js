@@ -69,7 +69,7 @@ $(function () {
     if ($('.swiper-container').length) {
         let mainSlider = new Swiper(document.querySelector('.main-slider'), {
             direction: 'vertical',
-            loop: true,
+            // loop: true,
             autoplay: true,
             height: 690,
             navigation: {
@@ -104,7 +104,7 @@ $(function () {
         let attractionSlider = new Swiper(document.querySelector('.attractions'), {
             observer: true,
             observeParents: true,
-            loop: true,
+            // loop: true,
             autoplay: true,
             spaceBetween: 30,
             centeredSlides: true,
@@ -129,7 +129,7 @@ $(function () {
         let instagramSlider = new Swiper(document.querySelector('.instagram-slider'), {
             observer: true,
             observeParents: true,
-            loop: true,
+            // loop: true,
             // autoplay: true,
             spaceBetween: 20,
             slidesPerView: 4,
@@ -306,7 +306,7 @@ $(function () {
     moment.updateLocale('ru');
     console.log(moment().format('LL'));
 
-    let dateInputAll = document.querySelectorAll('input[name="datefilter"]');
+    let dateInputAll = document.querySelectorAll('.datepicker-js');
     if (dateInputAll.length > 0) {
         dateInputAll.forEach(function (i) {
             $(i).daterangepicker({
@@ -338,4 +338,7 @@ $(function () {
         easing: 'ease',
         getCaptionFromTitleOrAlt: false,
     });
+
+//    /////////////////////////
+    console.log($.Deferred());
 });

@@ -1044,53 +1044,39 @@
                                          title="">
                                 </picture>
                             </a>
+                            <a href="<%= require('./img/apartment-img01.jpg') %>" class="instagram-slider__img-wrap swiper-slide">
+                                <picture class="instagram-slider__img">
+                                    <source srcset="<%= require('./img/instagram-img01.webp') %>" type="image/webp">
+                                    <img data-src="<%= require('./img/instagram-img01.jpg') %>" src="<%= require('./img/placeholder.png') %>" class="instagram-slider__img"
+                                         alt="attraction"
+                                         title="">
+                                </picture>
+                            </a>
+                            <a href="<%= require('./img/apartment-img02.jpg') %>" class="instagram-slider__img-wrap swiper-slide">
+                                <picture class="instagram-slider__img">
+                                    <source srcset="<%= require('./img/instagram-img02.webp') %>" type="image/webp">
+                                    <img data-src="<%= require('./img/instagram-img02.jpg') %>" src="<%= require('./img/placeholder.png') %>" class="instagram-slider__img"
+                                         alt="attraction"
+                                         title="">
+                                </picture>
+                            </a>
+                            <a href="<%= require('./img/apartment-img03.jpg') %>" class="instagram-slider__img-wrap swiper-slide">
+                                <picture class="instagram-slider__img">
+                                    <source srcset="<%= require('./img/instagram-img03.webp') %>" type="image/webp">
+                                    <img data-src="<%= require('./img/instagram-img03.jpg') %>" src="<%= require('./img/placeholder.png') %>" class="instagram-slider__img"
+                                         alt="attraction"
+                                         title="">
+                                </picture>
+                            </a>
+                            <a href="<%= require('./img/apartment-img04.jpg') %>" class="instagram-slider__img-wrap swiper-slide">
+                                <picture class="instagram-slider__img">
+                                    <source srcset="<%= require('./img/instagram-img04.webp') %>" type="image/webp">
+                                    <img data-src="<%= require('./img/instagram-img04.jpg') %>" src="<%= require('./img/placeholder.png') %>" class="instagram-slider__img"
+                                         alt="attraction"
+                                         title="">
+                                </picture>
+                            </a>
                         </div>
-
-                        <!--<div class="swiper-wrapper">
-                            <div class="swiper-slide">
-                                <a href="<%= require('./img/apartment-img01.jpg') %>" class="instagram-slider__img-wrap">
-                                    <picture class="instagram-slider__img">
-                                        <source srcset="<%= require('./img/instagram-img01.webp') %>" type="image/webp">
-                                        <img data-src="<%= require('./img/instagram-img01.jpg') %>" src="<%= require('./img/placeholder.png') %>" class="instagram-slider__img"
-                                             alt="attraction"
-                                             title="">
-                                    </picture>
-                                </a>
-                            </div>
-
-                            <div class="swiper-slide">
-                                <a href="<%= require('./img/apartment-img02.jpg') %>" class="instagram-slider__img-wrap">
-                                    <picture class="instagram-slider__img">
-                                        <source srcset="<%= require('./img/instagram-img02.webp') %>" type="image/webp">
-                                        <img data-src="<%= require('./img/instagram-img02.jpg') %>" src="<%= require('./img/placeholder.png') %>" class="instagram-slider__img"
-                                             alt="attraction"
-                                             title="">
-                                    </picture>
-                                </a>
-                            </div>
-
-                            <div class="swiper-slide">
-                                <a href="<%= require('./img/apartment-img03.jpg') %>" class="instagram-slider__img-wrap">
-                                    <picture class="instagram-slider__img">
-                                        <source srcset="<%= require('./img/instagram-img03.webp') %>" type="image/webp">
-                                        <img data-src="<%= require('./img/instagram-img03.jpg') %>" src="<%= require('./img/placeholder.png') %>" class="instagram-slider__img"
-                                             alt="attraction"
-                                             title="">
-                                    </picture>
-                                </a>
-                            </div>
-
-                            <div class="swiper-slide">
-                                <a href="<%= require('./img/apartment-img04.jpg') %>" class="instagram-slider__img-wrap">
-                                    <picture class="instagram-slider__img">
-                                        <source srcset="<%= require('./img/instagram-img04.webp') %>" type="image/webp">
-                                        <img data-src="<%= require('./img/instagram-img04.jpg') %>" src="<%= require('./img/placeholder.png') %>" class="instagram-slider__img"
-                                             alt="attraction"
-                                             title="">
-                                    </picture>
-                                </a>
-                            </div>
-                        </div>-->
 
                         <div class="swiper-arrows swiper-button-prev">
                             <svg>
@@ -1159,7 +1145,7 @@
 
                                 <div class="form-group position-relative">
                                     <label for="date_in">Укажите дату заезда</label>
-                                    <input type="text" name="datefilter" id="date_in" class="form-control-lg py-2 px-4 pr-5 rounded-0" autocomplete="off">
+                                    <input type="text" name="datefilter" id="date_in" class="form-control-lg py-2 px-4 pr-5 rounded-0 datepicker-js" autocomplete="off">
                                     <div class="reserve-form-content__field-ico">
                                         <svg>
                                             <use xlink:href="img/spritemap.svg#sprite-calendar"></use>
@@ -1169,7 +1155,7 @@
 
                                 <div class="form-group position-relative">
                                     <label for="date_out">Укажите дату выезда</label>
-                                    <input type="text" name="datefilter" id="date_out" class="form-control-lg py-2 px-4 pr-5 rounded-0" autocomplete="off">
+                                    <input type="text" name="datefilter" id="date_out" class="form-control-lg py-2 px-4 pr-5 rounded-0 datepicker-js" autocomplete="off">
                                     <div class="reserve-form-content__field-ico">
                                         <svg>
                                             <use xlink:href="img/spritemap.svg#sprite-calendar"></use>
@@ -1325,7 +1311,7 @@
 
 <div class="modal fade modal-custom" id="modal_reserve" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
-        <div class="modal-content">
+        <div class="modal-content modal-reserve-content">
             <div class="modal-header">
                 <h5 class="modal-title">Забронировать</h5>
 
@@ -1336,66 +1322,64 @@
                 </button>
             </div>
 
-            <div class="modal-body">
-                <div class="reserve m-0">
-                    <div class="reserve__form">
-                        <div class="reserve-form-content row justify-content-center pb-3">
-                            <div class="col-12 col-sm-6 col-md-4">
-                                <div class="form-group position-relative">
-                                    <label for="reserve_modal_name">Ваше имя*</label>
-                                    <input type="text" name="name" id="reserve_modal_name" class="form-control-lg py-2 px-4 rounded-0" required autocomplete="off">
-                                </div>
-
-                                <div class="form-group position-relative">
-                                    <label for="reserve_modal_phone">Ваш телефон*</label>
-                                    <input type="tel" name="phone" id="reserve_modal_phone" class="form-control-lg py-2 px-4 rounded-0 phone-mask"
-                                           pattern="\+\d{1,3}\s[\(]{0,1}[0-9]{3}[\)]{0,1}\s\d{2}\s\d{2}\s\d{3}" required autocomplete="off">
-                                </div>
-
-                                <div class="form-group position-relative">
-                                    <label for="reserve_modal_mail">Ваша почта*</label>
-                                    <input type="email" name="mail" id="reserve_modal_mail" class="form-control-lg py-2 px-4 rounded-0"
-                                           pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" required autocomplete="off">
-                                </div>
+            <div class="reserve m-0">
+                <div class="reserve__form">
+                    <div class="reserve-form-content row justify-content-center">
+                        <div class="col-12 col-sm-6 col-md-6">
+                            <div class="form-group position-relative">
+                                <label for="reserve_modal_name">Ваше имя*</label>
+                                <input type="text" name="name" id="reserve_modal_name" class="form-control-lg py-2 px-4 border-0 rounded-0" required autocomplete="off">
                             </div>
 
-                            <div class="col-12 col-sm-6 col-md-4">
-                                <div class="form-group position-relative">
-                                    <label for="reserve_modal_apartments">Выберите апартаменты</label>
+                            <div class="form-group position-relative">
+                                <label for="reserve_modal_phone">Ваш телефон*</label>
+                                <input type="tel" name="phone" id="reserve_modal_phone" class="form-control-lg py-2 px-4 border-0 rounded-0 phone-mask"
+                                       pattern="\+\d{1,3}\s[\(]{0,1}[0-9]{3}[\)]{0,1}\s\d{2}\s\d{2}\s\d{3}" required autocomplete="off">
+                            </div>
 
-                                    <select name="apartments-list" id="reserve_modal_apartments" class="form-control-lg p-0 rounded-0 styled">
-                                        <option value="1" selected>Апартаменты 1</option>
-                                        <option value="2">Апартаменты 2</option>
-                                        <option value="3">Апартаменты 3</option>
-                                        <option value="4">Апартаменты 4</option>
-                                    </select>
-                                </div>
-
-                                <div class="form-group position-relative">
-                                    <label for="modal_date_in">Укажите дату заезда</label>
-                                    <input type="text" name="datefilter" id="modal_date_in" class="form-control-lg py-2 px-4 pr-5 rounded-0" autocomplete="off">
-                                    <div class="reserve-form-content__field-ico">
-                                        <svg>
-                                            <use xlink:href="img/spritemap.svg#sprite-calendar"></use>
-                                        </svg>
-                                    </div>
-                                </div>
-
-                                <div class="form-group position-relative">
-                                    <label for="modal_date_out">Укажите дату выезда</label>
-                                    <input type="text" name="datefilter" id="modal_date_out" class="form-control-lg py-2 px-4 pr-5 rounded-0" autocomplete="off">
-                                    <div class="reserve-form-content__field-ico">
-                                        <svg>
-                                            <use xlink:href="img/spritemap.svg#sprite-calendar"></use>
-                                        </svg>
-                                    </div>
-                                </div>
+                            <div class="form-group position-relative">
+                                <label for="reserve_modal_mail">Ваша почта*</label>
+                                <input type="email" name="mail" id="reserve_modal_mail" class="form-control-lg py-2 px-4 border-0 rounded-0"
+                                       pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" required autocomplete="off">
                             </div>
                         </div>
 
-                        <button type="submit" class="reserve__submit btn btn-lg btn-primary d-block mt-2 mt-md-4 mx-auto font-weight-bold rounded-pill text-white">Забронировать
-                        </button>
+                        <div class="col-12 col-sm-6 col-md-6">
+                            <div class="form-group position-relative">
+                                <label for="reserve_modal_apartments">Выберите апартаменты</label>
+
+                                <select name="apartments-list" id="reserve_modal_apartments" class="form-control-lg p-0 rounded-0 styled">
+                                    <option value="1" selected>Апартаменты 1</option>
+                                    <option value="2">Апартаменты 2</option>
+                                    <option value="3">Апартаменты 3</option>
+                                    <option value="4">Апартаменты 4</option>
+                                </select>
+                            </div>
+
+                            <div class="form-group position-relative">
+                                <label for="modal_date_in">Укажите дату заезда</label>
+                                <input type="text" name="datefilter" id="modal_date_in" class="form-control-lg py-2 px-4 pr-5 border-0 rounded-0 datepicker-js" autocomplete="off">
+                                <div class="reserve-form-content__field-ico">
+                                    <svg>
+                                        <use xlink:href="img/spritemap.svg#sprite-calendar"></use>
+                                    </svg>
+                                </div>
+                            </div>
+
+                            <div class="form-group position-relative">
+                                <label for="modal_date_out">Укажите дату выезда</label>
+                                <input type="text" name="datefilter" id="modal_date_out" class="form-control-lg py-2 px-4 pr-5 border-0 rounded-0 datepicker-js" autocomplete="off">
+                                <div class="reserve-form-content__field-ico">
+                                    <svg>
+                                        <use xlink:href="img/spritemap.svg#sprite-calendar"></use>
+                                    </svg>
+                                </div>
+                            </div>
+                        </div>
                     </div>
+
+                    <button type="submit" class="reserve__submit btn btn-lg btn-primary d-block mt-3 mx-auto font-weight-bold rounded-pill text-white">Забронировать
+                    </button>
                 </div>
             </div>
         </div>
@@ -1403,9 +1387,9 @@
 </div>
 <div class="modal fade modal-custom" id="modal_review" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h5 class="modal-title">Забронировать</h5>
+        <div class="modal-content modal-review-content">
+            <div class="modal-header pb-1 mb-4">
+                <h5 class="modal-title">Оставить отзыв</h5>
 
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                     <svg>
@@ -1414,35 +1398,40 @@
                 </button>
             </div>
 
-            <div class="modal-body">
-                <div class="reserve m-0">
-                    <div class="reserve__form">
-                        <div class="reserve-form-content row justify-content-center pb-3">
-                            <div class="col-12 col-sm-6 col-md-4">
-                                <div class="form-group position-relative">
-                                    <label for="review_modal_name">Ваше имя*</label>
-                                    <input type="text" name="name" id="review_modal_name" class="form-control-lg py-2 px-4 rounded-0" required autocomplete="off">
-                                </div>
+            <div class="reserve m-0">
+                <div class="reserve__form">
+                    <div class="reviews-rating d-block pb-3 mb-3 text-center">
+                        <input type="number" class="rating-input" value="0">
 
-                                <div class="form-group position-relative">
-                                    <label for="review_modal_phone">Ваш телефон*</label>
-                                    <input type="tel" name="phone" id="review_modal_phone" class="form-control-lg py-2 px-4 rounded-0 phone-mask"
-                                           pattern="\+\d{1,3}\s[\(]{0,1}[0-9]{3}[\)]{0,1}\s\d{2}\s\d{2}\s\d{3}" required autocomplete="off">
-                                </div>
-                            </div>
+                        <span class="reviews-rating__text d-inline-block mt-2">Выберите оценку для отеля</span>
+                    </div>
 
-                            <div class="col-12 col-sm-6 col-md-4">
-                                <div class="form-group position-relative">
-                                    <label for="review_modal_message">Выберите апартаменты</label>
-
-                                    <textarea class="contacts-form__field form-control border-0 rounded-0 shadow-none" id="review_modal_message"></textarea>
-                                </div>
+                    <div class="reserve-form-content form-row justify-content-center">
+                        <div class="col-12 col-sm-6 col-md-6">
+                            <div class="form-group position-relative">
+                                <label for="review_modal_name">Ваше имя*</label>
+                                <input type="text" name="name" id="review_modal_name" class="form-control-lg py-2 px-4 border-0 rounded-0" required autocomplete="off">
                             </div>
                         </div>
 
-                        <button type="submit" class="reserve__submit btn btn-lg btn-primary d-block mt-2 mt-md-4 mx-auto font-weight-bold rounded-pill text-white">Забронировать
-                        </button>
+                        <div class="col-12 col-sm-6 col-md-6">
+                            <div class="form-group position-relative">
+                                <label for="review_modal_mail">Ваша почта*</label>
+                                <input type="email" name="mail" id="review_modal_mail" class="form-control-lg py-2 px-4 border-0 rounded-0"
+                                       pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" required autocomplete="off">
+                            </div>
+                        </div>
+
+                        <div class="col-12">
+                            <div class="form-group h-100 m-0">
+                                <label for="contact_message">Ваш отзыв</label>
+                                <textarea class="contacts-form__field form-control border-0 rounded-0 shadow-none" id="contact_message"></textarea>
+                            </div>
+                        </div>
                     </div>
+
+                    <button type="submit" class="reserve__submit btn btn-lg btn-primary d-block mt-4 mx-auto font-weight-bold rounded-pill text-white">Забронировать
+                    </button>
                 </div>
             </div>
         </div>

@@ -545,25 +545,6 @@
   padding: 0 20px;
   margin: 110px 0 0;
 
-  /*&:before, &:after {
-    content: '';
-    position: absolute;
-    top: 0;
-    display: block;
-    width: 20px;
-    height: 100%;
-    background: white;
-    z-index: 5;
-  }
-
-  &:before {
-    left: 0;
-  }
-
-  &:after {
-    right: 0;
-  }*/
-
   &__img {
     display: block;
     width: 270px;
@@ -666,6 +647,7 @@
         &__select {
           height: 100%;
           padding: 10px 34px 10px 22px;
+          border: transparent;
           border-radius: 0;
           font-family: $font-family-base;
           font-size: 16px;
@@ -1054,6 +1036,11 @@
 
 .reviews-rating {
   display: inline-block;
+
+  &__text {
+    color: #909090;
+    font-size: 14px;
+  }
 
   .rating-container {
     .star {
