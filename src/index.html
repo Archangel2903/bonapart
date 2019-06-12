@@ -568,19 +568,19 @@
 
             <div class="main-section-content">
                 <nav class="main-section-content-nav d-flex flex-row flex-lg-column">
-                    <a href="apart-page.html" class="main-section-content-nav__link border-primary rounded-pill ml-lg-auto text-white font-weight-bold">
+                    <a href="apart-page.html" class="main-section-content-nav__link border-primary rounded-pill ml-lg-auto text-white font-weight-bold" data-number="1">
                         <span class="main-section-content-nav__text">Апартаменты <svg><use xlink:href="img/spritemap.svg#sprite-arrow_right"></use></svg></span>
                     </a>
 
-                    <a href="apart-page.html" class="main-section-content-nav__link border-primary rounded-pill ml-lg-auto text-white font-weight-bold">
+                    <a href="apart-page.html" class="main-section-content-nav__link border-primary rounded-pill ml-lg-auto text-white font-weight-bold" data-number="2">
                         <span class="main-section-content-nav__text">Апартаменты 2<svg><use xlink:href="img/spritemap.svg#sprite-arrow_right"></use></svg></span>
                     </a>
 
-                    <a href="apart-page.html" class="main-section-content-nav__link border-primary rounded-pill ml-lg-auto text-white font-weight-bold">
+                    <a href="apart-page.html" class="main-section-content-nav__link border-primary rounded-pill ml-lg-auto text-white font-weight-bold" data-number="3">
                         <span class="main-section-content-nav__text">Апартаменты lorem ipsum<svg><use xlink:href="img/spritemap.svg#sprite-arrow_right"></use></svg></span>
                     </a>
 
-                    <a href="apart-page.html" class="main-section-content-nav__link border-primary rounded-pill ml-lg-auto text-white font-weight-bold">
+                    <a href="apart-page.html" class="main-section-content-nav__link border-primary rounded-pill ml-lg-auto text-white font-weight-bold" data-number="4">
                         <span class="main-section-content-nav__text">Апартаменты 2 lorem ipsum<svg><use xlink:href="img/spritemap.svg#sprite-arrow_right"></use></svg></span>
                     </a>
                 </nav>
@@ -692,9 +692,10 @@
                                 </picture>
 
                                 <div class="best-apartment__description">
-                                    <p class="best-apartment__title mb-1 font-weight-bold">Апартаменты <br>может есть название</p>
+                                    <h5 class="best-apartment__title mb-1 font-weight-bold">
+                                        <span class="best-apartment__number">1</span> Апартаменты <br>может есть название</h5>
 
-                                    <p class="best-apartment__text mb-4">This is Photoshop's version of Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet. Aenean
+                                    <p>This is Photoshop's version of Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet. Aenean
                                         sollicitudin,
                                         lorem quis</p>
 
@@ -748,9 +749,10 @@
                                 </picture>
 
                                 <div class="best-apartment__description">
-                                    <p class="best-apartment__title mb-1 font-weight-bold">Апартаменты <br>может есть название</p>
+                                    <h5 class="best-apartment__title mb-1 font-weight-bold">
+                                        <span class="best-apartment__number">2</span> Апартаменты <br>может есть название</h5>
 
-                                    <p class="best-apartment__text mb-4">This is Photoshop's version of Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet. Aenean
+                                    <p>This is Photoshop's version of Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet. Aenean
                                         sollicitudin,
                                         lorem quis</p>
 
@@ -804,9 +806,10 @@
                                 </picture>
 
                                 <div class="best-apartment__description">
-                                    <p class="best-apartment__title mb-1 font-weight-bold">Апартаменты <br>может есть название</p>
+                                    <h5 class="best-apartment__title mb-1 font-weight-bold">
+                                        <span class="best-apartment__number">3</span> Апартаменты <br>может есть название</h5>
 
-                                    <p class="best-apartment__text mb-4">This is Photoshop's version of Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet. Aenean
+                                    <p>This is Photoshop's version of Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet. Aenean
                                         sollicitudin,
                                         lorem quis</p>
 
@@ -860,9 +863,10 @@
                                 </picture>
 
                                 <div class="best-apartment__description">
-                                    <p class="best-apartment__title mb-1 font-weight-bold">Апартаменты <br>может есть название</p>
+                                    <h5 class="best-apartment__title mb-1 font-weight-bold">
+                                        <span class="best-apartment__number">4</span> Апартаменты <br>может есть название</h5>
 
-                                    <p class="best-apartment__text mb-4">This is Photoshop's version of Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet. Aenean
+                                    <p>This is Photoshop's version of Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet. Aenean
                                         sollicitudin,
                                         lorem quis</p>
 
@@ -1011,7 +1015,7 @@
 
                 <div class="row">
                     <div class="instagram-slider swiper-container">
-                        <div class="swiper-wrapper">
+                        <div class="swiper-wrapper lightgallery">
                             <a href="<%= require('./img/apartment-img01.jpg') %>" class="instagram-slider__img-wrap swiper-slide">
                                 <picture class="instagram-slider__img">
                                     <source srcset="<%= require('./img/instagram-img01.webp') %>" type="image/webp">
@@ -1135,8 +1139,10 @@
                                 <div class="form-group position-relative">
                                     <label for="reserve_apartments">Выберите апартаменты</label>
 
-                                    <select name="apartments-list" id="reserve_apartments" class="form-control-lg p-0 rounded-0 styled">
-                                        <option value="1" selected>Апартаменты 1</option>
+                                    <select name="apartments-list" id="reserve_apartments" class="form-control-lg p-0 rounded-0 styled" data-placeholder="Выберите апартаменты">
+                                        <option></option>
+
+                                        <option value="1">Апартаменты 1</option>
                                         <option value="2">Апартаменты 2</option>
                                         <option value="3">Апартаменты 3</option>
                                         <option value="4">Апартаменты 4</option>
@@ -1195,7 +1201,7 @@
                                     lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit. Duis sed odio sit amet nibh vulputate cursus a sit amet
                                     mauris.</p>
 
-                                <p class="last-section-content__text font-weight-light">Morbi accumsan ipsum velit. Nam nec tellus a odio tincidunt auctor a ornare odio. Sed non
+                                <p>Morbi accumsan ipsum velit. Nam nec tellus a odio tincidunt auctor a ornare odio. Sed non
                                     mauris vitae erat consequat auctor eu in elit. This is
                                     Photoshop's version of Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit
                                     consequat ipsum, nec sagittis sem</p>
@@ -1207,7 +1213,7 @@
                                     lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit. Duis sed odio sit amet nibh vulputate cursus a sit amet
                                     mauris.</p>
 
-                                <p class="last-section-content__text font-weight-light">Morbi accumsan ipsum velit. Nam nec tellus a odio tincidunt auctor a ornare odio. Sed non
+                                <p>Morbi accumsan ipsum velit. Nam nec tellus a odio tincidunt auctor a ornare odio. Sed non
                                     mauris vitae erat consequat auctor eu in elit. This is
                                     Photoshop's version of Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit
                                     consequat ipsum, nec sagittis sem</p>
@@ -1348,8 +1354,10 @@
                             <div class="form-group position-relative">
                                 <label for="reserve_modal_apartments">Выберите апартаменты</label>
 
-                                <select name="apartments-list" id="reserve_modal_apartments" class="form-control-lg p-0 rounded-0 styled">
-                                    <option value="1" selected>Апартаменты 1</option>
+                                <select name="apartments-list" id="reserve_modal_apartments" class="form-control-lg p-0 rounded-0 styled" data-placeholder="Выберите апартаменты">
+                                    <option></option>
+
+                                    <option value="1">Апартаменты 1</option>
                                     <option value="2">Апартаменты 2</option>
                                     <option value="3">Апартаменты 3</option>
                                     <option value="4">Апартаменты 4</option>

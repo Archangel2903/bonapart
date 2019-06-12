@@ -172,7 +172,7 @@
 }
 
 .main-section-content-nav {
-  counter-reset: nav;
+  //counter-reset: nav;
 
   &__link {
     position: relative;
@@ -194,8 +194,9 @@
     transition-delay: .2s;
 
     &:before {
-      counter-increment: nav;
-      content: counter(nav);
+      //counter-increment: nav;
+      //content: counter(nav);
+      content: attr(data-number);
       display: inline-block;
       width: 46px;
       height: 46px;
@@ -367,7 +368,7 @@
 }
 
 .best-apartment {
-  counter-reset: items;
+  //counter-reset: items;
   padding: 95px 0 0;
 
   &__box {
@@ -375,7 +376,6 @@
     min-height: 400px;
 
     &:not(:last-child) {
-      margin-bottom: 75px;
       margin-bottom: 51px;
     }
   }
@@ -399,6 +399,13 @@
     padding: 42px 60px 55px 45px;
     margin: 240px auto 0;
     background: white;
+
+    & > p {
+      margin: 0 0 24px;
+      color: #9b9b9b;
+      font-weight: 300;
+      font-size: 14px;
+    }
   }
 
   &__title {
@@ -406,10 +413,11 @@
     color: #120706;
     font-family: $font-family-custom;
     font-size: 24px;
+    line-height: 30px;
 
     &:before {
-      counter-increment: items;
-      content: counter(items);
+      //counter-increment: items;
+      //content: counter(items);
       display: block;
       width: 30px;
       height: 30px;
@@ -423,10 +431,17 @@
     }
   }
 
-  &__text {
-    color: #9b9b9b;
-    font-weight: 300;
-    font-size: 14px;
+  &__number {
+    display: block;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    margin: 0 0 8px;
+    color: white;
+    font-size: 20px;
+    line-height: 26px;
+    text-align: center;
+    background: $main-first-color;
   }
 
   &__link {
@@ -768,8 +783,9 @@
 }
 
 .last-section-content {
-  &__text {
+  p {
     color: #727272;
+    font-weight: $font-weight-light;
   }
 }
 
@@ -783,9 +799,17 @@
 .tour3d-content {
   margin-bottom: 40px;
 
+  iframe {
+    display: block;
+    width: 100%;
+    max-width: 970px;
+    height: 430px;
+  }
+
   &__view {
     display: block;
     width: 100%;
+    max-width: 970px;
     height: 430px;
     object-fit: cover;
     object-position: center;
@@ -819,12 +843,13 @@
 .tour3d-description {
   box-shadow: 3px 4px 24px rgba(0, 0, 0, 0.15);
 
-  &__text {
-    color: #727272;
-    line-height: 1.2;
+  &__text-wrap {
+    padding: 38px 40px 40px 34px;
 
-    &-wrap {
-      padding: 38px 40px 40px 34px;
+    p {
+      color: #727272;
+      font-weight: $font-weight-light;
+      line-height: 1.2;
     }
   }
 }
@@ -866,9 +891,7 @@
 
   &__price {
     width: 50%;
-
     padding: 29px 10px;
-    /*border-top: 1px solid #dee2e6;*/
     border-left: 1px solid #dee2e6;
     margin: 0;
     text-align: center;

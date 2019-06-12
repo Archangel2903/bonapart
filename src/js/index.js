@@ -332,13 +332,11 @@ $(function () {
     // reserved calendar
     $('.calendar-reserved__calendar').datepicker();
 
-    $('.instagram-slider .swiper-wrapper').lightGallery({
+    // lightgallery
+    $('.lightgallery').lightGallery({
         download: false,
         mode: 'lg-fade',
         easing: 'ease',
         getCaptionFromTitleOrAlt: false,
     });
-
-//    /////////////////////////
-    console.log($.Deferred());
 });
