@@ -13,6 +13,7 @@ import moment from 'moment';
 import 'moment/locale/ru';
 import 'bootstrap-daterangepicker';
 import 'bootstrap-star-rating';
+import 'readmore-js';
 import L from 'leaflet';
 import '../img/point.svg';
 
@@ -67,90 +68,115 @@ $(function () {
 
     // Swiper
     if ($('.swiper-container').length) {
-        let mainSlider = new Swiper(document.querySelector('.main-slider'), {
-            direction: 'vertical',
-            // loop: true,
-            autoplay: true,
-            height: 690,
-            navigation: {
-                nextEl: '.swiper-button-next',
-                prevEl: '.swiper-button-prev',
-            },
-            pagination: {
-                el: '.swiper-pagination',
-                type: 'fraction',
-                clickable: true,
-                formatFractionCurrent: function (number) {
-                    if (number < 10) {
-                        return '0' + number;
-                    } else {
-                        return number;
+
+        let mainSlider, attractionSlider, instagramSlider;
+
+        let mainSlides = document.querySelectorAll('.main-slider .swiper-slide').length;
+        let attractionSlides = document.querySelectorAll('.attractions .swiper-slide').length;
+        let instagramSlides = document.querySelectorAll('.instagram-slider .swiper-slide').length;
+
+        if (mainSlides > 1) {
+            mainSlider = new Swiper(document.querySelector('.main-slider'), {
+                direction: 'vertical',
+                // loop: true,
+                autoplay: true,
+                height: 690,
+                navigation: {
+                    nextEl: '.swiper-button-next',
+                    prevEl: '.swiper-button-prev',
+                },
+                pagination: {
+                    el: '.swiper-pagination',
+                    type: 'fraction',
+                    clickable: true,
+                    formatFractionCurrent: function (number) {
+                        if (number < 10) {
+                            return '0' + number;
+                        } else {
+                            return number;
+                        }
+                    },
+                    renderFraction: function (currentClass, totalClass, index) {
+                        if (index < 10) {
+                            return '<span class="' + currentClass + '">' + '0' + index + '</span>';
+                        } else {
+                            return '<span class="' + currentClass + '">' + index + '</span>';
+                        }
+                    },
+                },
+                breakpoints: {
+                    768: {
+                        height: 768,
                     }
+                }
+            });
+        } else {
+            mainSlider = new Swiper(document.querySelector('.main-slider'), {
+                init: false,
+            });
+        }
+
+        if (attractionSlides > 3) {
+            attractionSlider = new Swiper(document.querySelector('.attractions'), {
+                observer: true,
+                observeParents: true,
+                // loop: true,
+                autoplay: true,
+                spaceBetween: 25,
+                // centeredSlides: true,
+                slidesPerView: 'auto',
+                navigation: {
+                    nextEl: '.swiper-button-next',
+                    prevEl: '.swiper-button-prev',
                 },
-                renderFraction: function (currentClass, totalClass, index) {
-                    if (index < 10) {
-                        return '<span class="' + currentClass + '">' + '0' + index + '</span>';
-                    } else {
-                        return '<span class="' + currentClass + '">' + index + '</span>';
+                pagination: {
+                    el: '.swiper-pagination',
+                    clickable: true,
+                },
+                breakpoints: {
+                    991: {
+                        centeredSlides: false,
+                    },
+                    768: {
+                        centeredSlides: true,
                     }
-                },
-            },
-            breakpoints: {
-                768: {
-                    height: 768,
                 }
-            }
-        });
-        let attractionSlider = new Swiper(document.querySelector('.attractions'), {
-            observer: true,
-            observeParents: true,
-            // loop: true,
-            autoplay: true,
-            spaceBetween: 30,
-            centeredSlides: true,
-            slidesPerView: 'auto',
-            navigation: {
-                nextEl: '.swiper-button-next',
-                prevEl: '.swiper-button-prev',
-            },
-            pagination: {
-                el: '.swiper-pagination',
-                clickable: true,
-            },
-            breakpoints: {
-                991: {
-                    centeredSlides: false,
+            });
+        } else {
+            attractionSlider = new Swiper(document.querySelector('.attractions'), {
+                init: false,
+            });
+        }
+
+        if (instagramSlides > 4) {
+            instagramSlider = new Swiper(document.querySelector('.instagram-slider'), {
+                observer: true,
+                observeParents: true,
+                spaceBetween: 20,
+                slidesPerView: 4,
+                centeredSlides: false,
+                navigation: {
+                    nextEl: '.swiper-button-next',
+                    prevEl: '.swiper-button-prev',
                 },
-                768: {
-                    centeredSlides: true,
+                breakpoints: {
+                    1100: {
+                        slidesPerView: 3,
+                        centeredSlides: true,
+                    },
+                    860: {
+                        slidesPerView: 2,
+                    },
+                    600: {
+                        slidesPerView: 1
+                    }
                 }
-            }
-        });
-        let instagramSlider = new Swiper(document.querySelector('.instagram-slider'), {
-            observer: true,
-            observeParents: true,
-            // loop: true,
-            // autoplay: true,
-            spaceBetween: 20,
-            slidesPerView: 4,
-            centeredSlides: false,
-            navigation: {
-                nextEl: '.swiper-button-next',
-                prevEl: '.swiper-button-prev',
-            },
-            breakpoints: {
-                1100: {
-                    slidesPerView: 3,
-                    centeredSlides: true,
-                },
-                860: {
-                    slidesPerView: 2,
-                },
-                600: {
-                    slidesPerView: 1
-                }
-            }
-        });
+            });
+        } else {
+            instagramSlider = new Swiper(document.querySelector('.instagram-slider'), {
+                init: false,
+            });
+        }
 
         let mobSlider = document.querySelectorAll('.mobile-slider');
         mobSlider.forEach(function (slider) {
@@ -338,5 +364,13 @@ $(function () {
         mode: 'lg-fade',
         easing: 'ease',
         getCaptionFromTitleOrAlt: false,
+    });
+
+    // readmore js
+    $('.attractions__card .card-text').readmore({
+        speed: 300,
+        collapsedHeight: 130,
+        lessLink: '<a href="#" class="attractions__more d-block mr-4 mb-2 text-right m-md-0 mb-md-2 text-md-left">Показать больше</a>',
+        moreLink: '<a href="#" class="attractions__more d-block mr-4 mb-2 text-right m-md-0 mb-md-2 text-md-left">Свернуть текст</a>'
     });
 });

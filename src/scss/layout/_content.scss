@@ -560,9 +560,15 @@
   padding: 0 20px;
   margin: 110px 0 0;
 
+  &__img-wrap {
+    width: auto;
+    margin-right: 15px;
+  }
+
   &__img {
     display: block;
-    width: 270px;
+    width: 100%;
+    max-width: 270px;
     height: 270px;
     margin: 0 auto;
   }
