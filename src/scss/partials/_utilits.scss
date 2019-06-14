@@ -293,10 +293,7 @@
     width: 41px;
     height: 4px;
     background: $main-first-color;
-  }
-
-  .modal-reserve-content {
-
+    $main
   }
 
   .modal-review-content {
@@ -316,49 +313,6 @@
     }
   }
 
-  .modal {
-    &-content {
-      width: auto;
-      max-width: 650px;
-      padding: 40px 45px 45px;
-      margin: 0 auto;
-
-      &.modal-answer {
-        max-width: 375px;
-        padding: 45px 45px 30px;
-        text-align: center;
-
-        .modal-header {
-          margin: 0;
-        }
-
-        .modal-title {
-          font-size: 25px;
-        }
-
-        .modal-body {
-          padding: 0;
-
-          p {
-            color: #727272;
-          }
-        }
-      }
-    }
-
-    &-header {
-      padding: 0;
-      border: none;
-      margin: 0 0 38px;
-    }
-
-    &-title {
-      margin: 0 auto;
-      font-family: $font-family-custom;
-      font-size: 30px;
-    }
-  }
-
   .reserve-form-content {
     .form-group {
       margin: 0 0 11px;
@@ -373,16 +327,143 @@
     }
   }
 
+  .modal-content {
+    width: auto;
+    max-width: 650px;
+    padding: 40px 45px 45px;
+    margin: 0 auto;
+
+    &.modal-answer {
+      max-width: 375px;
+      padding: 45px 45px 30px;
+      text-align: center;
+
+      .modal-header {
+        margin: 0;
+      }
+
+      .modal-title {
+        font-size: 25px;
+      }
+
+      .modal-body {
+        padding: 0;
+
+        p {
+          color: #727272;
+        }
+      }
+    }
+  }
+
+  .modal-header {
+    padding: 0;
+    border: none;
+    margin: 0 0 38px;
+  }
+
+  .modal-title {
+    margin: 0 auto;
+    font-family: $font-family-custom;
+    font-size: 30px;
+  }
+
   .reviews-rating {
     .rating-container {
       .star {
         width: 23px;
-        //height: 16px;
         margin: 0 1px;
 
         svg {
           width: 23px;
           height: 20px;
+        }
+      }
+    }
+  }
+}
+
+.datepicker {
+  &.datepicker-inline {
+    width: 100%;
+    max-width: 325px;
+    padding: 30px;
+    margin: 0 auto;
+  }
+
+  > div {
+    height: 100%;
+  }
+
+  table {
+    height: 100%;
+
+    tr {
+      td {
+        width: 38px;
+        height: 38px;
+        vertical-align: middle;
+        border-radius: 50%;
+        color: $main-second-color;
+        font-weight: 500;
+        transition: $transition-base;
+      }
+
+      .dow {
+        color: #727272;
+        font-family: $font-family-base;
+        font-size: 14px;
+        font-weight: 400;
+      }
+
+      .day {
+        &.active.active {
+          background: $main-first-color;
+
+          &:hover {
+            background: $main-second-color;
+          }
+
+          &.old, &.new {
+            color: #9b9b9b;
+          }
+        }
+      }
+
+      .disabled {
+        cursor: not-allowed;
+        color: #9b9b9b;
+        font-weight: 400;
+        background: transparent;
+
+        &:hover {
+          cursor: not-allowed;
+          color: #9b9b9b;
+          font-weight: 400;
+          background: transparent;
+        }
+      }
+
+      .disabled-date {
+        border-radius: 0;
+        cursor: not-allowed;
+        color: $main-second-color;
+        font-weight: 500;
+        background: #ffd5d5 !important;
+
+        &:first-of-type {
+          border-radius: 25px 0 0 25px;
+        }
+
+        &:last-of-type {
+          border-radius: 0 25px 25px 0;
+        }
+
+        &:hover {
+          cursor: not-allowed;
+          color: $main-second-color;
+          font-weight: 500;
+          background: #ffd5d5;
         }
       }
     }
@@ -451,3 +532,5 @@
     }
   }
 }
+
+
