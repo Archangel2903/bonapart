@@ -369,6 +369,10 @@ $(function () {
     }*/
 
     $('.datepicker').datepicker({
+        templates: {
+            leftArrow: '<svg><use xlink:href="img/spritemap.svg#sprite-arrow_left"></use></svg>',
+            rightArrow: '<svg><use xlink:href="img/spritemap.svg#sprite-arrow_right"></use></svg>'
+        },
         format: "dd MM yyyy",
         startDate: moment().add(1, 'days').format('LL'),
         language: "ru",
@@ -376,5 +380,58 @@ $(function () {
         todayHighlight: true,
         datesDisabled: ['05/07/2019', '25/07/2019'],
         toggleActive: true,
+    });
+
+    $('.calendar-reserved').datepicker({
+        inputs: $(this).find('.datepicker-range'),
+        templates: {
+            leftArrow: '<svg><use xlink:href="img/spritemap.svg#sprite-arrow_left"></use></svg>',
+            rightArrow: '<svg><use xlink:href="img/spritemap.svg#sprite-arrow_right"></use></svg>'
+        },
+        format: "dd MM yyyy",
+        startDate: moment().add(1, 'days').format('LL'),
+        language: "ru",
+        autoclose: true,
+        todayHighlight: true,
+        datesDisabled: ['05/07/2019', '06/07/2019', '07/07/2019', '08/07/2019', '25/07/2019'],
+        toggleActive: true,
+    });
+
+    // $('.calendar-reserved .datepicker-range:last-of-type').datepicker('update');
+
+    /*let reservIn = $('#reserved_date_in');
+    let reservOut = $('#reserved_date_out');
+
+    $('#disDates').on('click', function () {
+        $('.datepicker').datepicker('setDatesDisabled', [])
+    });*/
+});
+
+
+
+
+$(function () {
+    let dateIn = $('#datepicker-in');
+    let dateOut = $('#datepicker-out');
+
+    dateIn.datepicker().on('changeDate', function () {
+        console.log('date change ' + dateIn.datepicker('getUTCDates'));
+    });
+
+    dateOut.datepicker().on('changeDate', function () {
+        console.log('date change ' + dateOut.datepicker('getUTCDates'));
+    });
+
+    $('.input-daterange').datepicker({
+        inputs: $(this).find('.datepicker-range')
+    });
+
+    $('#event_period').datepicker({
+        inputs: $('.actual_range')
+    });
+
+    $('.datepicker').each(function () {
+        $(this).find('tr .disabled-date').filter(':first-of-type').addClass('first-of-type');
+        $(this).find('tr .disabled-date').filter(':last-of-type').addClass('last-of-type');
     });
 });

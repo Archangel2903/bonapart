@@ -373,17 +373,19 @@
                             <div class="col-md-6">
                                 <div class="calendar-reserved__box">
                                     <p class="calendar-reserved__label">Укажите дату заезда</p>
-                                    <div class="calendar-reserved__calendar datepicker bg-white"></div>
-
-                                    <span class="calendar-reserved__text">эти даты уже заняты</span>
+                                    <div id="reserved_date_in" class="calendar-reserved__calendar datepicker-range bg-white"></div>
                                 </div>
                             </div>
 
                             <div class="col-md-6">
                                 <div class="calendar-reserved__box">
                                     <p class="calendar-reserved__label">Укажите дату выезда</p>
-                                    <div class="calendar-reserved__calendar datepicker bg-white"></div>
+                                    <div id="reserved_date_out" class="calendar-reserved__calendar datepicker-range bg-white"></div>
                                 </div>
+                            </div>
+
+                            <div class="col-12 mt-4 pt-1">
+                                <span class="calendar-reserved__text"><span class="indicator indicator_disabled"></span> эти даты уже заняты</span>
                             </div>
                         </div>
                     </div>
@@ -415,7 +417,7 @@
                         </div>
                     </div>
 
-                    <button type="submit" class="reserve__submit btn btn-lg btn-primary d-block mt-4 mx-auto font-weight-bold rounded-pill text-white">Забронировать</button>
+                    <button type="submit" id="disDates" class="reserve__submit btn btn-lg btn-primary d-block mt-4 mx-auto font-weight-bold rounded-pill text-white">Забронировать</button>
                 </div>
             </div>
         </div>
