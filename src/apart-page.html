@@ -118,9 +118,10 @@
                                 </div>
                             </div>
                         </div>
+
                         <div class="col-md-6 offset-md-1">
                             <div class="slide-content">
-                                <button class="slide-content__button btn btn-primary position-relative d-block rounded-pill mx-auto mt-5 text-white font-weight-bold shadow-none mt-md-5 ml-md-2">
+                                <button class="slide-content__button btn btn-primary position-relative d-block rounded-pill mx-auto mt-5 text-white font-weight-bold shadow-none mt-md-5 ml-md-2" data-toggle="modal" data-target="#modal_reserve">
                                     Забронировать
                                 </button>
                             </div>
@@ -372,7 +373,7 @@
                             <div class="col-md-6">
                                 <div class="calendar-reserved__box">
                                     <p class="calendar-reserved__label">Укажите дату заезда</p>
-                                    <div class="calendar-reserved__calendar bg-white"></div>
+                                    <div class="calendar-reserved__calendar datepicker bg-white"></div>
 
                                     <span class="calendar-reserved__text">эти даты уже заняты</span>
                                 </div>
@@ -381,7 +382,7 @@
                             <div class="col-md-6">
                                 <div class="calendar-reserved__box">
                                     <p class="calendar-reserved__label">Укажите дату выезда</p>
-                                    <div class="calendar-reserved__calendar bg-white"></div>
+                                    <div class="calendar-reserved__calendar datepicker bg-white"></div>
                                 </div>
                             </div>
                         </div>
@@ -500,7 +501,7 @@
                     </div>
 
                     <div class="col-12 pt-md-4">
-                        <button type="button" class="btn btn-primary btn-custom d-block mt-2 mx-auto rounded-pill text-white shadow-none mt-md-5">Забронировать</button>
+                        <button type="button" class="btn btn-primary btn-custom d-block mt-2 mx-auto rounded-pill text-white shadow-none mt-md-5" data-toggle="modal" data-target="#modal_reserve">Забронировать</button>
                     </div>
                 </div>
             </div>
@@ -778,6 +779,108 @@
     <!-- FOOTER END -->
 </div>
 
+<!-- RESERVE MODAL -->
+<div class="modal fade modal-custom" id="modal_reserve" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+        <div class="modal-content modal-reserve-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Забронировать</h5>
+
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <svg>
+                        <use xlink:href="img/spritemap.svg#sprite-close"></use>
+                    </svg>
+                </button>
+            </div>
+
+            <div class="reserve m-0">
+                <div class="reserve__form">
+                    <div class="reserve-form-content row justify-content-center">
+                        <div class="col-12 col-sm-6 col-md-6">
+                            <div class="form-group position-relative">
+                                <label for="reserve_modal_name">Ваше имя*</label>
+                                <input type="text" name="name" id="reserve_modal_name" class="form-control-lg py-2 px-4 border-0 rounded-0" required autocomplete="off">
+                            </div>
+
+                            <div class="form-group position-relative">
+                                <label for="reserve_modal_phone">Ваш телефон*</label>
+                                <input type="tel" name="phone" id="reserve_modal_phone" class="form-control-lg py-2 px-4 border-0 rounded-0 phone-mask"
+                                       pattern="\+\d{1,3}\s[\(]{0,1}[0-9]{3}[\)]{0,1}\s\d{2}\s\d{2}\s\d{3}" required autocomplete="off">
+                            </div>
+
+                            <div class="form-group position-relative">
+                                <label for="reserve_modal_mail">Ваша почта*</label>
+                                <input type="email" name="mail" id="reserve_modal_mail" class="form-control-lg py-2 px-4 border-0 rounded-0"
+                                       pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" required autocomplete="off">
+                            </div>
+                        </div>
+
+                        <div class="col-12 col-sm-6 col-md-6">
+                            <div class="form-group position-relative">
+                                <label for="reserve_modal_apartments">Выберите апартаменты</label>
+
+                                <select name="apartments-list" id="reserve_modal_apartments" class="form-control-lg p-0 rounded-0 styled" data-placeholder="Выберите апартаменты">
+                                    <option></option>
+
+                                    <option value="1">Апартаменты 1</option>
+                                    <option value="2">Апартаменты 2</option>
+                                    <option value="3">Апартаменты 3</option>
+                                    <option value="4">Апартаменты 4</option>
+                                </select>
+                            </div>
+
+                            <div class="form-group position-relative">
+                                <label for="modal_date_in">Укажите дату заезда</label>
+                                <input type="text" name="" id="modal_date_in" class="form-control-lg py-2 px-4 pr-5 border-0 rounded-0 datepicker" autocomplete="off">
+                                <div class="reserve-form-content__field-ico">
+                                    <svg>
+                                        <use xlink:href="img/spritemap.svg#sprite-calendar"></use>
+                                    </svg>
+                                </div>
+                            </div>
+
+                            <div class="form-group position-relative">
+                                <label for="modal_date_out">Укажите дату выезда</label>
+                                <input type="text" name="" id="modal_date_out" class="form-control-lg py-2 px-4 pr-5 border-0 rounded-0 datepicker" autocomplete="off">
+                                <div class="reserve-form-content__field-ico">
+                                    <svg>
+                                        <use xlink:href="img/spritemap.svg#sprite-calendar"></use>
+                                    </svg>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <button type="submit" class="reserve__submit btn btn-lg btn-primary d-block mt-3 mx-auto font-weight-bold rounded-pill text-white">Забронировать
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="modal fade modal-custom" id="modal_reserve_answer" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+        <div class="modal-content modal-answer">
+            <div class="modal-header flex-column">
+                <h5 class="modal-title">Заявка отправлена</h5>
+
+                <hr>
+
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <svg>
+                        <use xlink:href="img/spritemap.svg#sprite-close"></use>
+                    </svg>
+                </button>
+            </div>
+
+            <div class="modal-body">
+                <p class="font-weight-light">Спасибо, Ваша заявка отправлена. Наш менеджер свяжется с Вами в ближайшее время.</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- REVIEW MODAL -->
 <div class="modal fade modal-custom" id="modal_review" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
         <div class="modal-content modal-review-content">
@@ -826,6 +929,27 @@
                     <button type="submit" class="reserve__submit btn btn-lg btn-primary d-block mt-4 mx-auto font-weight-bold rounded-pill text-white">Забронировать
                     </button>
                 </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="modal fade modal-custom" id="modal_review_answer" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+        <div class="modal-content modal-answer">
+            <div class="modal-header flex-column">
+                <h5 class="modal-title">Отзыв отправлен</h5>
+
+                <hr>
+
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <svg>
+                        <use xlink:href="img/spritemap.svg#sprite-close"></use>
+                    </svg>
+                </button>
+            </div>
+
+            <div class="modal-body">
+                <p class="font-weight-light">Спасибо за Ваш отзыв, он будет опубликован на сайте после стандартной проверки.</p>
             </div>
         </div>
     </div>

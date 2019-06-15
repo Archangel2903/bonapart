@@ -293,7 +293,6 @@
     width: 41px;
     height: 4px;
     background: $main-first-color;
-    $main
   }
 
   .modal-review-content {
@@ -389,6 +388,10 @@
     max-width: 325px;
     padding: 30px;
     margin: 0 auto;
+  }
+
+  &.datepicker-dropdown {
+    padding: 1rem;
   }
 
   > div {

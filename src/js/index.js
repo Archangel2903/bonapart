@@ -11,6 +11,7 @@ import IMask, {Masked} from 'imask';
 import moment from 'moment';
 import 'moment/locale/ru';
 import 'bootstrap-datepicker';
+import 'bootstrap-datepicker/dist/locales/bootstrap-datepicker.ru.min';
 import 'bootstrap-star-rating';
 import 'readmore-js';
 import L from 'leaflet';
@@ -85,14 +86,10 @@ $(function () {
     if ($('article').length) {
         $('article').readmore({
             speed: 300,
-            collapsedHeight: 130,
-            maxHeight: 130,
             lessLink: '<a href="#" class="attractions__more d-block mr-4 mb-2 text-right m-md-0 mb-md-2 text-md-left">Показать больше</a>',
             moreLink: '<a href="#" class="attractions__more d-block mr-4 mb-2 text-right m-md-0 mb-md-2 text-md-left">Свернуть текст</a>'
         });
     }
-
-    // Swiper
     // Swiper
     if ($('.swiper-container').length) {
         var mainSlider, attractionSlider, instagramSlider;
@@ -283,6 +280,14 @@ $(function () {
         });
     }
 
+    // lightgallery
+    $('.lightgallery').lightGallery({
+        download: false,
+        mode: 'lg-fade',
+        easing: 'ease',
+        getCaptionFromTitleOrAlt: false,
+    });
+
     // star rating
     let rateInput = document.querySelectorAll('.rating-input');
     rateInput.forEach(function (input) {
@@ -340,6 +345,7 @@ $(function () {
     // datepicker
     moment.updateLocale('ru');
     console.log(moment().format('LL'));
+
     /*let dateInputAll = document.querySelectorAll('.datepicker-js');
     if (dateInputAll.length > 0) {
         dateInputAll.forEach(function (i) {
@@ -367,25 +373,8 @@ $(function () {
         startDate: moment().add(1, 'days').format('LL'),
         language: "ru",
         autoclose: true,
-        datesDisabled: ['20/06/2019', '21/06/2019', '22/06/2019', '23/06/2019', '24/06/2019', '25/06/2019']
-    });
-
-    // reserved calendar
-    $('.calendar-reserved__calendar').datepicker();
-
-    // lightgallery
-    $('.lightgallery').lightGallery({
-        download: false,
-        mode: 'lg-fade',
-        easing: 'ease',
-        getCaptionFromTitleOrAlt: false,
-    });
-
-
-    $('.attractions__card .card-text').readmore({
-        speed: 300,
-        collapsedHeight: 130,
-        lessLink: '<a href="#" class="attractions__more d-block mr-4 mb-2 text-right m-md-0 mb-md-2 text-md-left">Показать больше</a>',
-        moreLink: '<a href="#" class="attractions__more d-block mr-4 mb-2 text-right m-md-0 mb-md-2 text-md-left">Свернуть текст</a>'
+        todayHighlight: true,
+        datesDisabled: ['05/07/2019', '25/07/2019'],
+        toggleActive: true,
     });
 });
