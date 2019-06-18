@@ -94,6 +94,36 @@
     </header>
     <!-- HEADER END -->
 
+    <!-- MOBILE MENU -->
+    <div class="mobile-menu d-flex flex-column justify-content-center">
+        <div class="mobile-menu__background">
+            <img src="<%= require('./img/main-slide-img01.jpg') %>" class="mobile-menu__background-img" alt="" title="">
+        </div>
+
+        <ul class="mobile-menu__list">
+            <li class="mobile-menu__list-item">
+                <a href="#01" class="mobile-menu__list-link">Апартаменты 1</a>
+            </li>
+
+            <li class="mobile-menu__list-item">
+                <a href="#02" class="mobile-menu__list-link">Апартаменты 2</a>
+            </li>
+
+            <li class="mobile-menu__list-item">
+                <a href="#03" class="mobile-menu__list-link">Апартаменты 3</a>
+            </li>
+
+            <li class="mobile-menu__list-item">
+                <a href="#04" class="mobile-menu__list-link">Апартаменты 4</a>
+            </li>
+
+            <li class="mobile-menu__list-item">
+                <a href="#05" class="mobile-menu__list-link">Как к нам добраться</a>
+            </li>
+        </ul>
+    </div>
+    <!-- MOBILE MENU END -->
+
     <!-- CONTENT -->
     <main class="content">
 
@@ -121,7 +151,8 @@
 
                         <div class="col-md-6 offset-md-1">
                             <div class="slide-content">
-                                <button class="slide-content__button btn btn-primary position-relative d-block rounded-pill mx-auto mt-5 text-white font-weight-bold shadow-none mt-md-5 ml-md-2" data-toggle="modal" data-target="#modal_reserve">
+                                <button class="slide-content__button btn btn-primary position-relative d-block rounded-pill mx-auto mt-5 text-white font-weight-bold shadow-none mt-md-5 ml-md-2"
+                                        data-toggle="modal" data-target="#modal_reserve">
                                     Забронировать
                                 </button>
                             </div>
@@ -367,7 +398,7 @@
                     бронирование
                 </p>
 
-                <div class="row justify-content-center">
+                <div class="row justify-content-center mb-5">
                     <div class="col-md-8">
                         <div class="calendar-reserved row">
                             <div class="col-md-6">
@@ -384,15 +415,15 @@
                                 </div>
                             </div>
 
-                            <div class="col-12 mt-4 pt-1">
+                            <div class="col-12 mt-3 pt-1">
                                 <span class="calendar-reserved__text"><span class="indicator indicator_disabled"></span> эти даты уже заняты</span>
                             </div>
                         </div>
                     </div>
                 </div>
 
-                <div class="reserve__form">
-                    <div class="reserve-form-content form-row justify-content-center pb-3">
+                <div class="reserve__form pt-3">
+                    <div class="reserve-form-content row justify-content-center pb-3">
                         <div class="col-md-4">
                             <div class="form-group position-relative">
                                 <label for="apart_reserve_name">Ваше имя*</label>
@@ -417,7 +448,8 @@
                         </div>
                     </div>
 
-                    <button type="submit" id="disDates" class="reserve__submit btn btn-lg btn-primary d-block mt-4 mx-auto font-weight-bold rounded-pill text-white">Забронировать</button>
+                    <button type="submit" id="disDates" class="reserve__submit btn btn-lg btn-primary d-block mt-2 mx-auto font-weight-bold rounded-pill text-white">Забронировать
+                    </button>
                 </div>
             </div>
         </div>
@@ -431,63 +463,32 @@
 
                 <div class="row">
                     <div class="photo-room swiper-container mobile-slider">
-                        <div class="swiper-wrapper flex-md-wrap">
-                            <div class="photo-room__box swiper-slide col-md-3">
-                                <picture>
-                                    <source srcset="<%= require('./img/apartment-img01.webp') %>" type="image/webp">
-                                    <img data-src="<%= require('./img/apartment-img01.jpg') %>" src="<%= require('./img/placeholder.png') %>" class="photo-room__img" alt="room"
-                                         title="">
-                                </picture>
-                            </div>
-                            <div class="photo-room__box swiper-slide col-md-3">
-                                <picture>
-                                    <source srcset="<%= require('./img/apartment-img02.webp') %>" type="image/webp">
-                                    <img data-src="<%= require('./img/apartment-img02.jpg') %>" src="<%= require('./img/placeholder.png') %>" class="photo-room__img" alt="room"
-                                         title="">
-                                </picture>
-                            </div>
-                            <div class="photo-room__box swiper-slide col-md-3">
-                                <picture>
-                                    <source srcset="<%= require('./img/apartment-img03.webp') %>" type="image/webp">
-                                    <img data-src="<%= require('./img/apartment-img03.jpg') %>" src="<%= require('./img/placeholder.png') %>" class="photo-room__img" alt="room"
-                                         title="">
-                                </picture>
-                            </div>
-                            <div class="photo-room__box swiper-slide col-md-3">
-                                <picture>
-                                    <source srcset="<%= require('./img/apartment-img04.webp') %>" type="image/webp">
-                                    <img data-src="<%= require('./img/apartment-img04.jpg') %>" src="<%= require('./img/placeholder.png') %>" class="photo-room__img" alt="room"
-                                         title="">
-                                </picture>
-                            </div>
-                            <div class="photo-room__box swiper-slide col-md-3">
-                                <picture>
-                                    <source srcset="<%= require('./img/apartment-img01.webp') %>" type="image/webp">
-                                    <img data-src="<%= require('./img/apartment-img01.jpg') %>" src="<%= require('./img/placeholder.png') %>" class="photo-room__img" alt="room"
-                                         title="">
-                                </picture>
-                            </div>
-                            <div class="photo-room__box swiper-slide col-md-3">
-                                <picture>
-                                    <source srcset="<%= require('./img/apartment-img02.webp') %>" type="image/webp">
-                                    <img data-src="<%= require('./img/apartment-img02.jpg') %>" src="<%= require('./img/placeholder.png') %>" class="photo-room__img" alt="room"
-                                         title="">
-                                </picture>
-                            </div>
-                            <div class="photo-room__box swiper-slide col-md-3">
-                                <picture>
-                                    <source srcset="<%= require('./img/apartment-img03.webp') %>" type="image/webp">
-                                    <img data-src="<%= require('./img/apartment-img03.jpg') %>" src="<%= require('./img/placeholder.png') %>" class="photo-room__img" alt="room"
-                                         title="">
-                                </picture>
-                            </div>
-                            <div class="photo-room__box swiper-slide col-md-3">
-                                <picture>
-                                    <source srcset="<%= require('./img/apartment-img04.webp') %>" type="image/webp">
-                                    <img data-src="<%= require('./img/apartment-img04.jpg') %>" src="<%= require('./img/placeholder.png') %>" class="photo-room__img" alt="room"
-                                         title="">
-                                </picture>
-                            </div>
+                        <div class="swiper-wrapper lightgallery flex-md-wrap">
+                            <a href="<%= require('./img/apartment-img01.jpg') %>" class="photo-room__box swiper-slide col-md-3">
+                                <img src="<%= require('./img/placeholder.png') %>" class="photo-room__img" alt="" title="" data-src="<%= require('./img/apartment-img01.jpg') %>">
+                            </a>
+                            <a href="<%= require('./img/apartment-img02.jpg') %>" class="photo-room__box swiper-slide col-md-3">
+                                <img src="<%= require('./img/placeholder.png') %>" class="photo-room__img" alt="" title="" data-src="<%= require('./img/apartment-img02.jpg') %>">
+                            </a>
+                            <a href="<%= require('./img/apartment-img03.jpg') %>" class="photo-room__box swiper-slide col-md-3">
+                                <img src="<%= require('./img/placeholder.png') %>" class="photo-room__img" alt="" title="" data-src="<%= require('./img/apartment-img03.jpg') %>">
+                            </a>
+                            <a href="<%= require('./img/apartment-img04.jpg') %>" class="photo-room__box swiper-slide col-md-3">
+                                <img src="<%= require('./img/placeholder.png') %>" class="photo-room__img" alt="" title="" data-src="<%= require('./img/apartment-img04.jpg') %>">
+                            </a>
+
+                            <a href="<%= require('./img/apartment-img01.jpg') %>" class="photo-room__box swiper-slide col-md-3">
+                                <img src="<%= require('./img/placeholder.png') %>" class="photo-room__img" alt="" title="" data-src="<%= require('./img/apartment-img01.jpg') %>">
+                            </a>
+                            <a href="<%= require('./img/apartment-img02.jpg') %>" class="photo-room__box swiper-slide col-md-3">
+                                <img src="<%= require('./img/placeholder.png') %>" class="photo-room__img" alt="" title="" data-src="<%= require('./img/apartment-img02.jpg') %>">
+                            </a>
+                            <a href="<%= require('./img/apartment-img03.jpg') %>" class="photo-room__box swiper-slide col-md-3">
+                                <img src="<%= require('./img/placeholder.png') %>" class="photo-room__img" alt="" title="" data-src="<%= require('./img/apartment-img03.jpg') %>">
+                            </a>
+                            <a href="<%= require('./img/apartment-img04.jpg') %>" class="photo-room__box swiper-slide col-md-3">
+                                <img src="<%= require('./img/placeholder.png') %>" class="photo-room__img" alt="" title="" data-src="<%= require('./img/apartment-img04.jpg') %>">
+                            </a>
                         </div>
 
                         <div class="swiper-arrows swiper-button-prev d-md-none">
@@ -503,7 +504,9 @@
                     </div>
 
                     <div class="col-12 pt-md-4">
-                        <button type="button" class="btn btn-primary btn-custom d-block mt-2 mx-auto rounded-pill text-white shadow-none mt-md-5" data-toggle="modal" data-target="#modal_reserve">Забронировать</button>
+                        <button type="button" class="btn btn-primary btn-custom d-block mt-2 mx-auto rounded-pill text-white shadow-none mt-md-5" data-toggle="modal"
+                                data-target="#modal_reserve">Забронировать
+                        </button>
                     </div>
                 </div>
             </div>
@@ -831,23 +834,25 @@
                                 </select>
                             </div>
 
-                            <div class="form-group position-relative">
-                                <label for="modal_date_in">Укажите дату заезда</label>
-                                <input type="text" name="" id="modal_date_in" class="form-control-lg py-2 px-4 pr-5 border-0 rounded-0 datepicker" autocomplete="off">
-                                <div class="reserve-form-content__field-ico">
-                                    <svg>
-                                        <use xlink:href="img/spritemap.svg#sprite-calendar"></use>
-                                    </svg>
+                            <div class="calendar-reserved">
+                                <div class="form-group position-relative">
+                                    <label for="modal_date_in">Укажите дату заезда</label>
+                                    <input type="text" name="" id="modal_date_in" class="form-control-lg py-2 px-4 pr-5 border-0 rounded-0 datepicker-range" autocomplete="off">
+                                    <div class="reserve-form-content__field-ico">
+                                        <svg>
+                                            <use xlink:href="img/spritemap.svg#sprite-calendar"></use>
+                                        </svg>
+                                    </div>
                                 </div>
-                            </div>
 
-                            <div class="form-group position-relative">
-                                <label for="modal_date_out">Укажите дату выезда</label>
-                                <input type="text" name="" id="modal_date_out" class="form-control-lg py-2 px-4 pr-5 border-0 rounded-0 datepicker" autocomplete="off">
-                                <div class="reserve-form-content__field-ico">
-                                    <svg>
-                                        <use xlink:href="img/spritemap.svg#sprite-calendar"></use>
-                                    </svg>
+                                <div class="form-group position-relative">
+                                    <label for="modal_date_out">Укажите дату выезда</label>
+                                    <input type="text" name="" id="modal_date_out" class="form-control-lg py-2 px-4 pr-5 border-0 rounded-0 datepicker-range" autocomplete="off">
+                                    <div class="reserve-form-content__field-ico">
+                                        <svg>
+                                            <use xlink:href="img/spritemap.svg#sprite-calendar"></use>
+                                        </svg>
+                                    </div>
                                 </div>
                             </div>
                         </div>

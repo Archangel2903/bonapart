@@ -396,7 +396,7 @@
     width: 100%;
     max-width: 310px;
     height: 100%;
-    padding: 20px;
+    padding: 10px 20px;
     margin: 0 auto;
   }
 
@@ -470,8 +470,8 @@
           }
 
           &.today {
-            color: $main-first-color;
-            background: $main-second-color;
+            color: $main-second-color;
+            background: #9092b2;
           }
 
           &.active.active {

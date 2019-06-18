@@ -35,7 +35,7 @@
   },
   "dependencies": {
     "bootstrap": "^4.3.1",
-    "bootstrap-datepicker": "^3.0.5",
+    "bootstrap-datepicker": "^1.9.0",
     "bootstrap-star-rating": "^4.0.6",
     "imask": "^5.1.5",
     "intersection-observer": "^0.7.0",

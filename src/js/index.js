@@ -69,6 +69,13 @@ $(function () {
     // burger button
     $('.header-content__burger-btn').on('click', function () {
         $(this).toggleClass('active');
+
+        if($(this).hasClass('active')) {
+            $('.mobile-menu').css('height', $('.content').find('.section').first().height());
+        }
+
+        $('.mobile-menu').toggleClass('active');
+        $('body').toggleClass('overflow-hidden');
     });
 
     // apartments nav
@@ -90,6 +97,7 @@ $(function () {
             moreLink: '<a href="#" class="attractions__more d-block mr-4 mb-2 text-right m-md-0 mb-md-2 text-md-left">Свернуть текст</a>'
         });
     }
+
     // Swiper
     if ($('.swiper-container').length) {
         var mainSlider, attractionSlider, instagramSlider;
@@ -100,9 +108,10 @@ $(function () {
         if (mainSlides > 1) {
             mainSlider = new Swiper(document.querySelector('.main-slider'), {
                 direction: 'vertical',
-                // loop: true,
                 autoplay: true,
                 height: 690,
+                followFinger: false,
+                allowTouchMove: false,
                 navigation: {
                     nextEl: '.swiper-button-next',
                     prevEl: '.swiper-button-prev'
@@ -344,29 +353,9 @@ $(function () {
 
     // datepicker
     moment.updateLocale('ru');
-    console.log(moment().format('LL'));
 
-    /*let dateInputAll = document.querySelectorAll('.datepicker-js');
-    if (dateInputAll.length > 0) {
-        dateInputAll.forEach(function (i) {
-            $(i).daterangepicker({
-                alwaysShowCalendars: true,
-                autoApply: true,
-                singleDatePicker: true,
-                minDate: moment().format('DD MMMM YYYY'),
-                startDate: moment().format('DD MMMM YYYY'),
-                autoUpdateInput: false,
-                locale: {
-                    format: 'DD MMMM YYYY',
-                    cancelLabel: 'Clear',
-                    separator: ' '
-                }
-            });
-             $(i).on('apply.daterangepicker', function (ev, picker) {
-                $(this).val(picker.startDate.format('DD MMMM YYYY'));
-            });
-        });
-    }*/
+    let startDate = moment().add(1, 'days').format('LL');
+    console.log(startDate);
 
     $('.datepicker').datepicker({
         templates: {
@@ -374,11 +363,9 @@ $(function () {
             rightArrow: '<svg><use xlink:href="img/spritemap.svg#sprite-arrow_right"></use></svg>'
         },
         format: "dd MM yyyy",
-        startDate: moment().add(1, 'days').format('LL'),
+        startDate: moment().format('LL'),
         language: "ru",
         autoclose: true,
-        todayHighlight: true,
-        datesDisabled: ['05/07/2019', '25/07/2019'],
         toggleActive: true,
     });
 
@@ -389,22 +376,12 @@ $(function () {
             rightArrow: '<svg><use xlink:href="img/spritemap.svg#sprite-arrow_right"></use></svg>'
         },
         format: "dd MM yyyy",
-        startDate: moment().add(1, 'days').format('LL'),
+        startDate: startDate,
         language: "ru",
         autoclose: true,
-        todayHighlight: true,
         datesDisabled: ['05/07/2019', '06/07/2019', '07/07/2019', '08/07/2019', '25/07/2019'],
         toggleActive: true,
     });
-
-    // $('.calendar-reserved .datepicker-range:last-of-type').datepicker('update');
-
-    /*let reservIn = $('#reserved_date_in');
-    let reservOut = $('#reserved_date_out');
-
-    $('#disDates').on('click', function () {
-        $('.datepicker').datepicker('setDatesDisabled', [])
-    });*/
 });
 
 
@@ -428,10 +405,5 @@ $(function () {
 
     $('#event_period').datepicker({
         inputs: $('.actual_range')
-    });
-
-    $('.datepicker').each(function () {
-        $(this).find('tr .disabled-date').filter(':first-of-type').addClass('first-of-type');
-        $(this).find('tr .disabled-date').filter(':last-of-type').addClass('last-of-type');
     });
 });
