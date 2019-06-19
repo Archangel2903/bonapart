@@ -298,6 +298,10 @@
     }
   }
 
+  .section-404 {
+    padding: 200px 0 100px;
+  }
+
   .block-404 {
     font-size: 44px;
 
@@ -307,6 +311,7 @@
 
     &__img {
       width: auto;
+      margin: -35px -70px 0;
     }
   }
 }
