@@ -163,19 +163,19 @@
 
             <div class="main-section-content">
                 <nav class="main-section-content-nav d-flex flex-row flex-lg-column">
-                    <a href="apart-page.html" class="main-section-content-nav__link border-primary rounded-pill text-white font-weight-bold ml-lg-auto">
+                    <a href="apart-page.html" class="main-section-content-nav__link border-primary rounded-pill ml-lg-auto text-white font-weight-bold" data-number="1">
                         <span class="main-section-content-nav__text">Апартаменты <svg><use xlink:href="img/spritemap.svg#sprite-arrow_right"></use></svg></span>
                     </a>
 
-                    <a href="apart-page.html" class="main-section-content-nav__link border-primary rounded-pill text-white font-weight-bold ml-lg-auto">
+                    <a href="apart-page.html" class="main-section-content-nav__link border-primary rounded-pill ml-lg-auto text-white font-weight-bold" data-number="2">
                         <span class="main-section-content-nav__text">Апартаменты 2<svg><use xlink:href="img/spritemap.svg#sprite-arrow_right"></use></svg></span>
                     </a>
 
-                    <a href="apart-page.html" class="main-section-content-nav__link border-primary rounded-pill text-white font-weight-bold ml-lg-auto">
+                    <a href="apart-page.html" class="main-section-content-nav__link border-primary rounded-pill ml-lg-auto text-white font-weight-bold" data-number="3">
                         <span class="main-section-content-nav__text">Апартаменты lorem ipsum<svg><use xlink:href="img/spritemap.svg#sprite-arrow_right"></use></svg></span>
                     </a>
 
-                    <a href="apart-page.html" class="main-section-content-nav__link border-primary rounded-pill text-white font-weight-bold ml-lg-auto">
+                    <a href="apart-page.html" class="main-section-content-nav__link border-primary rounded-pill ml-lg-auto text-white font-weight-bold" data-number="4">
                         <span class="main-section-content-nav__text">Апартаменты 2 lorem ipsum<svg><use xlink:href="img/spritemap.svg#sprite-arrow_right"></use></svg></span>
                     </a>
                 </nav>
@@ -404,14 +404,20 @@
                             <div class="col-md-6">
                                 <div class="calendar-reserved__box">
                                     <p class="calendar-reserved__label">Укажите дату заезда</p>
+
                                     <div id="reserved_date_in" class="calendar-reserved__calendar datepicker-range bg-white"></div>
+
+                                    <input type="hidden" name="" class="result-val" value="">
                                 </div>
                             </div>
 
                             <div class="col-md-6">
                                 <div class="calendar-reserved__box">
                                     <p class="calendar-reserved__label">Укажите дату выезда</p>
+
                                     <div id="reserved_date_out" class="calendar-reserved__calendar datepicker-range bg-white"></div>
+
+                                    <input type="hidden" name="" class="result-val" value="">
                                 </div>
                             </div>
 

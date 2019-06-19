@@ -500,7 +500,7 @@
 
           &.disabled-date {
             border-radius: 25px 0 0 25px;
-            background: #ffd5d5;
+            background: #ffd5d5 !important;
 
             & + .disabled-date {
               border-radius: 0;

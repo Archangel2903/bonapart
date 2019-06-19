@@ -80,7 +80,7 @@ $(function () {
     $('.header-content__burger-btn').on('click', function () {
         $(this).toggleClass('active');
 
-        if($(this).hasClass('active')) {
+        if ($(this).hasClass('active')) {
             $('.mobile-menu').css('height', $('.content').find('.section').first().height());
         }
 
@@ -354,8 +354,9 @@ $(function () {
 
     // datepicker
     moment.updateLocale('ru');
+    console.log(moment().format('LL'));
 
-    $('.datepicker').datepicker({
+    /*$('.datepicker').datepicker({
         templates: {
             leftArrow: '<svg><use xlink:href="img/spritemap.svg#sprite-arrow_left"></use></svg>',
             rightArrow: '<svg><use xlink:href="img/spritemap.svg#sprite-arrow_right"></use></svg>'
@@ -365,10 +366,11 @@ $(function () {
         language: "ru",
         autoclose: true,
         toggleActive: true,
-    });
+    });*/
 
     $('.calendar-reserved').datepicker({
         inputs: $(this).find('.datepicker-range'),
+        keepEmptyValues: true,
         templates: {
             leftArrow: '<svg><use xlink:href="img/spritemap.svg#sprite-arrow_left"></use></svg>',
             rightArrow: '<svg><use xlink:href="img/spritemap.svg#sprite-arrow_right"></use></svg>'
@@ -379,5 +381,11 @@ $(function () {
         autoclose: true,
         datesDisabled: ['05/07/2019', '06/07/2019', '07/07/2019', '08/07/2019', '25/07/2019'],
         toggleActive: true,
+    });
+    $('.calendar-reserved').find('.datepicker-range').each(function () {
+        $(this).datepicker().on('changeDate', function (e) {
+            let input = $(this).parent().find('.result-val');
+            input.val(moment(e.date).format('DD/MM/YYYY'));
+        });
     });
 });
