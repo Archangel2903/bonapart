@@ -93,6 +93,11 @@ footer.footer {
 
   &__li-text {
     color: inherit;
+
+    &+ .footer-content__li-text:before {
+      content: '/';
+      padding: 0 2px;
+    }
   }
 }
 

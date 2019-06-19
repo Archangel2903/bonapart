@@ -44,6 +44,16 @@ $(window).on('load', function () {
     if (map) {
         map.setView(defaultCenter, 14.5).scrollWheelZoom.disable();
     }
+
+    // readmore js
+    if ($('article').length) {
+        $('article').readmore({
+            collapsedHeight: 145,
+            speed: 300,
+            lessLink: '<a href="#" class="attractions__more d-block mr-4 mb-2 text-right m-md-0 mb-md-2 text-md-left">Свернуть текст</a>',
+            moreLink: '<a href="#" class="attractions__more d-block mr-4 mb-2 text-right m-md-0 mb-md-2 text-md-left">Показать больше</a>'
+        });
+    }
 });
 
 $(function () {
@@ -88,15 +98,6 @@ $(function () {
     }, function () {
         $(this).css('width', $(this).data('width'));
     });
-
-    // readmore js
-    if ($('article').length) {
-        $('article').readmore({
-            speed: 300,
-            lessLink: '<a href="#" class="attractions__more d-block mr-4 mb-2 text-right m-md-0 mb-md-2 text-md-left">Показать больше</a>',
-            moreLink: '<a href="#" class="attractions__more d-block mr-4 mb-2 text-right m-md-0 mb-md-2 text-md-left">Свернуть текст</a>'
-        });
-    }
 
     // Swiper
     if ($('.swiper-container').length) {
@@ -354,16 +355,13 @@ $(function () {
     // datepicker
     moment.updateLocale('ru');
 
-    let startDate = moment().add(1, 'days').format('LL');
-    console.log(startDate);
-
     $('.datepicker').datepicker({
         templates: {
             leftArrow: '<svg><use xlink:href="img/spritemap.svg#sprite-arrow_left"></use></svg>',
             rightArrow: '<svg><use xlink:href="img/spritemap.svg#sprite-arrow_right"></use></svg>'
         },
         format: "dd MM yyyy",
-        startDate: moment().format('LL'),
+        startDate: '+1d',
         language: "ru",
         autoclose: true,
         toggleActive: true,
@@ -376,34 +374,10 @@ $(function () {
             rightArrow: '<svg><use xlink:href="img/spritemap.svg#sprite-arrow_right"></use></svg>'
         },
         format: "dd MM yyyy",
-        startDate: startDate,
+        startDate: '+1d',
         language: "ru",
         autoclose: true,
         datesDisabled: ['05/07/2019', '06/07/2019', '07/07/2019', '08/07/2019', '25/07/2019'],
         toggleActive: true,
-    });
-});
-
-
-
-
-$(function () {
-    let dateIn = $('#datepicker-in');
-    let dateOut = $('#datepicker-out');
-
-    dateIn.datepicker().on('changeDate', function () {
-        console.log('date change ' + dateIn.datepicker('getUTCDates'));
-    });
-
-    dateOut.datepicker().on('changeDate', function () {
-        console.log('date change ' + dateOut.datepicker('getUTCDates'));
-    });
-
-    $('.input-daterange').datepicker({
-        inputs: $(this).find('.datepicker-range')
-    });
-
-    $('#event_period').datepicker({
-        inputs: $('.actual_range')
     });
 });

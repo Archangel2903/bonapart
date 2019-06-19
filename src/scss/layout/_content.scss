@@ -283,7 +283,7 @@
     line-height: 12px;
     text-decoration: none !important;
     white-space: nowrap;
-    box-shadow: 2px 4px 10px 1px rgba(0, 0, 0, 0.8);
+    box-shadow: 2px 4px 10px 1px rgba(0, 0, 0, 0.5);
     transition: $transition-base;
     transition-delay: .2s;
 
@@ -567,6 +567,7 @@
 
     .card-text {
       color: #727272;
+      transition: $transition-base;
     }
   }
 
