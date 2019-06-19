@@ -1359,5 +1359,35 @@
 
 // 404 SECTION
 .section-404 {
+  padding: 240px 0 85px;
 
+  .section-bg {
+    &:after {
+      display: none;
+    }
+  }
+}
+
+.block-404 {
+  color: #5b5b5b;
+  font-weight: $font-weight-light;
+  font-size: 29px;
+
+  &__title {
+    padding: 20px 0 0;
+    color: $main-second-color;
+    font-family: $font-family-base;
+    font-size: 130px;
+    font-weight: $font-weight-bold;
+    text-align: center;
+  }
+
+  &__img {
+    width: 220px;
+    margin: -15px -50px 0 -30px;
+  }
+
+  &__link {
+    padding: 11px 45px;
+  }
 }

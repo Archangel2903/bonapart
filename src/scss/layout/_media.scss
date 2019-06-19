@@ -12,6 +12,16 @@
       font-size: 34px;
     }
   }*/
+
+  .block-404 {
+    &__title {
+      font-size: 162px;
+    }
+
+    &__img {
+      width: 277px;
+    }
+  }
 }
 @include media-breakpoint-up(sm) {
   .photo-room-section {
@@ -285,6 +295,18 @@
         width: 5px;
         height: 5px;
       }
+    }
+  }
+
+  .block-404 {
+    font-size: 44px;
+
+    &__title {
+      font-size: 290px;
+    }
+
+    &__img {
+      width: auto;
     }
   }
 }

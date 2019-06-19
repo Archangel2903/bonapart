@@ -80,9 +80,9 @@ $(function () {
     $('.header-content__burger-btn').on('click', function () {
         $(this).toggleClass('active');
 
-        if ($(this).hasClass('active')) {
+        /*if ($(this).hasClass('active')) {
             $('.mobile-menu').css('height', $('.content').find('.section').first().height());
-        }
+        }*/
 
         $('.mobile-menu').toggleClass('active');
         $('body').toggleClass('overflow-hidden');
