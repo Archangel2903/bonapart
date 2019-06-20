@@ -17,6 +17,7 @@
 
     &__img {
       width: 277px;
+      margin: -15px -90px 0 -70px;
     }
   }
 }
@@ -143,7 +144,7 @@
     padding: 95px 0 105px;
 
     .title {
-      font-size: 65px;
+      font-size: 65px !important;
     }
   }
 
@@ -324,12 +325,12 @@
     font-size: 44px;
 
     &__title {
-      font-size: 290px;
+      font-size: 290px !important;
     }
 
     &__img {
-      width: auto;
-      margin: -35px -70px 0;
+      width: auto !important;
+      margin: -35px -110px 0 !important;
     }
   }
 }
