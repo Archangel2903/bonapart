@@ -625,6 +625,14 @@
   }
 }
 
+@media screen and (min-width: 414px) {
+  .attractions-section {
+    .title {
+      font-size: 34px;
+    }
+  }
+}
+
 // INSTAGRAM SECTION
 .instagram-section {
   padding: 65px 0 90px;
@@ -1392,5 +1400,17 @@
 
   &__link {
     padding: 11px 45px;
+  }
+}
+
+@media screen and (min-width: 414px) {
+  .block-404 {
+    &__title {
+      font-size: 162px;
+    }
+
+    &__img {
+      width: 277px;
+    }
   }
 }
