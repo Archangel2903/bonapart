@@ -25,6 +25,10 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
   display: block;
 }
 
+article {
+  transition: $transition-base;
+}
+
 a {
   outline: none;
   color: $text-color;

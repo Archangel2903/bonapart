@@ -556,6 +556,10 @@
     max-width: 370px;
     margin: 0 auto;
 
+    .card-img-top {
+      height: 240px;
+    }
+
     .card-title {
       color: #120706;
       font-family: $font-family-custom;
@@ -564,7 +568,6 @@
 
     .card-text {
       color: #727272;
-      transition: $transition-base;
     }
   }
 
