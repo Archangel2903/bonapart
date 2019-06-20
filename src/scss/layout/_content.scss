@@ -514,7 +514,7 @@
     }
   }
 
-  &__text {
+  &__text, p {
     color: #9b9b9b;
     font-weight: 300;
     font-size: 14px;
@@ -646,7 +646,7 @@
 
 .instagram-slider {
   padding: 0 20px;
-  margin: 110px 0 0;
+  margin: 100px 0 0;
 
   &__img-wrap {
     width: auto;
@@ -1400,17 +1400,5 @@
 
   &__link {
     padding: 11px 45px;
-  }
-}
-
-@media screen and (min-width: 414px) {
-  .block-404 {
-    &__title {
-      font-size: 162px;
-    }
-
-    &__img {
-      width: 277px;
-    }
   }
 }
