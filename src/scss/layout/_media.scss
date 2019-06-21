@@ -227,6 +227,10 @@
 
     &__box {
       height: auto;
+
+      &_vertical {
+        height: 570px;
+      }
     }
   }
 

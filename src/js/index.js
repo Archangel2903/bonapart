@@ -61,7 +61,7 @@ $(function () {
     let imagesAll = document.querySelectorAll('img[data-src]');
     let imgObserve = new IntersectionObserver(function (entries) {
         entries.forEach(function (entry) {
-            if (entry.intersectionRatio > 0 && entry.target.hasAttribute('data-src')) {
+            if (entry.intersectionRatio >= 0 && entry.target.hasAttribute('data-src')) {
                 let current = entry.target;
                 let source = current.getAttribute('data-src');
 
@@ -155,8 +155,7 @@ $(function () {
                 // loop: true,
                 autoplay: true,
                 spaceBetween: 25,
-                // centeredSlides: true,
-                slidesPerView: 'auto',
+                slidesPerView: '3',
                 navigation: {
                     nextEl: '.swiper-button-next',
                     prevEl: '.swiper-button-prev'
@@ -167,10 +166,14 @@ $(function () {
                 },
                 breakpoints: {
                     991: {
-                        centeredSlides: false
+                        centeredSlides: false,
+                        slidesPerView: '2',
                     },
                     768: {
                         centeredSlides: true
+                    },
+                    480: {
+                        slidesPerView: '1',
                     }
                 }
             });
