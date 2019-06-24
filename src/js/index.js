@@ -48,10 +48,10 @@ $(window).on('load', function () {
     // readmore js
     if ($('article').length) {
         $('article').readmore({
-            collapsedHeight: 215,
+            collapsedHeight: 220,
             speed: 300,
-            lessLink: '<a href="#" class="attractions__more d-block mr-4 mb-2 text-right pt-md-3 m-md-0 mb-md-2 text-md-left">Свернуть текст</a>',
-            moreLink: '<a href="#" class="attractions__more d-block mr-4 mb-2 text-right pt-md-3 m-md-0 mb-md-2 text-md-left">Показать больше</a>'
+            lessLink: '<a href="#" class="attractions__more d-block mt-3 mr-4 mb-2 text-right pt-md-3 m-md-0 mb-md-2 text-md-left">Свернуть текст</a>',
+            moreLink: '<a href="#" class="attractions__more d-block mt-3 mr-4 mb-2 text-right pt-md-3 m-md-0 mb-md-2 text-md-left">Показать больше</a>'
         });
     }
 });

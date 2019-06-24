@@ -424,7 +424,7 @@
 .apartment-includes {
   display: grid !important;
   grid-template-columns: repeat(2, minmax(50%, 100%));
-  grid-gap: 20px 55px;
+  grid-gap: 15px 55px;
 
   &__box {
 
@@ -489,7 +489,7 @@
     position: relative;
     max-width: 485px;
     min-height: 350px;
-    padding: 42px 60px 55px 45px;
+    padding: 43px 60px 55px 45px;
     margin: 240px auto 0;
     background: white;
   }
@@ -553,14 +553,18 @@
 }
 
 .attractions {
-  padding: 60px 0 0;
+  padding: 95px 0 0;
 
   &__card {
     max-width: 370px;
     margin: 0 auto;
 
     .card-img-top {
-      height: 240px;
+      height: 190px;
+    }
+
+    .card-body {
+      padding: 0 30px;
     }
 
     .card-title {
@@ -571,6 +575,7 @@
 
     .card-text {
       color: #727272;
+      line-height: 19px;
     }
   }
 
@@ -628,14 +633,6 @@
   }
 }
 
-@media screen and (min-width: 414px) {
-  .attractions-section {
-    .title {
-      font-size: 34px;
-    }
-  }
-}
-
 // INSTAGRAM SECTION
 .instagram-section {
   padding: 65px 0 90px;
@@ -649,7 +646,7 @@
 
 .instagram-slider {
   padding: 0 20px;
-  margin: 100px 0 0;
+  margin: 75px 0 0;
 
   &__img-wrap {
     width: auto;
@@ -660,7 +657,7 @@
     display: block;
     width: 100%;
     max-width: 270px;
-    height: 270px;
+    height: 210px;
     margin: 0 auto;
   }
 
@@ -714,6 +711,10 @@
 }
 
 .reserve-form-content {
+  .form-group {
+    margin-bottom: 13px;
+  }
+
   &__field-ico {
     position: absolute;
     top: 55%;
@@ -758,7 +759,7 @@
       .jq-selectbox {
         &__select {
           height: 100%;
-          padding: 13px 34px 13px 22px;
+          padding: 16px 34px 16px 22px;
           border: transparent;
           border-radius: 0;
           font-family: $font-family-base;
