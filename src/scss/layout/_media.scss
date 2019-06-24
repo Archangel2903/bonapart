@@ -12,12 +12,12 @@
 
   .block-404 {
     &__title {
-      font-size: 162px;
+      font-size: 182px;
     }
 
     &__img {
       width: 277px;
-      margin: -15px -90px 0 -70px;
+      margin: -15px -50px 0 -50px;
     }
   }
 }
@@ -351,7 +351,7 @@
   }
 
   .section-404 {
-    padding: 200px 0 100px;
+    padding: 200px 0 110px;
   }
 
   .block-404 {
@@ -363,7 +363,7 @@
 
     &__img {
       width: auto !important;
-      margin: -35px -110px 0 !important;
+      margin: -35px -90px 0 -55px !important;
     }
   }
 
@@ -748,8 +748,12 @@
     padding-top: 65px;
 
     &__box {
-      padding: 45px 45px 70px;
+      padding: 45px 45px 60px;
     }
+  }
+
+  .contacts-section {
+    padding: 75px 0 100px;
   }
 
   #map {
