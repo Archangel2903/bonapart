@@ -97,7 +97,7 @@
     <!-- MOBILE MENU -->
     <div class="mobile-menu d-flex flex-column justify-content-center">
         <div class="mobile-menu__background">
-            <img src="<%= require('./img/main-slide-img01.jpg') %>" class="mobile-menu__background-img" alt="" title="">
+            <img src="<%= require('./img/main-slide-img01.jpg') %>" class="mobile-menu__background-img" alt="mobile-menu-bg" title="">
         </div>
 
         <ul class="mobile-menu__list">
@@ -139,9 +139,9 @@
 
                 <div class="container">
                     <div class="row">
-                        <div class="col-md-9 offset-md-1">
+                        <div class="col-md-11 offset-md-1 offset-xl-0">
                             <div class="slide-content">
-                                <div class="title ml-md-2 text-white font-weight-light">
+                                <div class="title ml-md-3 text-white font-weight-light">
                                     <span class="title__sup-text">3-х комнатные апартаменты</span>
                                     длинное название
                                     апартаментов
@@ -149,9 +149,9 @@
                             </div>
                         </div>
 
-                        <div class="col-md-6 offset-md-1">
+                        <div class="col-md-6 offset-md-1 offset-xl-0">
                             <div class="slide-content">
-                                <button class="slide-content__button btn btn-primary position-relative d-block rounded-pill mx-auto mt-5 text-white font-weight-bold shadow-none mt-md-5 ml-md-2"
+                                <button class="slide-content__button btn btn-primary position-relative d-block rounded-pill mx-auto mt-5 text-white font-weight-bold shadow-none mt-md-5 ml-md-3"
                                         data-toggle="modal" data-target="#modal_reserve">
                                     Забронировать
                                 </button>
@@ -162,7 +162,7 @@
             </div>
 
             <div class="main-section-content">
-                <nav class="main-section-content-nav d-flex flex-row flex-lg-column">
+                <nav class="main-section-content-nav d-flex flex-row flex-xl-column">
                     <span class="main-section-content-nav__link main-section-content-nav__link active border-primary rounded-pill ml-lg-auto text-white font-weight-bold" data-number="1">
                         <span class="main-section-content-nav__text">Апартаменты <svg><use xlink:href="img/spritemap.svg#sprite-arrow_right"></use></svg></span>
                     </span>
@@ -262,11 +262,11 @@
                                 </svg>
                             </div>
                             <p class="advantage__caption mt-2 mb-3 my-md-3 font-weight-bold">Номер</p>
-                            <p class="advantage__text">3-х комнатный номер</p>
+                            <p class="advantage__text">3-х комнатный <br>номер</p>
                         </div>
                     </div>
 
-                    <div class="swiper-controls mt-3 mx-auto text-center">
+                    <div class="swiper-controls mt-4 mx-auto text-center">
                         <div class="swiper-arrows swiper-button-prev h-auto">
                             <svg>
                                 <use xlink:href="img/spritemap.svg#sprite-arrow_left"></use>
@@ -399,9 +399,9 @@
                 </p>
 
                 <div class="row justify-content-center mb-5">
-                    <div class="col-md-8">
+                    <div class="col-md-8 col-lg-10 col-xl-8">
                         <div class="calendar-reserved row">
-                            <div class="col-md-6">
+                            <div class="col-md-6 mb-5 mb-md-0">
                                 <div class="calendar-reserved__box">
                                     <p class="calendar-reserved__label">Укажите дату заезда</p>
 
@@ -421,14 +421,14 @@
                                 </div>
                             </div>
 
-                            <div class="col-12 mt-3 pt-1">
+                            <div class="col-12 pt-1 mt-1 mt-md-3">
                                 <span class="calendar-reserved__text"><span class="indicator indicator_disabled"></span> эти даты уже заняты</span>
                             </div>
                         </div>
                     </div>
                 </div>
 
-                <div class="reserve__form pt-3">
+                <div class="reserve__form pt-1 pt-md-3 pt-lg-2 pt-xl-3">
                     <div class="reserve-form-content row justify-content-center pb-3">
                         <div class="col-md-4">
                             <div class="form-group position-relative">
@@ -454,7 +454,7 @@
                         </div>
                     </div>
 
-                    <button type="submit" id="disDates" class="reserve__submit btn btn-lg btn-primary d-block mt-2 mx-auto font-weight-bold rounded-pill text-white">Забронировать
+                    <button type="submit" id="disDates" class="reserve__submit btn btn-lg btn-primary d-block mt-3 mt-md-3 mt-xl-2 mx-auto font-weight-bold rounded-pill text-white">Забронировать
                     </button>
                 </div>
             </div>
@@ -471,23 +471,23 @@
                     <div class="photo-room swiper-container mobile-slider">
                         <div class="swiper-wrapper lightgallery flex-md-wrap">
                             <a href="<%= require('./img/apartment-img02.jpg') %>" class="photo-room__box swiper-slide col-md-3">
-                                <img src="<%= require('./img/placeholder.png') %>" class="photo-room__img" alt="" title="" data-src="<%= require('./img/apartment-img02.jpg') %>">
+                                <img src="<%= require('./img/placeholder.png') %>" class="photo-room__img" alt="photo room" title="" data-src="<%= require('./img/apartment-img02.jpg') %>">
                             </a>
                             <a href="<%= require('./img/apartment-img03.jpg') %>" class="photo-room__box swiper-slide col-md-6">
-                                <img src="<%= require('./img/placeholder.png') %>" class="photo-room__img" alt="" title="" data-src="<%= require('./img/apartment-img03.jpg') %>">
+                                <img src="<%= require('./img/placeholder.png') %>" class="photo-room__img" alt="photo room" title="" data-src="<%= require('./img/apartment-img03.jpg') %>">
                             </a>
                             <a href="<%= require('./img/apartment-img04.jpg') %>" class="photo-room__box swiper-slide col-md-3">
-                                <img src="<%= require('./img/placeholder.png') %>" class="photo-room__img" alt="" title="" data-src="<%= require('./img/apartment-img04.jpg') %>">
+                                <img src="<%= require('./img/placeholder.png') %>" class="photo-room__img" alt="photo room" title="" data-src="<%= require('./img/apartment-img04.jpg') %>">
                             </a>
 
                             <a href="<%= require('./img/apartment-img01.jpg') %>" class="photo-room__box swiper-slide col-md-6">
-                                <img src="<%= require('./img/placeholder.png') %>" class="photo-room__img" alt="" title="" data-src="<%= require('./img/apartment-img01.jpg') %>">
+                                <img src="<%= require('./img/placeholder.png') %>" class="photo-room__img" alt="photo room" title="" data-src="<%= require('./img/apartment-img01.jpg') %>">
                             </a>
                             <a href="<%= require('./img/apartment-img02.jpg') %>" class="photo-room__box swiper-slide col-md-3">
-                                <img src="<%= require('./img/placeholder.png') %>" class="photo-room__img" alt="" title="" data-src="<%= require('./img/apartment-img02.jpg') %>">
+                                <img src="<%= require('./img/placeholder.png') %>" class="photo-room__img" alt="photo room" title="" data-src="<%= require('./img/apartment-img02.jpg') %>">
                             </a>
                             <a href="<%= require('./img/apartment-img04.jpg') %>" class="photo-room__box swiper-slide col-md-3">
-                                <img src="<%= require('./img/placeholder.png') %>" class="photo-room__img" alt="" title="" data-src="<%= require('./img/apartment-img04.jpg') %>">
+                                <img src="<%= require('./img/placeholder.png') %>" class="photo-room__img" alt="photo room" title="" data-src="<%= require('./img/apartment-img04.jpg') %>">
                             </a>
                         </div>
 
@@ -504,9 +504,7 @@
                     </div>
 
                     <div class="col-12 pt-md-4">
-                        <button type="button" class="btn btn-primary btn-custom d-block mt-2 mx-auto rounded-pill text-white shadow-none mt-md-5" data-toggle="modal"
-                                data-target="#modal_reserve">Забронировать
-                        </button>
+                        <button type="button" class="btn btn-primary btn-custom d-block mt-2 mt-md-4 mt-xl-5 mx-auto rounded-pill text-white shadow-none" data-toggle="modal" data-target="#modal_reserve">Забронировать</button>
                     </div>
                 </div>
             </div>
@@ -521,7 +519,6 @@
 
                 <div class="row justify-content-center">
                     <div class="reviews col-md-10">
-
                         <div class="reviews__item media flex-column">
                             <div class="reviews__item-head media-head mb-3">
                                 <h5 class="reviews__title">Александр</h5>
@@ -666,7 +663,6 @@
                         <button class="reviews__button btn btn-primary d-block border-0 rounded-pill mt-5 mx-auto font-weight-bold text-white" data-toggle="modal"
                                 data-target="#modal_review">Оставить отзыв
                         </button>
-
                     </div>
                 </div>
             </div>

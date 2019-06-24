@@ -444,6 +444,10 @@
             opacity: 0;
             visibility: hidden;
           }
+
+          &:hover {
+            background: none;
+          }
         }
 
         &.datepicker-switch {

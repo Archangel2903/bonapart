@@ -75,11 +75,11 @@
     }
 
     &_apartment {
-      padding-bottom: 43px;
+      padding-bottom: 65px;
 
       .title {
-        font-size: 80px;
-        line-height: 68px;
+        font-size: 68px;
+        line-height: 57px;
       }
     }
   }
@@ -99,10 +99,6 @@
     }
   }
 
-  .main-section-content {
-    right: 15.8%;
-  }
-
   .advantage-section {
     padding: 80px 0 60px;
   }
@@ -112,12 +108,17 @@
 
     &__box {
       &:not(:nth-last-child(-1n+3)) {
-        margin-bottom: 25px;
+        margin-bottom: 60px;
       }
     }
 
+    &__caption {
+      font-size: 18px;
+    }
+
     &__text {
-      width: 70%;
+      width: 95%;
+      letter-spacing: 0;
     }
   }
 
@@ -194,12 +195,12 @@
   }
 
   .tour3d-section {
-    padding: 95px 0 120px;
+    padding: 85px 0 100px;
   }
 
   .tour3d-description {
     &__text-wrap {
-      padding: 45px 40px 20px;
+      padding: 40px 31px 10px;
     }
   }
 
@@ -219,34 +220,51 @@
 
     &__price {
       width: 100%;
-      padding: 29px 2px;
+      padding: 28px 2px;
       border: 0;
       border-top: 1px solid #dee2e6;
     }
   }
 
   .simple-reserved-section {
-    padding: 90px 0 120px;
+    padding: 85px 0 105px;
+
+    .title {
+      margin-bottom: 75px;
+    }
   }
 
   .photo-room-section {
-    padding: 95px 0 115px;
+    padding: 80px 0 105px;
   }
 
   .photo-room {
-    margin-top: 100px;
+    margin-top: 70px;
 
     &__box {
       height: auto;
+
+      &:not(:nth-last-child(-1n+5)) {
+        margin-bottom: 35px;
+      }
 
       &_vertical {
         height: 570px;
       }
     }
+
+    &__img {
+      max-width: none;
+      height: 210px;
+    }
   }
 
   .reviews-section {
-    padding: 99px 0 125px;
+    padding: 85px 0 102px;
+
+    .title {
+      line-height: 0.85;
+    }
   }
 
   .reviews {
@@ -268,17 +286,17 @@
   }
 
   .ways-section {
-    padding: 115px 0 70px;
+    padding: 100px 0 70px;
   }
 
   .ways {
     &__box {
-      padding: 50px 49px 52px;
+      padding: 40px 45px 20px;
     }
   }
 
   .contacts-section {
-    padding: 80px 0 92px;
+    padding: 55px 0 100px;
   }
 
   .contacts {
@@ -352,6 +370,12 @@
   #map {
     height: 270px;
   }
+
+  .map-section {
+    #map {
+      height: 400px;
+    }
+  }
 }
 
 @include media-breakpoint-up(lg) {
@@ -359,31 +383,6 @@
     overflow-wrap: normal;
     word-wrap: normal;
     word-break: normal;
-  }
-
-  .main-section-content {
-    top: 41.5%;
-    right: 19%;
-    bottom: auto;
-    left: auto;
-    transform: translate(0);
-  }
-
-  .main-section-content-nav {
-    &__link {
-      min-width: 51px;
-      width: 51px;
-      height: 51px;
-
-      &:not(:last-child) {
-        margin: 0 0 22px;
-      }
-
-      &:before {
-        width: 51px;
-        height: 51px;
-      }
-    }
   }
 
   .best-apartment {
@@ -471,20 +470,21 @@
   }
 
   .media .media {
-    padding-left: 43px;
+    padding-left: 80px;
+    margin-top: 55px;
   }
 
   .pages-nav-section {
-    padding: 35px 0;
+    padding: 30px 0;
   }
 
   .pages-nav {
     &__link {
       width: 100%;
-      max-width: 400px;
-      padding: 25px 5px 25px 55px;
+      max-width: 370px;
+      padding: 20px 5px 20px 55px;
       margin: 0 15px;
-      font-size: 16px;
+      font-size: 14px;
 
       svg {
         width: 23px;
@@ -503,6 +503,19 @@
 }
 
 @include media-breakpoint-up(xl) {
+  .main-section-content {
+    top: 41.5%;
+    right: 15.8%;
+    bottom: auto;
+    left: auto;
+    transform: translate(0);
+  }
+
+  .main-section-content-nav {
+    &__link:not(:last-child) {
+      margin: 0 0 22px;
+    }
+  }
 }
 
 @media screen and (min-width: 1100px) {
@@ -513,8 +526,8 @@
 
 @media screen and (min-width: 1201px) {
   .main-section-content {
-    top: 41.5%;
-    right: 19%;
+    top: 43.5%;
+    right: 16%;
   }
 }
 
@@ -533,8 +546,43 @@
     }
   }
 
+  .main-section-content {
+    top: 41.5%;
+    right: 19%;
+    bottom: auto;
+    left: auto;
+    transform: translate(0);
+  }
+
+  .main-section-content-nav {
+    &__link {
+      min-width: 51px;
+      width: 51px;
+      height: 51px;
+
+      &:not(:last-child) {
+        margin: 0 0 22px;
+      }
+
+      &:before {
+        width: 51px;
+        height: 51px;
+      }
+    }
+
+    &__text {
+      margin: 0 15px 0 10px;
+      font-size: inherit;
+      letter-spacing: -1.2px;
+    }
+  }
+
   .advantage-section {
     padding: 115px 0 85px;
+  }
+
+  .apart-advantage-section {
+    padding: 0 0 105px;
   }
 
   .advantage {
@@ -622,8 +670,96 @@
     }
   }
 
+  .tour3d-section {
+    padding: 100px 0 120px;
+  }
+
+  .tour3d-content {
+    margin-bottom: 45px;
+
+    &__view {
+      height: 430px;
+      margin-top: 8px;
+    }
+  }
+
+  .scroll-ico {
+    bottom: 30px;
+  }
+
+  .tour3d-description__text-wrap {
+    padding: 38px 40px 25px 34px;
+  }
+
+  .simple-reserved-section {
+    padding: 95px 0 120px;
+
+    .title {
+      margin-bottom: 115px;
+    }
+  }
+
+  .photo-room-section {
+    padding: 95px 0 115px;
+  }
+
+  .photo-room {
+    margin-top: 115px;
+
+    &__box:not(:nth-last-child(-1n+5)) {
+      margin-bottom: 30px;
+    }
+
+    &__img {
+      height: 270px;
+    }
+  }
+
+  .reviews-section {
+    padding: 100px 0 127px;
+  }
+
+  .reviews {
+    margin: 95px auto 0;
+  }
+
+  .media .media {
+    padding-left: 43px;
+    margin-top: 26px;
+  }
+
+  .pages-nav-section {
+    padding: 35px 0;
+  }
+
+  .pages-nav {
+    &__link {
+      max-width: 400px;
+      padding: 25px 5px 25px 55px;
+      font-size: 16px;
+    }
+  }
+
+  .ways-section {
+    padding: 110px 0 70px;
+  }
+
+  .ways {
+    padding-top: 65px;
+
+    &__box {
+      padding: 45px 45px 70px;
+    }
+  }
+
   #map {
     height: 320px;
+  }
+
+  .map-section {
+    #map {
+      height: 500px;
+    }
   }
 }
 
