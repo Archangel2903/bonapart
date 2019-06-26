@@ -402,20 +402,20 @@
                     <div class="col-md-8 col-lg-10 col-xl-8">
                         <div class="calendar-reserved row">
                             <div class="col-md-6 mb-5 mb-md-0">
-                                <div class="calendar-reserved__box">
+                                <div class="calendar-reserved__box text-center text-md-left">
                                     <p class="calendar-reserved__label">Укажите дату заезда</p>
 
-                                    <div id="reserved_date_in" class="calendar-reserved__calendar datepicker-range bg-white"></div>
+                                    <div id="reserved_date_in" class="calendar-reserved__calendar datepicker-range mx-auto mx-md-0 bg-white"></div>
 
                                     <input type="hidden" name="" class="result-val" value="">
                                 </div>
                             </div>
 
                             <div class="col-md-6">
-                                <div class="calendar-reserved__box">
+                                <div class="calendar-reserved__box text-center text-md-left">
                                     <p class="calendar-reserved__label">Укажите дату выезда</p>
 
-                                    <div id="reserved_date_out" class="calendar-reserved__calendar datepicker-range bg-white"></div>
+                                    <div id="reserved_date_out" class="calendar-reserved__calendar datepicker-range mx-auto mx-md-0 bg-white"></div>
 
                                     <input type="hidden" name="" class="result-val" value="">
                                 </div>
@@ -469,8 +469,29 @@
 
                 <div class="row">
                     <div class="photo-room swiper-container mobile-slider">
-                        <div class="swiper-wrapper lightgallery flex-md-wrap">
-                            <a href="<%= require('./img/apartment-img02.jpg') %>" class="photo-room__box swiper-slide col-md-3">
+                        <div class="swiper-wrapper lightgallery flex-md-wrap packery-grid">
+                            <a href="<%= require('./img/apartment-img02.jpg') %>" class="photo-room__box grid-item swiper-slide">
+                                <img src="<%= require('./img/placeholder.png') %>" class="photo-room__img" alt="photo room" title="" data-src="<%= require('./img/apartment-img02.jpg') %>">
+                            </a>
+                            <a href="<%= require('./img/apartment-img03.jpg') %>" class="photo-room__box grid-item swiper-slide">
+                                <img src="<%= require('./img/placeholder.png') %>" class="photo-room__img" alt="photo room" title="" data-src="<%= require('./img/apartment-img03.jpg') %>">
+                            </a>
+                            <a href="<%= require('./img/apartment-img04.jpg') %>" class="photo-room__box grid-item swiper-slide">
+                                <img src="<%= require('./img/placeholder.png') %>" class="photo-room__img" alt="photo room" title="" data-src="<%= require('./img/apartment-img04.jpg') %>">
+                            </a>
+                            <a href="<%= require('./img/apartment-img02.jpg') %>" class="photo-room__box grid-item photo-room__box_height-2 swiper-slide">
+                                <img src="<%= require('./img/placeholder.png') %>" class="photo-room__img" alt="photo room" title="" data-src="<%= require('./img/apartment-img02.jpg') %>">
+                            </a>
+                            <a href="<%= require('./img/apartment-img01.jpg') %>" class="photo-room__box grid-item photo-room__box_width-2 swiper-slide">
+                                <img src="<%= require('./img/placeholder.png') %>" class="photo-room__img" alt="photo room" title="" data-src="<%= require('./img/apartment-img01.jpg') %>">
+                            </a>
+                            <a href="<%= require('./img/apartment-img02.jpg') %>" class="photo-room__box grid-item swiper-slide">
+                                <img src="<%= require('./img/placeholder.png') %>" class="photo-room__img" alt="photo room" title="" data-src="<%= require('./img/apartment-img02.jpg') %>">
+                            </a>
+
+
+
+                            <!--<a href="<%= require('./img/apartment-img02.jpg') %>" class="photo-room__box swiper-slide col-md-3">
                                 <img src="<%= require('./img/placeholder.png') %>" class="photo-room__img" alt="photo room" title="" data-src="<%= require('./img/apartment-img02.jpg') %>">
                             </a>
                             <a href="<%= require('./img/apartment-img03.jpg') %>" class="photo-room__box swiper-slide col-md-6">
@@ -488,7 +509,7 @@
                             </a>
                             <a href="<%= require('./img/apartment-img04.jpg') %>" class="photo-room__box swiper-slide col-md-3">
                                 <img src="<%= require('./img/placeholder.png') %>" class="photo-room__img" alt="photo room" title="" data-src="<%= require('./img/apartment-img04.jpg') %>">
-                            </a>
+                            </a>-->
                         </div>
 
                         <div class="swiper-arrows swiper-button-prev d-md-none">

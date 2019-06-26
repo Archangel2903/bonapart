@@ -15,6 +15,7 @@ import 'bootstrap-datepicker/dist/locales/bootstrap-datepicker.ru.min';
 import 'bootstrap-star-rating';
 import 'readmore-js';
 import L from 'leaflet';
+import Packery from 'packery';
 import '../img/point.svg';
 
 $(window).on('load', function () {
@@ -389,6 +390,15 @@ $(function () {
         $(this).datepicker().on('changeDate', function (e) {
             let input = $(this).parent().find('.result-val');
             input.val(moment(e.date).format('DD/MM/YYYY'));
+        });
+    });
+
+    // packery
+    let packeryElem = document.querySelectorAll('.packery-grid');
+    packeryElem.forEach(function (elem) {
+        let packery_element = new Packery(elem, {
+            itemSelector: '.grid-item',
+            gutter: 30,
         });
     });
 });

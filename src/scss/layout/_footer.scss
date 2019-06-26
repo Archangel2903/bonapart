@@ -92,6 +92,7 @@ footer.footer {
   }
 
   &__li-text {
+    display: inline-block;
     color: inherit;
 
     &+ .footer-content__li-text:before {
