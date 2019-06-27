@@ -3,22 +3,7 @@
 
 /* Bootstrap */
 //require
-@import "~bootstrap/scss/functions";
-@import "~bootstrap/scss/variables";
-@import "~bootstrap/scss/mixins";
-//optional
-@import "~bootstrap/scss/reboot";
-@import "~bootstrap/scss/grid";
-@import "~bootstrap/scss/type";
-@import "~bootstrap/scss/utilities";
-@import "~bootstrap/scss/dropdown";
-@import "~bootstrap/scss/buttons";
-@import "~bootstrap/scss/breadcrumb";
-@import "~bootstrap/scss/card";
-@import "~bootstrap/scss/forms";
-@import "~bootstrap/scss/modal";
-@import "~bootstrap/scss/media";
-@import "~bootstrap/scss/utilities/text";
+@import "~bootstrap/scss/bootstrap";
 
 /* Plugins style */
 @import '~swiper/dist/css/swiper.min.css';
