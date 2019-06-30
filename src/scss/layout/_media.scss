@@ -243,6 +243,9 @@
     &__box {
       height: auto;
 
+      width: 270px;
+      height: 270px;
+
       &:not(:nth-last-child(-1n+5)) {
         margin-bottom: 35px;
       }

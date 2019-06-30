@@ -15,7 +15,7 @@ import 'bootstrap-datepicker/dist/locales/bootstrap-datepicker.ru.min';
 import 'bootstrap-star-rating';
 import 'readmore-js';
 import L from 'leaflet';
-import Packery from 'packery';
+import 'packery';
 import '../img/point.svg';
 
 $(window).on('load', function () {
@@ -55,6 +55,16 @@ $(window).on('load', function () {
             moreLink: '<a href="#" class="attractions__more d-block mt-3 mr-4 mb-2 text-right pt-md-3 m-md-0 mb-md-2 text-md-left">Показать больше</a>'
         });
     }
+});
+
+$(window).on('scroll', function () {
+    let yOffset = window.pageYOffset;
+    let header = $('.header');
+    let toTop = $('#to_top');
+
+    (yOffset >= 40) ? header.addClass('bg-secondary') : header.removeClass('bg-secondary');
+
+    (yOffset >= 600) ? toTop.addClass('show') : toTop.removeClass('show');
 });
 
 $(function () {
@@ -393,12 +403,25 @@ $(function () {
         });
     });
 
+    // to top
+    $('#to_top').on('click', function (e) {
+        e.preventDefault();
+        $('body,html').animate({
+            scrollTop: 0,
+        }, 800);
+    });
+
     // packery
-    let packeryElem = document.querySelectorAll('.packery-grid');
+    /*let packeryElem = document.querySelectorAll('.packery-grid');
     packeryElem.forEach(function (elem) {
         let packery_element = new Packery(elem, {
             itemSelector: '.grid-item',
             gutter: 30,
         });
+    });*/
+
+    $('.packery-grid').packery({
+        itemSelector: '.grid-item',
+        gutter: 30,
     });
 });
