@@ -16,7 +16,7 @@
 
     &__img {
       width: 277px;
-      margin: -15px -50px 0 -50px;
+      margin: -15px -60px 0 -40px;
     }
   }
 }
@@ -151,7 +151,17 @@
     padding: 75px 0 0;
 
     .swiper-slide {
-      width: 49%;
+      width: 47.5%;
+
+      & + .swiper-slide {
+        margin: 0 0 0 30px;
+      }
+    }
+
+    &.swiper-container-initialized {
+      .swiper-slide + .swiper-slide {
+        margin: 0;
+      }
     }
   }
 
@@ -238,26 +248,26 @@
   }
 
   .photo-room {
-    margin-top: 70px;
+    width: 90%;
+    margin: 70px auto 0;
 
     &__box {
-      height: auto;
-
-      width: 270px;
-      height: 270px;
-
-      &:not(:nth-last-child(-1n+5)) {
-        margin-bottom: 35px;
-      }
-
-      &_vertical {
-        height: 570px;
-      }
-    }
-
-    &__img {
+      width: 210px;
       max-width: none;
       height: 210px;
+
+      &.swiper-slide {
+        opacity: 1;
+        visibility: visible;
+      }
+
+      &_width-2 {
+        width: 450px;
+      }
+
+      &_height-2 {
+        height: 450px;
+      }
     }
   }
 
@@ -469,6 +479,10 @@
     &__price {
 
     }
+  }
+
+  .photo-room {
+    width: 100%;
   }
 
   .media .media {
@@ -708,12 +722,17 @@
   .photo-room {
     margin-top: 115px;
 
-    &__box:not(:nth-last-child(-1n+5)) {
-      margin-bottom: 30px;
-    }
-
-    &__img {
+    &__box {
+      width: 270px;
       height: 270px;
+
+      &_width-2 {
+        width: 570px;
+      }
+
+      &_height-2 {
+        height: 570px;
+      }
     }
   }
 
@@ -788,7 +807,48 @@
 @include media-breakpoint-down(xs) {
 }
 
-@media (max-width: 414px) {
+@media (max-width: 400px) {
+  .title {
+    font-size: 42px;
+  }
+
+  .main-section .title {
+    font-size: 42px;
+  }
+
+  .main-section-content-nav {
+    &__link {
+      min-width: 35px;
+      width: 35px;
+      height: 35px;
+      font-size: 18px;
+
+      &:not(:last-child) {
+        margin-right: 3px;
+      }
+
+      &:before {
+        width: 35px;
+        height: 35px;
+        font-size: 18px;
+        line-height: 1.5;
+      }
+
+      svg {
+        width: 10px;
+        height: 10px;
+        margin-left: 5px;
+      }
+    }
+
+    &__text {
+      margin: 0 5px;
+    }
+  }
+
+  .apartment-includes {
+    grid-template-columns: repeat(1, minmax(50%, 100%));
+  }
 }
 
 @media (max-width: 375px) {

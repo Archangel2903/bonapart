@@ -39,14 +39,23 @@
     text-transform: uppercase;
     letter-spacing: 2.4px;
   }
+
+  .title-hash {
+    display: inline-block;
+
+    & + .title-hash {
+      &:before {
+        content: '_';
+      }
+    }
+  }
 }
 
 .mobile-menu {
   position: fixed;
   display: block;
   width: 100%;
-  height: 768px;
-  //padding: 240px 0 190px;
+  height: 100%;
   transform: translateX(-100%);
   z-index: 2;
   transition: $transition-base;
@@ -586,8 +595,18 @@
     text-decoration: underline;
   }
 
+  &.swiper-container-initialized {
+    .swiper-slide + .swiper-slide {
+      margin: 0;
+    }
+  }
+
   .swiper-slide {
     width: 100%;
+
+    & + .swiper-slide {
+      margin: 30px 0 0;
+    }
   }
 
   .swiper-controls {
@@ -638,12 +657,6 @@
 // INSTAGRAM SECTION
 .instagram-section {
   padding: 65px 0 90px;
-
-  .title {
-    overflow-wrap: break-word;
-    word-wrap: break-word;
-    word-break: break-all;
-  }
 }
 
 .instagram-slider {
@@ -1065,30 +1078,29 @@
 }
 
 .photo-room {
-  margin-top: 87px;
+  margin: 87px auto 40px;
 
   &__box {
     width: 270px;
+    max-width: 270px;
     height: 270px;
 
-    &:not(:nth-last-child(-1n+5)) {
-      margin-bottom: 30px;
-    }
+    &.swiper-slide {
+      opacity: 0;
+      visibility: hidden;
 
-    &_width-2 {
-      width: 570px;
-    }
-
-    &_height-2 {
-      height: 570px;
+      &.swiper-slide-active {
+        opacity: 1;
+        visibility: visible;
+        margin: 0 auto;
+      }
     }
   }
 
   &__img {
     display: block;
     width: 100%;
-    max-width: 270px;
-    height: 270px;
+    height: 100%;
     margin: 0 auto;
     object-fit: cover;
     object-position: center;

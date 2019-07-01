@@ -15,7 +15,7 @@ import 'bootstrap-datepicker/dist/locales/bootstrap-datepicker.ru.min';
 import 'bootstrap-star-rating';
 import 'readmore-js';
 import L from 'leaflet';
-import 'packery';
+import Packery from 'packery';
 import '../img/point.svg';
 
 $(window).on('load', function () {
@@ -48,11 +48,31 @@ $(window).on('load', function () {
 
     // readmore js
     if ($('article').length) {
-        $('article').readmore({
-            collapsedHeight: 220,
-            speed: 300,
-            lessLink: '<a href="#" class="attractions__more d-block mt-3 mr-4 mb-2 text-right pt-md-3 m-md-0 mb-md-2 text-md-left">Свернуть текст</a>',
-            moreLink: '<a href="#" class="attractions__more d-block mt-3 mr-4 mb-2 text-right pt-md-3 m-md-0 mb-md-2 text-md-left">Показать больше</a>'
+        if ($('article').hasClass('text-review')) {
+            $('.text-review').readmore({
+                collapsedHeight: 95,
+                speed: 300,
+                lessLink: '<a href="#" class="attractions__more d-block mt-3 mr-4 mb-2 text-right pt-md-3 m-md-0 mb-md-2">Свернуть текст</a>',
+                moreLink: '<a href="#" class="attractions__more d-block mt-3 mr-4 mb-2 text-right pt-md-3 m-md-0 mb-md-2">Показать больше</a>'
+            });
+        } else {
+            $('article').readmore({
+                collapsedHeight: 220,
+                speed: 300,
+                lessLink: '<a href="#" class="attractions__more d-block mt-3 mr-4 mb-2 text-right pt-md-3 m-md-0 mb-md-2 text-md-left">Свернуть текст</a>',
+                moreLink: '<a href="#" class="attractions__more d-block mt-3 mr-4 mb-2 text-right pt-md-3 m-md-0 mb-md-2 text-md-left">Показать больше</a>'
+            });
+        }
+    }
+
+    // packery
+    let packeryElem = document.querySelectorAll('.packery-grid');
+    if (window.innerWidth >= 768) {
+        packeryElem.forEach(function (elem) {
+            let packery_element = new Packery(elem, {
+                itemSelector: '.grid-item',
+                gutter: 30,
+            });
         });
     }
 });
@@ -60,9 +80,16 @@ $(window).on('load', function () {
 $(window).on('scroll', function () {
     let yOffset = window.pageYOffset;
     let header = $('.header');
+    let headerTop = $('.header-top');
     let toTop = $('#to_top');
 
-    (yOffset >= 40) ? header.addClass('bg-secondary') : header.removeClass('bg-secondary');
+    if (yOffset >= 40) {
+        headerTop.slideUp(300);
+        header.addClass('bg-secondary');
+    } else {
+        headerTop.slideDown(300);
+        header.removeClass('bg-secondary');
+    }
 
     (yOffset >= 600) ? toTop.addClass('show') : toTop.removeClass('show');
 });
@@ -112,10 +139,10 @@ $(function () {
 
     // Swiper
     if ($('.swiper-container').length) {
-        var mainSlider, attractionSlider, instagramSlider;
-        var mainSlides = document.querySelectorAll('.main-slider .swiper-slide').length;
-        var attractionSlides = document.querySelectorAll('.attractions .swiper-slide').length;
-        var instagramSlides = document.querySelectorAll('.instagram-slider .swiper-slide').length;
+        let mainSlider, attractionSlider, instagramSlider;
+        let mainSlides = document.querySelectorAll('.main-slider .swiper-slide').length;
+        let attractionSlides = document.querySelectorAll('.attractions .swiper-slide').length;
+        let instagramSlides = document.querySelectorAll('.instagram-slider .swiper-slide').length;
 
         if (mainSlides > 1) {
             mainSlider = new Swiper(document.querySelector('.main-slider'), {
@@ -166,7 +193,7 @@ $(function () {
                 // loop: true,
                 autoplay: true,
                 spaceBetween: 25,
-                slidesPerView: '3',
+                slidesPerView: 3,
                 navigation: {
                     nextEl: '.swiper-button-next',
                     prevEl: '.swiper-button-prev'
@@ -177,20 +204,19 @@ $(function () {
                 },
                 breakpoints: {
                     991: {
-                        centeredSlides: false,
-                        slidesPerView: '2',
-                    },
-                    768: {
-                        centeredSlides: true
+                        slidesPerView: 2,
                     },
                     480: {
-                        slidesPerView: '1',
+                        centeredSlides: true,
+                        slidesPerView: 1,
                     }
                 }
             });
         } else {
+            $('.attractions .swiper-wrapper').addClass('flex-wrap');
+
             attractionSlider = new Swiper(document.querySelector('.attractions'), {
-                init: false
+                init: false,
             });
         }
 
@@ -200,7 +226,6 @@ $(function () {
                 observeParents: true,
                 spaceBetween: 20,
                 slidesPerView: 4,
-                centeredSlides: false,
                 navigation: {
                     nextEl: '.swiper-button-next',
                     prevEl: '.swiper-button-prev'
@@ -208,13 +233,14 @@ $(function () {
                 breakpoints: {
                     1100: {
                         slidesPerView: 3,
-                        centeredSlides: true
                     },
                     860: {
-                        slidesPerView: 2
+                        centeredSlides: false,
+                        slidesPerView: 2,
                     },
                     600: {
-                        slidesPerView: 1
+                        centeredSlides: true,
+                        slidesPerView: 1,
                     }
                 }
             });
@@ -224,9 +250,9 @@ $(function () {
             });
         }
 
-        var mobSlider = document.querySelectorAll('.mobile-slider');
+        let mobSlider = document.querySelectorAll('.mobile-slider');
         mobSlider.forEach(function (slider) {
-            var swiper = null;
+            let swiper = null;
 
             if (slider.classList.contains('photo-room')) {
                 swiper = new Swiper(slider, {
@@ -242,11 +268,9 @@ $(function () {
                     },
                     breakpoints: {
                         768: {
-                            slidesPerView: 2
+                            slidesPerView: 'auto',
+                            centeredSlides: true,
                         },
-                        480: {
-                            slidesPerView: 1
-                        }
                     }
                 });
             } else if (slider.classList.contains('ways')) {
@@ -296,7 +320,7 @@ $(function () {
                 });
             }
 
-            var mqlMD = matchMedia('(min-width: 768px)');
+            let mqlMD = matchMedia('(min-width: 768px)');
             mqlMD.addListener(function () {
                 if (mqlMD.matches) swiper.destroy();
             });
@@ -409,19 +433,5 @@ $(function () {
         $('body,html').animate({
             scrollTop: 0,
         }, 800);
-    });
-
-    // packery
-    /*let packeryElem = document.querySelectorAll('.packery-grid');
-    packeryElem.forEach(function (elem) {
-        let packery_element = new Packery(elem, {
-            itemSelector: '.grid-item',
-            gutter: 30,
-        });
-    });*/
-
-    $('.packery-grid').packery({
-        itemSelector: '.grid-item',
-        gutter: 30,
     });
 });
