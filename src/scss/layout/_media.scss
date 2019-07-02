@@ -3,6 +3,12 @@
 *************************************************/
 // min-width
 @media screen and (min-width: 414px) {
+  .main-section .swiper-controls {
+    top: 53.5%;
+    left: 12%;
+    transform: translate(-50%, -50%) rotate(-90deg);
+  }
+
   .attractions-section {
     .title {
       font-size: 34px;
@@ -17,6 +23,18 @@
     &__img {
       width: 277px;
       margin: -15px -60px 0 -40px;
+    }
+  }
+
+  .pages-nav {
+    &__link {
+      &_prev {
+        padding-right: 35px !important;
+      }
+
+      &_next {
+        padding-left: 35px !important;
+      }
     }
   }
 }
@@ -94,7 +112,7 @@
 
     .swiper-controls {
       top: 60%;
-      left: 28%;
+      left: 18%;
     }
   }
 
@@ -294,6 +312,25 @@
 
     .media .media {
       //margin-top: 35px;
+    }
+  }
+
+  .pages-nav {
+    &__link {
+      &_prev {
+        padding-right: 30px !important;
+      }
+
+      &_next {
+        padding-left: 30px !important;
+      }
+    }
+
+    &__number {
+      display: inline-block;
+      width: 29px;
+      height: 29px;
+      font-size: 20px;
     }
   }
 
@@ -506,14 +543,6 @@
         width: 23px;
         height: 23px;
       }
-    }
-
-    &__number {
-      display: inline-block;
-      width: 29px;
-      height: 29px;
-      font-size: 20px;
-      text-align: center;
     }
   }
 }
