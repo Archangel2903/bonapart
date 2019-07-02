@@ -49,6 +49,12 @@
   .contacts-form {
     max-width: none;
   }
+
+  .modal-custom {
+    .modal-content {
+      padding: 40px 45px 45px;
+    }
+  }
 }
 
 @include media-breakpoint-up(md) {
@@ -111,8 +117,8 @@
     }
 
     .swiper-controls {
-      top: 60%;
-      left: 18%;
+      top: 61.5% !important;
+      left: 28%;
     }
   }
 
@@ -151,9 +157,18 @@
     padding: 0 0 85px;
   }
 
-  .mobile-slider {
+  .main-slider {
+    max-height: 690px;
+
+    .slide-content {
+      &__text-description {
+        max-width: 255px;
+      }
+    }
+
     .swiper-controls {
-      display: none;
+      top: 60%;
+      left: 18%;
     }
   }
 
@@ -313,6 +328,10 @@
     .media .media {
       //margin-top: 35px;
     }
+  }
+
+  .pages-nav-section {
+    padding: 30px 0;
   }
 
   .pages-nav {
@@ -502,7 +521,7 @@
 
   .attractions {
     .swiper-slide {
-      width: 32%;
+      width: 31%;
     }
   }
 
@@ -573,6 +592,7 @@
   .main-section-content {
     top: 43.5%;
     right: 16%;
+    transform: none;
   }
 }
 
@@ -593,10 +613,9 @@
 
   .main-section-content {
     top: 41.5%;
-    right: 19%;
+    right: 19.5%;
     bottom: auto;
     left: auto;
-    transform: translate(0);
   }
 
   .main-section-content-nav {
